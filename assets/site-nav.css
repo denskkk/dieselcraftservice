@@ -487,6 +487,24 @@
   text-transform: uppercase;
 }
 
+#mobile-menu.dc-site-mobile-menu .mobile-accordion-btn .chevron {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: block;
+  flex: 0 0 18px;
+  margin-left: 16px;
+  color: var(--dc-nav-red);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-accordion-btn.open .chevron,
+#mobile-menu.dc-site-mobile-menu .mobile-accordion-btn[aria-expanded="true"] .chevron {
+  transform: rotate(180deg) !important;
+}
+
 #mobile-menu.dc-site-mobile-menu .mobile-accordion-content {
   max-height: 0;
   overflow: hidden;
