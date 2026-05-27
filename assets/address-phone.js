@@ -73,6 +73,74 @@
     });
   };
 
+  const getLeadClickData = (link) => {
+    const rawHref = link.getAttribute('href') || '';
+    const href = rawHref.trim();
+    if (!href) return null;
+
+    const normalizedHref = href.toLowerCase();
+    if (normalizedHref.startsWith('tel:')) {
+      return {
+        event: 'click_phone',
+        contact_channel: 'phone',
+        contact_value: href.replace(/^tel:/i, ''),
+      };
+    }
+
+    if (normalizedHref.startsWith('viber:')) {
+      return {
+        event: 'click_viber',
+        contact_channel: 'viber',
+      };
+    }
+
+    try {
+      const url = new URL(href, window.location.href);
+      const host = url.hostname.replace(/^www\./, '').toLowerCase();
+      if (host === 't.me' || normalizedHref.startsWith('tg:')) {
+        return {
+          event: 'click_telegram',
+          contact_channel: 'telegram',
+        };
+      }
+      if (host === 'wa.me' || host === 'api.whatsapp.com') {
+        return {
+          event: 'click_whatsapp',
+          contact_channel: 'whatsapp',
+        };
+      }
+      if ((host === 'google.com' || host === 'maps.google.com') && normalizedHref.includes('maps')) {
+        return {
+          event: 'click_map',
+          contact_channel: 'map',
+        };
+      }
+    } catch {
+      return null;
+    }
+
+    return null;
+  };
+
+  const pushLeadClickEvent = (link, clickData) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      ...clickData,
+      link_url: link.href || link.getAttribute('href') || '',
+      link_text: link.textContent.trim().replace(/\s+/g, ' ').slice(0, 120),
+      page_path: window.location.pathname,
+      page_title: document.title,
+    });
+  };
+
+  const trackLeadClick = (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    const link = target?.closest('a[href]');
+    if (!link) return;
+    const clickData = getLeadClickData(link);
+    if (clickData) pushLeadClickEvent(link, clickData);
+  };
+
   const setAddress = (addressId, persist = true) => {
     const selectedAddress = phones[addressId] ? addressId : 'address1';
     const phone = phones[selectedAddress];
@@ -101,6 +169,7 @@
     });
 
     document.addEventListener('click', closeAddressDropdowns);
+    document.addEventListener('click', trackLeadClick, { capture: true });
 
     document.querySelectorAll('.address-option').forEach((option) => {
       option.addEventListener('click', () => {
