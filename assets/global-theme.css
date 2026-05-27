@@ -1,0 +1,3004 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DIESEL-CRAFT — Warm Theme Override
+   Палітра: тепле вугільно-мідне / Charcoal + Copper Amber
+   Завантажується ОСТАННІМ — перекриває всі inline стилі через !important
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── 1. CSS Variables ─────────────────────────────────────────────── */
+:root {
+  /* Backgrounds — light theme */
+  --wm-bg:       #ffffff;
+  --wm-bg2:      #f8f5f0;
+  --wm-bg3:      #f2ece3;
+  --wm-card:     #ffffff;
+  --wm-panel:    rgba(20, 16, 9, 0.97);
+
+  /* Accent — мідно-бурштиновий */
+  --wm-accent:   #d4830e;
+  --wm-accent2:  #9a5505;
+
+  /* Text — dark for light backgrounds */
+  --wm-text:     #1a1410;
+  --wm-muted:    #5a4e3e;
+  --wm-dim:      #8a7a65;
+
+  /* Nav/dark-bg text (explicitly light — used in header/footer/hero) */
+  --wm-nav-text:  #f0e8d8;
+  --wm-nav-muted: #c8b898;
+  --wm-nav-dim:   #9a8870;
+
+  /* Override existing nav variables */
+  --dc-nav-black:   #0f0d0a;
+  --dc-nav-panel:   rgba(20, 16, 9, 0.97);
+  --dc-nav-red:     #d4830e;
+  --dc-nav-darkred: #9a5505;
+  --dc-nav-text:    #f0e8d8;
+  --dc-nav-muted:   #c8b898;
+  --dc-nav-dim:     #9a8870;
+
+  /* Override page-level variables */
+  --dc-red:      #d4830e;
+  --dc-red-dark: #9a5505;
+  --dc-black:    #ffffff;
+  --dc-panel:    #f8f5f0;
+  --dc-panel-2:  #f2ece3;
+  --dc-text:     #1a1410;
+  --dc-muted:    rgba(26, 20, 10, 0.65);
+  --dc-soft:     rgba(212, 131, 14, 0.08);
+}
+
+/* ── 2. Body & base ───────────────────────────────────────────────── */
+body {
+  background: #ffffff !important;
+  color: #1a1410 !important;
+}
+
+/* ── 3. Header ────────────────────────────────────────────────────── */
+#main-header,
+#main-header.dc-site-header {
+  background: rgba(15, 13, 10, 0.86) !important;
+  border-bottom: 1px solid rgba(212, 131, 14, 0.2) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.55), 0 1px 0 rgba(212,131,14,0.15) !important;
+}
+#main-header.scrolled,
+#main-header.dc-site-header.scrolled {
+  background: rgba(15, 13, 10, 0.97) !important;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.75), 0 1px 0 rgba(212,131,14,0.28) !important;
+}
+#main-header::before,
+#main-header.dc-site-header::before {
+  background: linear-gradient(90deg, transparent, var(--wm-accent2) 20%, var(--wm-accent) 50%, var(--wm-accent2) 80%, transparent) !important;
+  box-shadow: 0 0 12px rgba(212,131,14,0.65) !important;
+}
+
+/* ── 4. Logo ──────────────────────────────────────────────────────── */
+.logo-main span,
+.dc-site-logo-main span {
+  color: var(--wm-accent) !important;
+  text-shadow: 0 0 15px rgba(212,131,14,0.45) !important;
+}
+.logo-sub,
+.dc-site-logo-sub {
+  color: var(--wm-dim) !important;
+}
+
+/* ── 5. Nav links ─────────────────────────────────────────────────── */
+.nav-link,
+#main-header.dc-site-header .nav-link {
+  color: #c8b898 !important;
+}
+.nav-link::after,
+#main-header.dc-site-header .nav-link::after {
+  background: linear-gradient(90deg, var(--wm-accent2), var(--wm-accent)) !important;
+}
+.nav-link:hover,
+.nav-link.active,
+#main-header.dc-site-header .nav-link:hover,
+#main-header.dc-site-header .nav-link.active {
+  color: #f0e8d8 !important;
+}
+
+/* ── 6. Chevrons ─────────────────────────────────────────────────── */
+.nav-dropdown-trigger .chevron,
+#main-header.dc-site-header .chevron,
+#main-header.dc-site-header .addr-chevron {
+  color: #9a8870 !important;
+}
+.dropdown-group:hover .chevron,
+.dropdown-group.open .chevron,
+#main-header.dc-site-header .dropdown-group:hover .chevron,
+#main-header.dc-site-header .dropdown-group.open .chevron {
+  color: var(--wm-accent) !important;
+}
+
+/* ── 7. Mega menu ────────────────────────────────────────────────── */
+.mega-menu,
+#main-header.dc-site-header .mega-menu {
+  background: var(--wm-panel) !important;
+  border-color: rgba(212, 131, 14, 0.2) !important;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 40px rgba(212,131,14,0.04) !important;
+}
+.mega-menu::before {
+  background: linear-gradient(90deg, transparent, var(--wm-accent), transparent) !important;
+}
+.mega-item,
+#main-header.dc-site-header .mega-item {
+  color: #c8b898 !important;
+}
+.mega-item:hover,
+#main-header.dc-site-header .mega-item:hover {
+  background: rgba(212, 131, 14, 0.08) !important;
+  border-color: rgba(212, 131, 14, 0.25) !important;
+  color: #f0e8d8 !important;
+}
+.mega-icon,
+#main-header.dc-site-header .mega-icon {
+  color: var(--wm-accent) !important;
+}
+.dc-site-mega-title {
+  color: var(--wm-accent) !important;
+  border-bottom-color: rgba(240, 232, 216, 0.06) !important;
+}
+.dc-site-mega-note {
+  color: rgba(240, 232, 216, 0.5) !important;
+}
+
+/* ── 8. Phone & address ──────────────────────────────────────────── */
+.phone-icon,
+#main-header.dc-site-header .phone-icon,
+#main-header.dc-site-header .pin-icon {
+  color: var(--wm-accent) !important;
+}
+@keyframes phonePulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(212,131,14,0.4)); }
+  50%       { filter: drop-shadow(0 0 10px rgba(212,131,14,0.75)); }
+}
+.address-btn {
+  border-color: rgba(240,232,216,0.07) !important;
+  color: #9a8870 !important;
+  background: rgba(240,232,216,0.03) !important;
+}
+.address-btn:hover {
+  border-color: rgba(212,131,14,0.35) !important;
+  color: #c8b898 !important;
+  background: rgba(212,131,14,0.04) !important;
+}
+.address-btn .pin-icon {
+  color: var(--wm-accent) !important;
+}
+.address-menu,
+#main-header.dc-site-header .address-menu {
+  background: rgba(20, 16, 9, 0.97) !important;
+  border-color: rgba(212, 131, 14, 0.18) !important;
+}
+.address-option,
+#main-header.dc-site-header .address-option {
+  color: #9a8870 !important;
+}
+.address-option:hover,
+#main-header.dc-site-header .address-option:hover {
+  background: rgba(212, 131, 14, 0.08) !important;
+  color: #f0e8d8 !important;
+}
+.address-option.selected {
+  color: var(--wm-accent) !important;
+}
+.dot,
+#main-header.dc-site-header .dot {
+  background: var(--wm-accent) !important;
+  box-shadow: 0 0 8px rgba(212,131,14,0.55) !important;
+}
+
+/* ── 9. Social links ─────────────────────────────────────────────── */
+.social-link,
+#main-header.dc-site-header .social-link {
+  border-color: rgba(240,232,216,0.1) !important;
+  color: #9a8870 !important;
+}
+.social-link:hover,
+#main-header.dc-site-header .social-link:hover {
+  border-color: rgba(212,131,14,0.4) !important;
+  color: var(--wm-accent) !important;
+  background: rgba(212,131,14,0.07) !important;
+  box-shadow: 0 0 12px rgba(212,131,14,0.25), inset 0 0 12px rgba(212,131,14,0.04) !important;
+}
+
+/* ── 10. CTA Button ──────────────────────────────────────────────── */
+.cta-button,
+.svc-cta-btn-primary,
+.callcta-btn-call,
+.price-cta-btn.red-btn {
+  background: linear-gradient(135deg, var(--wm-accent) 0%, var(--wm-accent2) 100%) !important;
+  box-shadow: 0 4px 20px rgba(212,131,14,0.38) !important;
+}
+.cta-button:hover,
+.svc-cta-btn-primary:hover {
+  background: linear-gradient(135deg, #e89820 0%, #b06010 100%) !important;
+  box-shadow: 0 8px 35px rgba(212,131,14,0.52) !important;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(212,131,14,0.38), 0 0 0 0 rgba(212,131,14,0.25); }
+  50%       { box-shadow: 0 4px 30px rgba(212,131,14,0.55), 0 0 0 6px rgba(212,131,14,0); }
+}
+.red-divider,
+#main-header.dc-site-header .red-divider {
+  background: linear-gradient(180deg, transparent, var(--wm-accent), transparent) !important;
+}
+
+/* ── 11. Mobile menu ─────────────────────────────────────────────── */
+#mobile-menu {
+  background: rgba(15, 13, 10, 0.98) !important;
+}
+#mobile-menu::before {
+  background: linear-gradient(90deg, transparent, var(--wm-accent), transparent) !important;
+}
+.mobile-nav-link,
+.mobile-accordion-btn {
+  color: var(--wm-muted) !important;
+  border-bottom-color: rgba(240,232,216,0.05) !important;
+}
+.mobile-nav-link:hover,
+.mobile-accordion-btn:hover {
+  color: var(--wm-accent) !important;
+}
+.mobile-accordion-btn .acc-icon {
+  color: var(--wm-accent) !important;
+}
+.mobile-sub-link {
+  color: var(--wm-dim) !important;
+}
+.mobile-sub-link:hover {
+  background: rgba(212,131,14,0.07) !important;
+  color: var(--wm-text) !important;
+}
+.mobile-cta-fixed .cta-button {
+  box-shadow: 0 8px 30px rgba(212,131,14,0.5) !important;
+}
+.burger-line {
+  background: var(--wm-muted) !important;
+}
+.burger.active .burger-line:nth-child(1),
+.burger.active .burger-line:nth-child(3) {
+  background: var(--wm-accent) !important;
+}
+
+/* ── 12. Hero Section ────────────────────────────────────────────── */
+.hero-eyebrow {
+  background: rgba(212,131,14,0.1) !important;
+  border-color: rgba(212,131,14,0.3) !important;
+  color: var(--wm-accent) !important;
+}
+.hero-eyebrow::before {
+  background: var(--wm-accent) !important;
+  box-shadow: 0 0 8px rgba(212,131,14,0.75) !important;
+}
+@keyframes heroDot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.hero-title .accent,
+.hero-title .red {
+  color: var(--wm-accent) !important;
+  text-shadow: 0 0 40px rgba(212,131,14,0.28) !important;
+}
+.hero-divider {
+  background: linear-gradient(90deg, var(--wm-accent), rgba(212,131,14,0.18)) !important;
+}
+.hero-sub {
+  color: var(--wm-muted) !important;
+}
+.hero-badge {
+  background: rgba(240,232,216,0.04) !important;
+  border-color: rgba(240,232,216,0.08) !important;
+}
+.hero-badge:hover {
+  border-color: rgba(212,131,14,0.25) !important;
+  background: rgba(212,131,14,0.05) !important;
+}
+.hero-badge-icon {
+  background: rgba(212,131,14,0.1) !important;
+  border-color: rgba(212,131,14,0.18) !important;
+}
+.hero-badge-icon svg {
+  color: var(--wm-accent) !important;
+}
+.hero-badge-title {
+  color: var(--wm-text) !important;
+}
+.hero-badge-sub {
+  color: var(--wm-dim) !important;
+}
+.hero-cta-secondary {
+  color: var(--wm-dim) !important;
+}
+.hero-cta-secondary:hover {
+  color: var(--wm-text) !important;
+}
+.hero-scroll-line {
+  background: linear-gradient(180deg, transparent, rgba(212,131,14,0.5)) !important;
+}
+.hero-scroll span {
+  color: rgba(240,232,216,0.28) !important;
+}
+.hero-section::after,
+.page-hero::after {
+  background: linear-gradient(90deg, var(--wm-accent) 0%, rgba(212,131,14,0.18) 60%, transparent 100%) !important;
+}
+
+/* ── 13. Breadcrumb ──────────────────────────────────────────────── */
+.breadcrumb {
+  background: #f2ece3 !important;
+  border-bottom-color: rgba(26,20,10,0.07) !important;
+}
+.breadcrumb-inner,
+.breadcrumb a {
+  color: #8a7a65 !important;
+}
+.breadcrumb a:hover {
+  color: var(--wm-accent) !important;
+}
+.breadcrumb .current {
+  color: #5a4e3e !important;
+}
+.breadcrumb .sep {
+  color: rgba(26,20,10,0.2) !important;
+}
+
+/* ── 14. Section eyebrow ─────────────────────────────────────────── */
+.services-eyebrow {
+  color: var(--wm-accent) !important;
+}
+.services-eyebrow::before,
+.services-eyebrow::after {
+  background: linear-gradient(90deg, transparent, var(--wm-accent)) !important;
+}
+.services-eyebrow::after {
+  background: linear-gradient(90deg, var(--wm-accent), transparent) !important;
+}
+
+/* ── 15. Section backgrounds ─────────────────────────────────────── */
+.symptoms-section,
+.included-section {
+  background: #f8f5f0 !important;
+}
+.process-section,
+.prices-section {
+  background: #ffffff !important;
+}
+
+/* ── 16. Service / symptom cards ─────────────────────────────────── */
+.svc-card {
+  background: #ffffff !important;
+  border-color: rgba(26,20,10,0.09) !important;
+  box-shadow: 0 2px 16px rgba(26,20,10,0.05) !important;
+}
+.svc-card:hover {
+  border-color: rgba(212,131,14,0.35) !important;
+  box-shadow: 0 8px 40px rgba(212,131,14,0.12), 0 2px 16px rgba(26,20,10,0.06) !important;
+}
+.svc-card::before {
+  background: linear-gradient(145deg, rgba(212,131,14,0.03), transparent 60%) !important;
+}
+.svc-card-body::before {
+  background: linear-gradient(90deg, rgba(212,131,14,0.3), rgba(212,131,14,0.1), rgba(212,131,14,0.3)) !important;
+}
+.svc-card-badge {
+  background: rgba(212,131,14,0.1) !important;
+  border-color: rgba(212,131,14,0.25) !important;
+  color: var(--wm-accent) !important;
+}
+.svc-card-title {
+  color: #1a1410 !important;
+}
+.svc-card-desc {
+  color: rgba(26, 20, 10, 0.65) !important;
+}
+.svc-card-number {
+  color: rgba(212, 131, 14, 0.1) !important;
+}
+.svc-card-visual {
+  background: linear-gradient(160deg, #f2ece3 0%, #ece5d9 100%) !important;
+}
+.svc-card-visual::before {
+  background: radial-gradient(ellipse 80% 60% at 50% 70%, rgba(212,131,14,0.07) 0%, transparent 65%) !important;
+}
+.svc-card-visual-grid {
+  background-image: linear-gradient(rgba(212,131,14,0.07) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(212,131,14,0.07) 1px, transparent 1px) !important;
+}
+
+/* ── 16b. Service card link ─────────────────────────────────────── */
+.svc-card-link {
+  color: var(--wm-accent) !important;
+}
+.svc-card:hover .svc-card-link {
+  color: var(--wm-accent-light, #e8a42a) !important;
+}
+
+/* ── 17. Process cards ───────────────────────────────────────────── */
+.process-card {
+  background: #ffffff !important;
+  border-color: rgba(26,20,10,0.09) !important;
+  box-shadow: 0 2px 16px rgba(26,20,10,0.05) !important;
+}
+.process-card::before {
+  background: linear-gradient(90deg, transparent, rgba(212,131,14,0.45), transparent) !important;
+}
+.process-card:hover {
+  border-color: rgba(212,131,14,0.3) !important;
+  box-shadow: 0 6px 30px rgba(212,131,14,0.1) !important;
+}
+.process-num {
+  color: rgba(212, 131, 14, 0.15) !important;
+}
+.process-card-title {
+  color: #1a1410 !important;
+}
+.process-card-text {
+  color: rgba(26, 20, 10, 0.62) !important;
+}
+.process-scan,
+.prices-scan {
+  background: linear-gradient(90deg, transparent 0%, var(--wm-accent2) 20%, var(--wm-accent) 50%, var(--wm-accent2) 80%, transparent 100%) !important;
+}
+
+/* ── 18. Process image ───────────────────────────────────────────── */
+.process-img-inner {
+  background: rgba(242,236,227,0.85) !important;
+  border-color: rgba(26,20,10,0.1) !important;
+}
+.process-img-inner p {
+  color: rgba(26, 20, 10, 0.55) !important;
+}
+
+/* ── 19. Included section ────────────────────────────────────────── */
+.inc-icon {
+  background: rgba(212,131,14,0.1) !important;
+  border-color: rgba(212,131,14,0.2) !important;
+  color: var(--wm-accent) !important;
+}
+.inc-title {
+  color: #1a1410 !important;
+}
+.inc-sub {
+  color: rgba(26, 20, 10, 0.62) !important;
+}
+
+/* ── 20. CTA block (services) ────────────────────────────────────── */
+.services-cta-inner {
+  background: linear-gradient(135deg, #f8f5f0 0%, #f2ece3 50%, #ede5d8 100%) !important;
+  border-color: rgba(212,131,14,0.2) !important;
+  box-shadow: 0 2px 24px rgba(26,20,10,0.06) !important;
+}
+.services-cta-inner::before {
+  background: radial-gradient(ellipse 60% 80% at 0% 50%, rgba(212,131,14,0.07) 0%, transparent 55%),
+              radial-gradient(ellipse 40% 60% at 100% 50%, rgba(212,131,14,0.05) 0%, transparent 55%) !important;
+}
+.services-cta-inner::after {
+  background: linear-gradient(90deg, rgba(212,131,14,0.45), rgba(212,131,14,0.15), rgba(212,131,14,0.45)) !important;
+}
+.services-cta-title {
+  color: #1a1410 !important;
+}
+.services-cta-sub,
+.section-sub-main {
+  color: rgba(26, 20, 10, 0.62) !important;
+}
+.svc-cta-btn-secondary {
+  border-color: rgba(26,20,10,0.15) !important;
+  color: #1a1410 !important;
+}
+.svc-cta-btn-secondary:hover {
+  border-color: rgba(212,131,14,0.45) !important;
+  background: rgba(212,131,14,0.05) !important;
+}
+
+/* ── 21. Price cards ─────────────────────────────────────────────── */
+.price-card {
+  background: #ffffff !important;
+  border-color: rgba(26,20,10,0.09) !important;
+  box-shadow: 0 2px 16px rgba(26,20,10,0.05) !important;
+}
+.price-card.featured {
+  border-color: rgba(212,131,14,0.35) !important;
+  background: linear-gradient(145deg, #fffbf4 0%, #fef6e8 100%) !important;
+  box-shadow: 0 4px 32px rgba(212,131,14,0.12), 0 0 0 1px rgba(212,131,14,0.12) !important;
+}
+.price-card:hover {
+  border-color: rgba(212,131,14,0.25) !important;
+  box-shadow: 0 6px 30px rgba(212,131,14,0.1) !important;
+}
+.price-card.featured:hover {
+  box-shadow: 0 10px 40px rgba(212,131,14,0.18), 0 0 0 1px rgba(212,131,14,0.28) !important;
+}
+.price-badge {
+  background: rgba(212,131,14,0.12) !important;
+  border-color: rgba(212,131,14,0.28) !important;
+  color: var(--wm-accent) !important;
+}
+.price-card-icon {
+  background: rgba(212,131,14,0.07) !important;
+  border-color: rgba(212,131,14,0.15) !important;
+  color: var(--wm-accent) !important;
+}
+.price-card-name {
+  color: #1a1410 !important;
+}
+.price-card-desc {
+  color: rgba(26, 20, 10, 0.6) !important;
+}
+.price-divider {
+  background: linear-gradient(90deg, rgba(212,131,14,0.2), transparent) !important;
+}
+.pl-name {
+  color: rgba(26, 20, 10, 0.62) !important;
+}
+.pl-val {
+  color: #1a1410 !important;
+}
+.pl-val.accent {
+  color: var(--wm-accent) !important;
+}
+.price-cta-btn {
+  border-color: rgba(26,20,10,0.12) !important;
+  color: rgba(26,20,10,0.55) !important;
+}
+.price-cta-btn:hover {
+  border-color: rgba(212,131,14,0.38) !important;
+  color: #1a1410 !important;
+  background: rgba(212,131,14,0.06) !important;
+}
+.prices-note {
+  color: rgba(26, 20, 10, 0.38) !important;
+}
+
+/* ── 22. Call CTA section ────────────────────────────────────────── */
+.callcta-section {
+  background: #f8f5f0 !important;
+}
+
+/* ── 22b. Adv banner (CTA block) ─────────────────────────────────── */
+.adv-banner {
+  background: linear-gradient(135deg, #9a5505 0%, #6b3a03 50%, #4a2802 100%) !important;
+}
+.callcta-eyebrow {
+  color: rgba(26,20,10,0.5) !important;
+}
+.callcta-eyebrow span {
+  background: var(--wm-accent) !important;
+}
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.6); opacity: 0.6; }
+}
+.callcta-title .red,
+.section-title-main .red,
+.services-title .red,
+.rev-title .red,
+.adv-title .red,
+.contacts-title .red,
+.gallery-title .red,
+.prices-title .red,
+.section-title .red,
+h1 .red, h2 .red, h3 .red {
+  color: var(--wm-accent) !important;
+}
+/* Section titles dark on light bg */
+.services-title,
+.rev-title,
+.adv-title,
+.contacts-title,
+.gallery-title,
+.prices-title,
+.section-title-main,
+.callcta-title {
+  color: #1a1410 !important;
+}
+.callcta-sub {
+  color: rgba(26, 20, 10, 0.55) !important;
+}
+.callcta-phone {
+  color: #1a1410 !important;
+}
+.callcta-phone:hover {
+  color: var(--wm-accent) !important;
+  text-shadow: none !important;
+}
+.callcta-btn-wa {
+  background: rgba(37,211,102,0.09) !important;
+  border-color: rgba(37,211,102,0.28) !important;
+}
+.callcta-btn-wa:hover {
+  background: rgba(37,211,102,0.15) !important;
+}
+
+/* ── 23. Footer ──────────────────────────────────────────────────── */
+.site-footer {
+  background: #0a0806 !important;
+  border-top-color: rgba(240,232,216,0.04) !important;
+}
+.footer-logo .dash {
+  color: var(--wm-accent) !important;
+}
+.footer-desc {
+  color: rgba(240, 232, 216, 0.38) !important;
+}
+.footer-social-btn {
+  border-color: rgba(240,232,216,0.09) !important;
+  color: rgba(240,232,216,0.42) !important;
+}
+.footer-social-btn:hover {
+  border-color: rgba(212,131,14,0.38) !important;
+  color: var(--wm-accent) !important;
+  background: rgba(212,131,14,0.06) !important;
+}
+.footer-col-title {
+  color: rgba(240,232,216,0.38) !important;
+}
+.footer-links a {
+  color: rgba(240, 232, 216, 0.52) !important;
+}
+.footer-links a:hover {
+  color: #f0e8d8 !important;
+}
+.footer-contact-item span,
+.footer-contact-item a {
+  color: rgba(240, 232, 216, 0.52) !important;
+}
+.footer-contact-item a:hover {
+  color: #f0e8d8 !important;
+}
+.footer-contact-item svg {
+  color: var(--wm-accent) !important;
+}
+.footer-grid {
+  border-bottom-color: rgba(240,232,216,0.04) !important;
+}
+.footer-bottom {
+  border-top-color: rgba(240,232,216,0.04) !important;
+}
+.footer-copy {
+  color: rgba(240, 232, 216, 0.2) !important;
+}
+.footer-bottom-links a {
+  color: rgba(240, 232, 216, 0.2) !important;
+}
+.footer-bottom-links a:hover {
+  color: rgba(240, 232, 216, 0.5) !important;
+}
+
+/* ── 24. Engine menu (dvyguny pages) ─────────────────────────────── */
+.engine-menu-panel {
+  border-color: rgba(212, 131, 14, 0.2) !important;
+  background:
+    linear-gradient(135deg, rgba(212,131,14,0.09), rgba(240,232,216,0.02) 42%, rgba(15,13,10,0.86)),
+    radial-gradient(circle at 16% 0%, rgba(212,131,14,0.18), transparent 32%) !important;
+}
+.engine-menu-kicker {
+  color: var(--wm-accent) !important;
+}
+.engine-menu-title {
+  color: var(--wm-text) !important;
+}
+.engine-menu-copy {
+  color: rgba(240, 232, 216, 0.52) !important;
+}
+.engine-menu-link {
+  border-color: rgba(240,232,216,0.07) !important;
+  background: rgba(15,13,10,0.65) !important;
+  color: var(--wm-text) !important;
+}
+.engine-menu-link:hover {
+  border-color: rgba(212,131,14,0.55) !important;
+  background: rgba(212,131,14,0.09) !important;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.32), 0 0 28px rgba(212,131,14,0.11) !important;
+}
+.engine-menu-code {
+  color: var(--wm-text) !important;
+}
+.engine-menu-brand {
+  color: var(--wm-dim) !important;
+}
+.engine-menu-note {
+  color: var(--wm-dim) !important;
+}
+.engine-menu-cta {
+  color: var(--wm-accent) !important;
+}
+
+/* ── 25. Hide internal SEO label visible to users ────────────────── */
+.engine-menu-kicker {
+  display: none !important;
+}
+
+/* ── 26. Index page hero gradients (warm overlay) ────────────────── */
+.hero-overlay,
+.page-hero-overlay {
+  background:
+    linear-gradient(105deg,
+      rgba(10, 8, 5, 0.92) 0%,
+      rgba(10, 8, 5, 0.74) 38%,
+      rgba(10, 8, 5, 0.30) 65%,
+      rgba(10, 8, 5, 0.08) 100%),
+    linear-gradient(180deg,
+      rgba(10, 8, 5, 0.62) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(10, 8, 5, 0.80) 100%) !important;
+}
+
+/* ── 27. Advantages / reviews section ───────────────────────────── */
+/* Index page Tailwind-based sections override */
+.bg-dc-dark,
+[class*="bg-dc-dark"] {
+  background-color: #f8f5f0 !important;
+}
+.bg-dc-black,
+[class*="bg-dc-black"] {
+  background-color: #ffffff !important;
+}
+.bg-dc-darkgray,
+[class*="bg-dc-darkgray"] {
+  background-color: #f2ece3 !important;
+}
+.text-dc-red,
+[class*="text-dc-red"] {
+  color: var(--wm-accent) !important;
+}
+.border-dc-red,
+[class*="border-dc-red"] {
+  border-color: rgba(212,131,14,0.3) !important;
+}
+.bg-dc-red,
+[class*="bg-dc-red"] {
+  background-color: var(--wm-accent) !important;
+}
+.shadow-red-glow,
+[class*="shadow-red-glow"] {
+  box-shadow: 0 0 20px rgba(212,131,14,0.35), 0 0 60px rgba(212,131,14,0.12) !important;
+}
+
+/* ── 28. Mobile padding fixes ────────────────────────────────────── */
+@media (max-width: 639px) {
+  .section-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .callcta-container,
+  .footer-container,
+  .breadcrumb-inner,
+  .services-cta {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .hero-content,
+  .page-hero-content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 108px !important;
+    padding-bottom: 56px !important;
+  }
+  .symptoms-section,
+  .process-section,
+  .included-section,
+  .prices-section {
+    padding-top: 60px !important;
+    padding-bottom: 52px !important;
+  }
+  .callcta-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  .services-cta-inner {
+    padding: 32px 20px !important;
+    flex-direction: column !important;
+  }
+  .services-cta-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .svc-cta-btn-primary,
+  .svc-cta-btn-secondary {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .hero-badges {
+    gap: 8px !important;
+  }
+  .hero-badge {
+    padding: 8px 12px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .callcta-container,
+  .footer-container,
+  .breadcrumb-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* ── 29. Text readability (all screens) ──────────────────────────── */
+.hero-sub,
+.section-sub-main,
+.svc-card-desc,
+.process-card-text,
+.inc-sub,
+.price-card-desc,
+.services-cta-sub {
+  opacity: 1 !important;
+}
+
+/* ── 29b. Tailwind text colors on light bg ───────────────────────── */
+.text-gray-300, .text-gray-400, .text-gray-500 {
+  color: rgba(26, 20, 10, 0.62) !important;
+}
+.text-white {
+  color: #1a1410 !important;
+}
+/* Override text-white only outside hero/header/footer */
+.hero-section .text-white,
+.page-hero .text-white,
+#main-header .text-white,
+.site-footer .text-white,
+#mobile-menu .text-white {
+  color: #ffffff !important;
+}
+
+/* Theme color for meta content="..." */
+meta[name="theme-color"] {
+  content: #0f0d0a;
+}
+
+/* ── 30. dc-site mobile meta section ─────────────────────────────── */
+.dc-site-mobile-meta {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(240,232,216,0.06) !important;
+}
+.dc-site-mobile-label {
+  color: var(--wm-dim) !important;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.dc-site-mobile-addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.dc-site-mobile-socials {
+  display: flex;
+  gap: 10px;
+}
+
+/* ── 31. Final light theme pass ──────────────────────────────────── */
+html,
+body,
+main {
+  background: #ffffff !important;
+  color: #1a1410 !important;
+}
+
+body > section:not(.hero-section):not(.page-hero),
+main > section:not(.hero-section):not(.page-hero),
+.services-section,
+.rev-section,
+.contacts-section,
+.gallery-section,
+.process-section,
+.prices-section {
+  background: #ffffff !important;
+  color: #1a1410 !important;
+}
+
+.adv-section,
+.symptoms-section,
+.included-section,
+.callcta-section,
+.breadcrumb {
+  background: #f8f5f0 !important;
+  color: #1a1410 !important;
+}
+
+.services-section::before,
+.services-section::after,
+.adv-section::before,
+.adv-section::after,
+.rev-section::before,
+.rev-section::after,
+.contacts-section::before,
+.contacts-section::after,
+.gallery-section::before,
+.gallery-section::after {
+  background: none !important;
+  opacity: 0 !important;
+}
+
+.hero-section,
+.page-hero {
+  color: #f0e8d8 !important;
+}
+
+.hero-title,
+.hero-badge-title,
+.hero-phone-number,
+.page-hero-title,
+.page-hero h1,
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.page-hero h2,
+.page-hero h3 {
+  color: #f0e8d8 !important;
+}
+
+.hero-sub,
+.hero-badge-sub,
+.page-hero-sub,
+.page-hero p {
+  color: rgba(240, 232, 216, 0.76) !important;
+}
+
+.services-title,
+.adv-title,
+.rev-title,
+.contacts-title,
+.gallery-title,
+.prices-title,
+.section-title,
+.section-title-main,
+.callcta-title,
+.services-cta-title,
+.process-card-title,
+.price-card-name,
+.inc-title,
+.svc-card-title,
+.rev-card-name,
+.adv-card-title,
+.contacts-info-value,
+.engine-menu-title,
+.engine-menu-code {
+  color: #1a1410 !important;
+}
+
+.services-sub,
+.adv-sub,
+.rev-sub,
+.contacts-sub,
+.gallery-sub,
+.section-sub,
+.section-sub-main,
+.svc-card-desc,
+.adv-card-desc,
+.rev-card-text,
+.contacts-info-sub,
+.price-card-desc,
+.process-card-text,
+.inc-sub,
+.engine-menu-copy,
+.engine-menu-brand,
+.engine-menu-note {
+  color: rgba(26, 20, 10, 0.64) !important;
+}
+
+.svc-card,
+.adv-card,
+.rev-card,
+.contacts-info-card,
+.contacts-form-wrap,
+.price-card,
+.process-card,
+.services-cta-inner,
+.engine-menu-panel,
+.engine-menu-link,
+.mobile-engine-dropdown,
+.mobile-engine-dropdown summary,
+.mobile-engine-dropdown .engine-menu-link {
+  background: #ffffff !important;
+  border-color: rgba(26, 20, 10, 0.1) !important;
+  box-shadow: 0 8px 28px rgba(32, 24, 14, 0.07) !important;
+  color: #1a1410 !important;
+}
+
+.adv-card:hover,
+.rev-card:hover,
+.svc-card:hover,
+.contacts-info-card:hover,
+.price-card:hover,
+.process-card:hover,
+.engine-menu-link:hover {
+  border-color: rgba(212, 131, 14, 0.34) !important;
+  box-shadow: 0 14px 42px rgba(212, 131, 14, 0.13), 0 6px 20px rgba(32, 24, 14, 0.07) !important;
+}
+
+.adv-card::before,
+.rev-card::after,
+.contacts-map-overlay {
+  background: linear-gradient(135deg, rgba(212, 131, 14, 0.07), transparent 62%) !important;
+}
+
+.adv-card-icon-wrap,
+.contacts-icon-wrap,
+.price-card-icon,
+.inc-icon,
+.hero-badge-icon {
+  background: rgba(212, 131, 14, 0.1) !important;
+  border-color: rgba(212, 131, 14, 0.2) !important;
+  color: var(--wm-accent) !important;
+}
+
+.adv-card-bg-num,
+.process-num,
+.svc-card-number {
+  color: rgba(212, 131, 14, 0.12) !important;
+}
+
+.contacts-info-label,
+.contacts-eyebrow,
+.services-eyebrow,
+.adv-eyebrow,
+.rev-eyebrow,
+.gallery-eyebrow,
+.prices-eyebrow,
+.callcta-eyebrow {
+  color: var(--wm-accent) !important;
+}
+
+.contacts-info-value a,
+.svc-card-link,
+.engine-menu-cta,
+.price-cta-btn,
+.callcta-phone {
+  color: var(--wm-accent) !important;
+}
+
+.contacts-map,
+.gallery-item,
+.gallery-card,
+.svc-card-visual,
+.process-img-inner {
+  background: #f2ece3 !important;
+  border-color: rgba(26, 20, 10, 0.1) !important;
+}
+
+.gallery-item::after,
+.gallery-card::after {
+  background: linear-gradient(180deg, transparent 35%, rgba(26, 20, 10, 0.58) 100%) !important;
+}
+
+.contacts-form-wrap input,
+.contacts-form-wrap textarea,
+.contacts-form-wrap select,
+.form-input,
+.form-textarea {
+  background: #fbf8f2 !important;
+  border-color: rgba(26, 20, 10, 0.14) !important;
+  color: #1a1410 !important;
+}
+
+.contacts-form-wrap input::placeholder,
+.contacts-form-wrap textarea::placeholder,
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(26, 20, 10, 0.42) !important;
+}
+
+.site-footer {
+  background: #f2ece3 !important;
+  border-top-color: rgba(26, 20, 10, 0.08) !important;
+  color: #1a1410 !important;
+}
+
+.footer-desc,
+.footer-col-title,
+.footer-links a,
+.footer-contact-item span,
+.footer-contact-item a,
+.footer-copy,
+.footer-bottom-links a {
+  color: rgba(26, 20, 10, 0.58) !important;
+}
+
+.footer-links a:hover,
+.footer-contact-item a:hover,
+.footer-bottom-links a:hover {
+  color: #1a1410 !important;
+}
+
+.footer-social-btn {
+  border-color: rgba(26, 20, 10, 0.12) !important;
+  color: rgba(26, 20, 10, 0.58) !important;
+  background: rgba(255, 255, 255, 0.55) !important;
+}
+
+.footer-grid,
+.footer-bottom {
+  border-color: rgba(26, 20, 10, 0.08) !important;
+}
+
+/* -- 32. Reference blue/light palette pass ------------------------- */
+:root {
+  --wm-bg: #eaf6ff;
+  --wm-bg2: #f5fbff;
+  --wm-bg3: #dff0ff;
+  --wm-card: #ffffff;
+  --wm-panel: rgba(255, 255, 255, 0.98);
+  --wm-accent: #219be6;
+  --wm-accent2: #0f66ad;
+  --wm-yellow: #ffd21f;
+  --wm-text: #101827;
+  --wm-muted: #43536b;
+  --wm-dim: #728299;
+  --dc-nav-black: #ffffff;
+  --dc-nav-panel: rgba(255, 255, 255, 0.98);
+  --dc-nav-red: #219be6;
+  --dc-nav-darkred: #0f66ad;
+  --dc-nav-text: #101827;
+  --dc-nav-muted: #43536b;
+  --dc-nav-dim: #728299;
+  --dc-red: #219be6;
+  --dc-red-dark: #0f66ad;
+  --dc-black: #eaf6ff;
+  --dc-panel: #ffffff;
+  --dc-panel-2: #f5fbff;
+  --dc-text: #101827;
+  --dc-muted: rgba(16, 24, 39, 0.66);
+  --dc-soft: rgba(33, 155, 230, 0.1);
+}
+
+html,
+body,
+main {
+  background: #eaf6ff !important;
+  color: #101827 !important;
+}
+
+#main-header,
+#main-header.dc-site-header,
+#main-header.scrolled,
+#main-header.dc-site-header.scrolled {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid rgba(15, 102, 173, 0.12) !important;
+  box-shadow: 0 8px 28px rgba(15, 102, 173, 0.08) !important;
+  color: #101827 !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+#main-header::before,
+#main-header.dc-site-header::before {
+  background: linear-gradient(90deg, transparent, #219be6 20%, #55bdf6 50%, #219be6 80%, transparent) !important;
+  box-shadow: none !important;
+}
+
+.dc-site-logo-main,
+.logo-main {
+  color: #219be6 !important;
+  text-shadow: none !important;
+}
+
+.dc-site-logo-main span,
+.logo-main span {
+  color: #0f66ad !important;
+  text-shadow: none !important;
+}
+
+.dc-site-logo-sub,
+.logo-sub {
+  color: #6f8198 !important;
+}
+
+.nav-link,
+#main-header.dc-site-header .nav-link,
+.phone-link,
+#main-header.dc-site-header .phone-link,
+.address-btn,
+.mobile-nav-link,
+.mobile-accordion-btn {
+  color: #101827 !important;
+}
+
+.nav-link:hover,
+.nav-link.active,
+#main-header.dc-site-header .nav-link:hover,
+#main-header.dc-site-header .nav-link.active,
+.phone-link:hover,
+#main-header.dc-site-header .phone-link:hover,
+.address-btn:hover,
+.mobile-nav-link:hover,
+.mobile-accordion-btn:hover {
+  color: #219be6 !important;
+}
+
+.phone-icon,
+#main-header.dc-site-header .phone-icon,
+#main-header.dc-site-header .pin-icon,
+.address-btn .pin-icon,
+.mega-icon,
+#main-header.dc-site-header .mega-icon,
+.mobile-accordion-btn .acc-icon,
+.footer-contact-item svg {
+  color: #219be6 !important;
+}
+
+.social-link,
+#main-header.dc-site-header .social-link,
+.address-btn {
+  background: #f5fbff !important;
+  border-color: rgba(33, 155, 230, 0.16) !important;
+  color: #219be6 !important;
+  box-shadow: none !important;
+}
+
+.mega-menu,
+#main-header.dc-site-header .mega-menu,
+.address-menu,
+#main-header.dc-site-header .address-menu,
+#mobile-menu {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(33, 155, 230, 0.14) !important;
+  box-shadow: 0 18px 50px rgba(15, 102, 173, 0.12) !important;
+}
+
+.mega-item,
+#main-header.dc-site-header .mega-item,
+.address-option,
+#main-header.dc-site-header .address-option,
+.mobile-sub-link {
+  color: #43536b !important;
+}
+
+.mega-item:hover,
+#main-header.dc-site-header .mega-item:hover,
+.address-option:hover,
+#main-header.dc-site-header .address-option:hover,
+.mobile-sub-link:hover {
+  background: rgba(33, 155, 230, 0.08) !important;
+  border-color: rgba(33, 155, 230, 0.18) !important;
+  color: #101827 !important;
+}
+
+.hero-section,
+.page-hero {
+  color: #ffffff !important;
+}
+
+.hero-overlay,
+.page-hero-overlay {
+  background:
+    linear-gradient(105deg, rgba(10, 35, 63, 0.88) 0%, rgba(10, 35, 63, 0.68) 40%, rgba(10, 35, 63, 0.22) 70%, rgba(10, 35, 63, 0.08) 100%),
+    linear-gradient(180deg, rgba(6, 24, 45, 0.5) 0%, transparent 45%, rgba(6, 24, 45, 0.72) 100%) !important;
+}
+
+.hero-title,
+.hero-badge-title,
+.page-hero-title,
+.page-hero h1,
+.hero-section h1,
+.hero-section h2,
+.hero-section h3 {
+  color: #ffffff !important;
+}
+
+.hero-sub,
+.hero-badge-sub,
+.page-hero-sub,
+.page-hero p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.hero-title .accent,
+.hero-title .red,
+.page-hero .accent,
+.page-hero .red {
+  color: #55bdf6 !important;
+  text-shadow: 0 0 32px rgba(85, 189, 246, 0.3) !important;
+}
+
+.hero-eyebrow,
+.hero-badge {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+.cta-button,
+.svc-cta-btn-primary,
+.callcta-btn-call,
+.price-cta-btn.red-btn {
+  background: linear-gradient(135deg, #ffd21f 0%, #f4b400 100%) !important;
+  color: #101827 !important;
+  box-shadow: 0 10px 26px rgba(244, 180, 0, 0.28) !important;
+}
+
+.cta-button:hover,
+.svc-cta-btn-primary:hover,
+.callcta-btn-call:hover,
+.price-cta-btn.red-btn:hover {
+  background: linear-gradient(135deg, #ffe16a 0%, #ffd21f 100%) !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 34px rgba(244, 180, 0, 0.34) !important;
+}
+
+body > section:not(.hero-section):not(.page-hero),
+main > section:not(.hero-section):not(.page-hero),
+.services-section,
+.adv-section,
+.rev-section,
+.contacts-section,
+.gallery-section,
+.prices-section,
+.process-section,
+.callcta-section,
+.symptoms-section,
+.included-section,
+.breadcrumb {
+  background: #eaf6ff !important;
+  color: #101827 !important;
+}
+
+.services-section:nth-of-type(even),
+.adv-section,
+.callcta-section,
+.included-section,
+.breadcrumb {
+  background: #f5fbff !important;
+}
+
+.services-section::before,
+.services-section::after,
+.adv-section::before,
+.adv-section::after,
+.rev-section::before,
+.rev-section::after,
+.contacts-section::before,
+.contacts-section::after,
+.gallery-section::before,
+.gallery-section::after {
+  background: none !important;
+  opacity: 0 !important;
+}
+
+.services-title,
+.adv-title,
+.rev-title,
+.contacts-title,
+.gallery-title,
+.prices-title,
+.section-title,
+.section-title-main,
+.callcta-title,
+.services-cta-title,
+.process-card-title,
+.price-card-name,
+.inc-title,
+.rev-card-name,
+.adv-card-title,
+.contacts-info-value,
+.engine-menu-title,
+.engine-menu-code,
+.text-white {
+  color: #101827 !important;
+}
+
+.services-title .red,
+.adv-title .red,
+.rev-title .red,
+.contacts-title .red,
+.gallery-title .red,
+.prices-title .red,
+.section-title .red,
+.section-title-main .red,
+.callcta-title .red,
+h1 .red,
+h2 .red,
+h3 .red,
+.text-dc-red,
+[class*="text-dc-red"] {
+  color: #219be6 !important;
+}
+
+.services-sub,
+.adv-sub,
+.rev-sub,
+.contacts-sub,
+.gallery-sub,
+.section-sub,
+.section-sub-main,
+.adv-card-desc,
+.rev-card-text,
+.contacts-info-sub,
+.price-card-desc,
+.process-card-text,
+.inc-sub,
+.engine-menu-copy,
+.engine-menu-brand,
+.engine-menu-note,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500 {
+  color: rgba(16, 24, 39, 0.66) !important;
+}
+
+.svc-card {
+  background: linear-gradient(180deg, #239eea 0%, #155f9d 100%) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 14px 34px rgba(15, 102, 173, 0.18) !important;
+  color: #ffffff !important;
+}
+
+.svc-card:hover {
+  border-color: rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 18px 44px rgba(15, 102, 173, 0.26) !important;
+}
+
+.svc-card-title,
+.svc-card-desc,
+.svc-card-link {
+  color: #ffffff !important;
+}
+
+.svc-card-desc {
+  opacity: 0.84 !important;
+}
+
+.svc-card-badge {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.26) !important;
+  color: #ffffff !important;
+}
+
+.svc-card-number {
+  color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.svc-card-visual {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)) !important;
+}
+
+.adv-card,
+.rev-card,
+.contacts-info-card,
+.contacts-form-wrap,
+.price-card,
+.process-card,
+.services-cta-inner,
+.engine-menu-panel,
+.engine-menu-link,
+.mobile-engine-dropdown,
+.mobile-engine-dropdown summary,
+.mobile-engine-dropdown .engine-menu-link {
+  background: #ffffff !important;
+  border-color: rgba(15, 102, 173, 0.1) !important;
+  box-shadow: 0 12px 34px rgba(15, 102, 173, 0.08) !important;
+  color: #101827 !important;
+}
+
+.adv-card:hover,
+.rev-card:hover,
+.contacts-info-card:hover,
+.price-card:hover,
+.process-card:hover,
+.engine-menu-link:hover {
+  border-color: rgba(33, 155, 230, 0.34) !important;
+  box-shadow: 0 16px 46px rgba(33, 155, 230, 0.15) !important;
+}
+
+.adv-card-icon-wrap,
+.contacts-icon-wrap,
+.price-card-icon,
+.inc-icon,
+.hero-badge-icon {
+  background: rgba(33, 155, 230, 0.1) !important;
+  border-color: rgba(33, 155, 230, 0.2) !important;
+  color: #219be6 !important;
+}
+
+.contacts-info-label,
+.contacts-eyebrow,
+.services-eyebrow,
+.adv-eyebrow,
+.rev-eyebrow,
+.gallery-eyebrow,
+.prices-eyebrow,
+.callcta-eyebrow,
+.pl-val.accent,
+.contacts-info-value a,
+.engine-menu-cta,
+.price-cta-btn,
+.callcta-phone {
+  color: #219be6 !important;
+}
+
+.bg-dc-dark,
+[class*="bg-dc-dark"],
+.bg-dc-black,
+[class*="bg-dc-black"],
+.bg-dc-darkgray,
+[class*="bg-dc-darkgray"] {
+  background-color: #eaf6ff !important;
+}
+
+.border-dc-red,
+[class*="border-dc-red"] {
+  border-color: rgba(33, 155, 230, 0.3) !important;
+}
+
+.bg-dc-red,
+[class*="bg-dc-red"] {
+  background-color: #219be6 !important;
+}
+
+.shadow-red-glow,
+[class*="shadow-red-glow"] {
+  box-shadow: 0 0 20px rgba(33, 155, 230, 0.25), 0 0 60px rgba(33, 155, 230, 0.12) !important;
+}
+
+.contacts-map,
+.gallery-item,
+.gallery-card,
+.process-img-inner {
+  background: #ffffff !important;
+  border-color: rgba(15, 102, 173, 0.1) !important;
+}
+
+.adv-banner {
+  background: linear-gradient(135deg, #219be6 0%, #0f66ad 100%) !important;
+  color: #ffffff !important;
+}
+
+.adv-banner-title,
+.adv-banner-sub,
+.adv-banner-label {
+  color: #ffffff !important;
+}
+
+.contacts-form-wrap input,
+.contacts-form-wrap textarea,
+.contacts-form-wrap select,
+.form-input,
+.form-textarea {
+  background: #f5fbff !important;
+  border-color: rgba(15, 102, 173, 0.18) !important;
+  color: #101827 !important;
+}
+
+.site-footer {
+  background: #ffffff !important;
+  border-top-color: rgba(15, 102, 173, 0.1) !important;
+  color: #101827 !important;
+}
+
+.footer-desc,
+.footer-col-title,
+.footer-links a,
+.footer-contact-item span,
+.footer-contact-item a,
+.footer-copy,
+.footer-bottom-links a {
+  color: rgba(16, 24, 39, 0.62) !important;
+}
+
+.footer-links a:hover,
+.footer-contact-item a:hover,
+.footer-bottom-links a:hover {
+  color: #219be6 !important;
+}
+
+.footer-social-btn {
+  background: #f5fbff !important;
+  border-color: rgba(33, 155, 230, 0.16) !important;
+  color: #219be6 !important;
+}
+
+.footer-grid,
+.footer-bottom {
+  border-color: rgba(15, 102, 173, 0.1) !important;
+}
+
+@media (max-width: 767px) {
+  #main-header,
+  #main-header.dc-site-header,
+  #main-header.scrolled,
+  #main-header.dc-site-header.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
+}
+
+/* -- 33. Remove remaining red accents ----------------------------- */
+.services-scan-line,
+.adv-stat-bar,
+.process-scan,
+.prices-scan,
+.red-divider,
+#main-header.dc-site-header .red-divider {
+  background: linear-gradient(90deg, transparent 0%, #219be6 22%, #55bdf6 50%, #219be6 78%, transparent 100%) !important;
+  box-shadow: 0 0 18px rgba(33, 155, 230, 0.28) !important;
+}
+
+.adv-stat-value span,
+.services-stat span,
+.stat-value span,
+.contacts-info-value a:hover,
+.price-cta-btn:hover,
+.footer-social-btn:hover,
+.callcta-phone:hover {
+  color: #219be6 !important;
+}
+
+.adv-btn-white,
+.rev-write-link,
+.form-submit,
+.price-cta-btn.red-btn,
+.callcta-btn-call,
+.svc-cta-btn-primary {
+  background: linear-gradient(135deg, #ffd21f 0%, #f4b400 100%) !important;
+  border-color: transparent !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 30px rgba(244, 180, 0, 0.28) !important;
+}
+
+.adv-btn-white:hover,
+.rev-write-link:hover,
+.form-submit:hover,
+.price-cta-btn.red-btn:hover,
+.callcta-btn-call:hover,
+.svc-cta-btn-primary:hover {
+  background: linear-gradient(135deg, #ffe16a 0%, #ffd21f 100%) !important;
+  color: #101827 !important;
+  box-shadow: 0 16px 38px rgba(244, 180, 0, 0.34) !important;
+}
+
+.adv-btn-outline,
+.svc-cta-btn-secondary,
+.price-cta-btn,
+.callcta-btn-wa {
+  background: #ffffff !important;
+  border-color: rgba(33, 155, 230, 0.22) !important;
+  color: #219be6 !important;
+}
+
+.adv-btn-outline:hover,
+.svc-cta-btn-secondary:hover,
+.price-cta-btn:hover,
+.callcta-btn-wa:hover {
+  background: rgba(33, 155, 230, 0.08) !important;
+  border-color: rgba(33, 155, 230, 0.36) !important;
+  color: #0f66ad !important;
+}
+
+.rev-avatar {
+  background: linear-gradient(135deg, #219be6 0%, #0f66ad 100%) !important;
+  color: #ffffff !important;
+}
+
+.rev-card-tag {
+  background: rgba(33, 155, 230, 0.1) !important;
+  border-color: rgba(33, 155, 230, 0.2) !important;
+  color: #0f66ad !important;
+}
+
+.services-section span:not(.dc-site-logo-main span),
+.adv-section span:not(.dc-site-logo-main span),
+.rev-section span:not(.dc-site-logo-main span),
+.contacts-section span:not(.dc-site-logo-main span),
+.prices-section span:not(.dc-site-logo-main span) {
+  border-color: rgba(33, 155, 230, 0.18) !important;
+}
+
+.adv-stats span,
+.adv-stat span,
+.adv-stat-value span,
+.stats-grid span,
+.stat-card span,
+.stat-value span {
+  color: #219be6 !important;
+}
+
+.services-subtitle,
+.services-lead,
+.services-header p,
+.adv-header p,
+.rev-header p,
+.gallery-header p,
+.contacts-header p,
+.prices-header p,
+.section-header p {
+  color: rgba(16, 24, 39, 0.62) !important;
+  opacity: 1 !important;
+}
+
+.services-header,
+.adv-header,
+.rev-header,
+.gallery-header,
+.contacts-header,
+.prices-header,
+.section-header {
+  color: #101827 !important;
+}
+
+/* -- 34. Engine hero remains a dark photo section ----------------- */
+.engine-hero {
+  background-color: #06182d !important;
+  color: #ffffff !important;
+}
+
+.engine-hero::before {
+  background:
+    linear-gradient(105deg, rgba(6, 24, 45, 0.92) 0%, rgba(6, 24, 45, 0.68) 46%, rgba(6, 24, 45, 0.18) 100%),
+    radial-gradient(circle at 78% 28%, rgba(33, 155, 230, 0.22), transparent 32%) !important;
+}
+
+.engine-hero::after {
+  background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px) !important;
+  opacity: 0.55 !important;
+}
+
+.engine-hero .engine-h1,
+.engine-hero .engine-h1:not(span),
+.engine-hero h1,
+.engine-hero h2,
+.engine-hero h3 {
+  color: #ffffff !important;
+}
+
+.engine-hero .engine-h1 span {
+  color: #55bdf6 !important;
+}
+
+.engine-hero .engine-lead,
+.engine-hero p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.engine-hero .engine-kicker {
+  background: rgba(33, 155, 230, 0.14) !important;
+  border-color: rgba(85, 189, 246, 0.38) !important;
+  color: #dff4ff !important;
+}
+
+.engine-hero .engine-kicker::before {
+  background: #55bdf6 !important;
+  box-shadow: 0 0 16px rgba(85, 189, 246, 0.85) !important;
+}
+
+.engine-hero .engine-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+.engine-hero .engine-btn:hover {
+  background: rgba(33, 155, 230, 0.18) !important;
+  border-color: rgba(85, 189, 246, 0.42) !important;
+}
+
+.engine-hero .engine-btn.primary {
+  background: linear-gradient(135deg, #ffd21f 0%, #f4b400 100%) !important;
+  border-color: transparent !important;
+  color: #101827 !important;
+  box-shadow: 0 14px 36px rgba(244, 180, 0, 0.28) !important;
+}
+
+.engine-page .engine-hero {
+  background: #06182d !important;
+  color: #ffffff !important;
+}
+
+body.engine-page > section.engine-hero:not(.page-hero):not(.hero-section) {
+  background: #06182d !important;
+  color: #ffffff !important;
+}
+
+.engine-page .engine-breadcrumb {
+  background: #f5fbff !important;
+  border-top-color: rgba(15, 102, 173, 0.1) !important;
+  border-bottom-color: rgba(15, 102, 173, 0.1) !important;
+  color: rgba(16, 24, 39, 0.6) !important;
+}
+
+.engine-page .engine-breadcrumb a:hover {
+  color: #219be6 !important;
+}
+
+/* -- 35. No black blocks across all pages ------------------------- */
+body,
+main,
+.engine-page,
+.blog-page,
+.contacts-page {
+  background: #eaf6ff !important;
+  color: #101827 !important;
+}
+
+#top::before,
+#top::after,
+.hero-overlay,
+.page-hero-overlay,
+.engine-hero::before,
+.engine-hero::after,
+.process-img::after,
+.adv-banner::before,
+.adv-banner::after {
+  background: linear-gradient(105deg, rgba(33, 155, 230, 0.42) 0%, rgba(85, 189, 246, 0.24) 52%, rgba(234, 246, 255, 0.08) 100%) !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+.hero-section,
+.page-hero {
+  background-color: #eaf6ff !important;
+}
+
+.hero-title,
+.page-hero-title,
+.page-hero h1,
+.hero-section h1 {
+  color: #ffffff !important;
+  text-shadow: 0 3px 22px rgba(15, 102, 173, 0.55) !important;
+}
+
+.hero-sub,
+.page-hero-sub,
+.page-hero p,
+.hero-section p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 2px 16px rgba(15, 102, 173, 0.48) !important;
+}
+
+.article-visual,
+.stat-card,
+.contact-panel,
+.map-card,
+.form-wrap,
+.branch-card,
+.ac-panel,
+.ac-service-card,
+.ac-price,
+.ac-hero-card,
+.lead-form,
+.ac-photo,
+.rev-rating-box,
+.rev-google-link,
+.adv-stats,
+.engine-card,
+.engine-other-card,
+.engine-faq,
+.engine-article-card,
+.engine-cta,
+.engine-footer,
+.sticky-engine-cta,
+.engine-shell > article,
+.engine-section article {
+  background: #ffffff !important;
+  border-color: rgba(33, 155, 230, 0.14) !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 34px rgba(15, 102, 173, 0.08) !important;
+}
+
+.article-visual::before,
+.article-visual::after,
+.engine-card::before,
+.engine-other-card::before,
+.engine-faq::before,
+.engine-article-card::before,
+.engine-cta::before,
+.engine-footer::before,
+.sticky-engine-cta::before {
+  background: linear-gradient(135deg, rgba(33, 155, 230, 0.1), rgba(234, 246, 255, 0.16)) !important;
+  opacity: 1 !important;
+}
+
+.article-visual:hover,
+.stat-card:hover,
+.contact-panel:hover,
+.branch-card:hover,
+.ac-panel:hover,
+.engine-card:hover,
+.engine-other-card:hover,
+.engine-faq:hover,
+.engine-article-card:hover {
+  border-color: rgba(33, 155, 230, 0.34) !important;
+  box-shadow: 0 16px 44px rgba(33, 155, 230, 0.14) !important;
+}
+
+.gallery-item-overlay,
+.gallery-item::after,
+.gallery-card::after {
+  background: linear-gradient(180deg, rgba(33, 155, 230, 0.02) 15%, rgba(15, 102, 173, 0.72) 100%) !important;
+}
+
+.engine-page .engine-hero,
+body.engine-page > section.engine-hero:not(.page-hero):not(.hero-section) {
+  background: linear-gradient(135deg, #eaf6ff 0%, #dff0ff 100%) !important;
+  color: #101827 !important;
+}
+
+.engine-hero .engine-h1,
+.engine-hero .engine-h1:not(span),
+.engine-hero h1,
+.engine-hero h2,
+.engine-hero h3 {
+  color: #101827 !important;
+  text-shadow: none !important;
+}
+
+.engine-hero .engine-h1 span,
+.engine-h1 span,
+.engine-eyebrow,
+.engine-kicker,
+.engine-card-num,
+.engine-menu-cta {
+  color: #219be6 !important;
+}
+
+.engine-hero .engine-lead,
+.engine-hero p,
+.engine-text,
+.engine-card p,
+.engine-faq p,
+.engine-article-card p,
+.engine-cta p,
+.engine-footer,
+.sticky-engine-cta {
+  color: rgba(16, 24, 39, 0.66) !important;
+  text-shadow: none !important;
+}
+
+.engine-hero .engine-kicker {
+  background: rgba(33, 155, 230, 0.1) !important;
+  border-color: rgba(33, 155, 230, 0.24) !important;
+}
+
+.engine-hero .engine-kicker::before {
+  background: #219be6 !important;
+  box-shadow: 0 0 14px rgba(33, 155, 230, 0.55) !important;
+}
+
+.engine-btn,
+.engine-hero .engine-btn,
+.sticky-engine-cta .engine-btn {
+  background: #ffffff !important;
+  border-color: rgba(33, 155, 230, 0.22) !important;
+  color: #219be6 !important;
+  box-shadow: none !important;
+}
+
+.engine-btn:hover,
+.engine-hero .engine-btn:hover,
+.sticky-engine-cta .engine-btn:hover {
+  background: rgba(33, 155, 230, 0.08) !important;
+  border-color: rgba(33, 155, 230, 0.36) !important;
+  color: #0f66ad !important;
+}
+
+.engine-btn.primary,
+.engine-hero .engine-btn.primary,
+.sticky-engine-cta .engine-btn.primary {
+  background: linear-gradient(135deg, #ffd21f 0%, #f4b400 100%) !important;
+  border-color: transparent !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 30px rgba(244, 180, 0, 0.28) !important;
+}
+
+.engine-section,
+.engine-section.alt,
+.engine-breadcrumb,
+.engine-page .engine-breadcrumb {
+  background: #eaf6ff !important;
+  border-color: rgba(33, 155, 230, 0.12) !important;
+  color: #101827 !important;
+}
+
+.engine-section.alt {
+  background: #f5fbff !important;
+}
+
+.blog-page article,
+.blog-page section,
+.contacts-page section,
+.ac-page section {
+  background-color: #eaf6ff !important;
+}
+
+.blog-page .article-card,
+.blog-page .post-card,
+.contacts-page .contact-card,
+.contacts-page .branch-card {
+  background: #ffffff !important;
+  border-color: rgba(33, 155, 230, 0.14) !important;
+  color: #101827 !important;
+}
+
+.article-card,
+.blog-page .article-card,
+.cta-box,
+.blog-page .cta-box {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-color: rgba(33, 155, 230, 0.14) !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 34px rgba(15, 102, 173, 0.08) !important;
+}
+
+.article-card:hover,
+.blog-page .article-card:hover,
+.cta-box:hover,
+.blog-page .cta-box:hover {
+  border-color: rgba(33, 155, 230, 0.34) !important;
+  box-shadow: 0 16px 44px rgba(33, 155, 230, 0.14) !important;
+}
+
+.article-card h2,
+.article-card h3,
+.article-card-title,
+.cta-box h2,
+.cta-box h3 {
+  color: #101827 !important;
+}
+
+.article-card p,
+.article-card-excerpt,
+.cta-box p {
+  color: rgba(16, 24, 39, 0.66) !important;
+}
+
+.stat-card,
+.blog-page .stat-card {
+  background: #ffffff !important;
+  border-color: rgba(33, 155, 230, 0.14) !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 34px rgba(15, 102, 173, 0.08) !important;
+}
+
+.stat-num,
+.blog-page .stat-num {
+  color: #219be6 !important;
+}
+
+.stat-label,
+.blog-page .stat-label {
+  color: rgba(16, 24, 39, 0.66) !important;
+}
+
+.article-visual,
+.blog-page .article-visual {
+  background: linear-gradient(180deg, #239eea 0%, #155f9d 100%) !important;
+}
+
+.article-visual::after,
+.blog-page .article-visual::after {
+  background: linear-gradient(180deg, rgba(33, 155, 230, 0.02), rgba(15, 102, 173, 0.5)) !important;
+}
+
+.article-num,
+.blog-page .article-num {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+meta[name="theme-color"] {
+  content: #eaf6ff;
+}
+
+/* -- 36. Final readability pass ---------------------------------- */
+:root {
+  --readable-ink: #101827;
+  --readable-muted: rgba(16, 24, 39, 0.72);
+  --readable-soft: rgba(16, 24, 39, 0.58);
+  --readable-accent: #0a5f9f;
+  --readable-light: #ffffff;
+  --readable-light-muted: rgba(255, 255, 255, 0.88);
+  --readable-hero-shade: rgba(4, 15, 29, 0.9);
+}
+
+.hero-overlay,
+.page-hero-overlay,
+.blog-hero::before,
+.contact-hero::before,
+.ac-hero::before {
+  background:
+    linear-gradient(105deg,
+      rgba(4, 15, 29, 0.96) 0%,
+      rgba(4, 15, 29, 0.82) 42%,
+      rgba(4, 15, 29, 0.54) 68%,
+      rgba(4, 15, 29, 0.36) 100%),
+    linear-gradient(180deg,
+      rgba(4, 15, 29, 0.76) 0%,
+      rgba(4, 15, 29, 0.28) 42%,
+      rgba(4, 15, 29, 0.88) 100%) !important;
+}
+
+#top.blog-hero::before,
+#top.contact-hero::before,
+#top.ac-hero::before,
+body > section#top.blog-hero::before,
+body > section#top.contact-hero::before,
+body > section#top.ac-hero::before {
+  background:
+    linear-gradient(105deg,
+      rgba(4, 15, 29, 0.96) 0%,
+      rgba(4, 15, 29, 0.84) 42%,
+      rgba(4, 15, 29, 0.58) 70%,
+      rgba(4, 15, 29, 0.42) 100%) !important;
+  opacity: 1 !important;
+}
+
+.hero-section,
+.page-hero,
+.blog-hero,
+.contact-hero,
+.ac-hero,
+.adv-banner {
+  background-color: #06182d !important;
+  background-image: linear-gradient(105deg, rgba(4, 15, 29, 0.96), rgba(4, 15, 29, 0.72)) !important;
+  color: var(--readable-light) !important;
+}
+
+body > section#top.blog-hero,
+body > section#top.contact-hero,
+body > section#top.ac-hero,
+main > section#top.blog-hero,
+main > section#top.contact-hero,
+main > section#top.ac-hero {
+  background-color: #06182d !important;
+  background-image: linear-gradient(105deg, rgba(4, 15, 29, 0.96), rgba(4, 15, 29, 0.72)) !important;
+  color: #ffffff !important;
+}
+
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section .text-white,
+.hero-title,
+.hero-badge-title,
+.page-hero h1,
+.page-hero h2,
+.page-hero h3,
+.page-hero .text-white,
+.page-hero-title,
+.blog-hero h1,
+.blog-hero h2,
+.blog-hero h3,
+.contact-hero h1,
+.contact-hero h2,
+.contact-hero h3,
+.ac-hero h1,
+.ac-hero h2,
+.ac-hero h3,
+.adv-banner h2,
+.adv-banner h3 {
+  color: var(--readable-light) !important;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.62) !important;
+}
+
+.hero-section p,
+.hero-section li,
+.hero-section span,
+.hero-sub,
+.hero-badge-sub,
+.page-hero p,
+.page-hero li,
+.page-hero span,
+.page-hero-sub,
+.blog-hero p,
+.contact-hero p,
+.ac-hero p,
+.ac-hero li,
+.adv-banner p,
+.adv-banner span {
+  color: var(--readable-light-muted) !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.58) !important;
+}
+
+.hero-badge,
+.contact-panel,
+.ac-panel,
+.ac-hero-card {
+  background: rgba(4, 15, 29, 0.72) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28) !important;
+}
+
+.hero-eyebrow,
+.blog-hero .hero-kicker,
+.contact-hero .hero-eyebrow,
+.ac-badge {
+  background: rgba(255, 255, 255, 0.13) !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hero-title .red,
+.hero-title .accent,
+.page-hero .red,
+.page-hero .accent,
+.blog-hero .red,
+.contact-hero .red,
+.ac-hero .red,
+.blog-hero .hero-title span,
+.contact-hero .hero-title span,
+.ac-title span {
+  color: #8ed8ff !important;
+}
+
+.services-title,
+.adv-title,
+.rev-title,
+.contacts-title,
+.gallery-title,
+.prices-title,
+.section-title,
+.section-title-main,
+.callcta-title,
+.services-cta-title,
+.article-card h2,
+.article-card h3,
+.article-title,
+.article-body h3,
+.panel-title,
+.form-title,
+.branch-title,
+.quick-value,
+.info-value,
+.form-label,
+.price-card-name,
+.process-card-title,
+.inc-title,
+.ac-service-card h3,
+.ac-price strong,
+.ac-faq summary,
+.engine-card h2,
+.engine-card h3,
+.engine-other-card h3,
+.engine-faq summary,
+.engine-article-card h2,
+.engine-article-card h3,
+.ac-section-title {
+  color: var(--readable-ink) !important;
+  text-shadow: none !important;
+}
+
+.services-sub,
+.adv-sub,
+.rev-sub,
+.contacts-sub,
+.gallery-sub,
+.section-sub,
+.section-sub-main,
+.article-lead,
+.article-body p,
+.article-body li,
+.article-note,
+.quick-sub,
+.info-sub,
+.form-subtitle,
+.form-note,
+.branch-text,
+.price-card-desc,
+.process-card-text,
+.inc-sub,
+.svc-card-desc,
+.ac-service-card p,
+.ac-section-copy,
+.ac-card-list,
+.ac-faq p,
+.engine-text,
+.engine-card p,
+.engine-faq p,
+.engine-article-card p,
+.engine-cta p {
+  color: var(--readable-muted) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+.quick-label,
+.info-label,
+.article-time,
+.price-badge,
+.ac-card-label,
+.ac-price small {
+  color: var(--readable-soft) !important;
+  opacity: 1 !important;
+}
+
+.red,
+.section-title .red,
+.section-title-main .red,
+.services-title .red,
+.adv-title .red,
+.rev-title .red,
+.contacts-title .red,
+.gallery-title .red,
+.prices-title .red,
+.callcta-title .red,
+h1 .red,
+h2 .red,
+h3 .red,
+.text-dc-red,
+[class*="text-dc-red"],
+.contacts-info-value a,
+.svc-card-link,
+.price-cta-btn,
+.engine-menu-cta,
+.engine-h1 span,
+.engine-card-num,
+.stat-num,
+.stat-value span,
+.services-stat span,
+.adv-stat-value span,
+.address-btn,
+#main-header.dc-site-header .address-btn,
+.footer-social-btn,
+.engine-btn:not(.primary) {
+  color: var(--readable-accent) !important;
+}
+
+.engine-page .engine-hero .engine-h1 span,
+body.engine-page > section.engine-hero .engine-h1 span {
+  color: var(--readable-accent) !important;
+}
+
+.dc-site-logo-sub,
+.logo-sub,
+.breadcrumb a,
+.breadcrumb-inner,
+.footer-desc,
+.footer-links a,
+.footer-contact-item span,
+.footer-contact-item a,
+.footer-copy,
+.footer-bottom-links a {
+  color: rgba(16, 24, 39, 0.68) !important;
+}
+
+.breadcrumb .current {
+  color: #101827 !important;
+}
+
+.contact-panel .panel-title,
+.contact-panel .quick-value,
+.contact-panel .quick-label,
+.contact-panel .quick-sub,
+.ac-panel .ac-card-label,
+.ac-panel .ac-card-list,
+.ac-panel strong,
+.ac-panel h2,
+.ac-panel h3,
+.ac-panel p {
+  color: var(--readable-light-muted) !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.48) !important;
+}
+
+.contact-panel .panel-title,
+.contact-panel .quick-value,
+.ac-panel strong,
+.ac-panel h2,
+.ac-panel h3 {
+  color: #ffffff !important;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.lead-form input,
+.lead-form select,
+.lead-form textarea,
+.contacts-form-wrap input,
+.contacts-form-wrap textarea,
+.contacts-form-wrap select {
+  background: #ffffff !important;
+  border-color: rgba(15, 102, 173, 0.24) !important;
+  color: var(--readable-ink) !important;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder,
+.lead-form input::placeholder,
+.lead-form textarea::placeholder,
+.contacts-form-wrap input::placeholder,
+.contacts-form-wrap textarea::placeholder {
+  color: rgba(16, 24, 39, 0.48) !important;
+}
+
+.gallery-item::after,
+.gallery-card::after,
+.article-visual::after,
+.process-img::after,
+.ac-photo {
+  background: linear-gradient(180deg, rgba(4, 15, 29, 0.08) 20%, rgba(4, 15, 29, 0.82) 100%) !important;
+}
+
+.gallery-item-title,
+.gallery-item-sub,
+.article-num,
+.process-img-inner strong,
+.process-img-inner p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6) !important;
+}
+
+.secondary-btn,
+.ac-btn.secondary {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.52) !important;
+}
+
+.cta-button,
+.ac-btn.primary,
+.svc-cta-btn-primary,
+.callcta-btn-call,
+.price-cta-btn.red-btn,
+.engine-btn.primary {
+  background-color: #ffd21f !important;
+  color: #101827 !important;
+  text-shadow: none !important;
+}
+
+/* -- 37. Service cards readability ------------------------------- */
+.svc-card {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.22), transparent 34%),
+    linear-gradient(160deg, #168ed8 0%, #0b5f9d 58%, #084574 100%) !important;
+  border-color: rgba(255, 255, 255, 0.42) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 42px rgba(11, 95, 157, 0.24) !important;
+}
+
+.svc-card-body {
+  background: linear-gradient(180deg, rgba(4, 15, 29, 0.04), rgba(4, 15, 29, 0.24)) !important;
+}
+
+.svc-card-title,
+.svc-card-desc,
+.svc-card-link,
+.svc-card:hover .svc-card-title,
+.svc-card:hover .svc-card-desc,
+.svc-card:hover .svc-card-link {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(4, 15, 29, 0.34) !important;
+}
+
+.svc-card-desc {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 500 !important;
+}
+
+.svc-card-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  min-height: 34px !important;
+  margin-top: 16px !important;
+  padding: 0 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.26) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.13) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+}
+
+.svc-card:hover .svc-card-link {
+  background: rgba(255, 210, 31, 0.95) !important;
+  border-color: rgba(255, 210, 31, 0.95) !important;
+  color: #101827 !important;
+  text-shadow: none !important;
+}
+
+/* -- 38. Hero direct call block ----------------------------------- */
+.hero-contact-card {
+  width: min(620px, 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  margin: 0 0 28px !important;
+  padding: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 18px !important;
+  background: rgba(4, 15, 29, 0.7) !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(14px) !important;
+}
+
+.hero-contact-address {
+  min-width: 0 !important;
+  display: grid !important;
+  gap: 4px !important;
+}
+
+.hero-contact-label {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hero-contact-address strong {
+  color: #ffffff !important;
+  font-size: clamp(1.05rem, 2vw, 1.42rem) !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.58) !important;
+}
+
+.hero-call-now,
+.mobile-call-button {
+  position: relative !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #ffe16a 0%, #ffd21f 48%, #f4b400 100%) !important;
+  border: 0 !important;
+  color: #101827 !important;
+  box-shadow: 0 0 0 1px rgba(255, 210, 31, 0.34), 0 0 28px rgba(255, 210, 31, 0.62), 0 14px 34px rgba(244, 180, 0, 0.32) !important;
+  isolation: isolate !important;
+}
+
+.hero-call-now::after,
+.mobile-call-button::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: -45% !important;
+  z-index: -1 !important;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.7) 50%, transparent 65%) !important;
+  transform: translateX(-70%) !important;
+  animation: callShine 2.8s ease-in-out infinite !important;
+}
+
+@keyframes callShine {
+  0%, 45% { transform: translateX(-70%); }
+  75%, 100% { transform: translateX(70%); }
+}
+
+.hero-call-now {
+  min-height: 52px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  flex: 0 0 auto !important;
+  padding: 0 22px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+.mobile-call-button {
+  min-height: 62px !important;
+  display: grid !important;
+  place-items: center !important;
+  gap: 2px !important;
+  text-decoration: none !important;
+}
+
+.mobile-call-button span {
+  color: #101827 !important;
+  font-size: 0.9rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+.mobile-call-button small {
+  color: rgba(16, 24, 39, 0.7) !important;
+  font-size: 0.72rem !important;
+  font-weight: 850 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+@media (max-width: 767px) {
+  .hero-contact-card {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    margin-bottom: 22px !important;
+    padding: 13px !important;
+  }
+
+  .hero-call-now {
+    width: 100% !important;
+  }
+
+  .mobile-cta-fixed {
+    display: flex !important;
+    justify-content: center !important;
+    bottom: calc(14px + env(safe-area-inset-bottom)) !important;
+    left: 50% !important;
+    width: calc(100vw - 24px) !important;
+    max-width: 390px !important;
+    z-index: 1200 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1179px) {
+  .mobile-cta-fixed {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-overlay,
+  .page-hero-overlay,
+  .blog-hero::before,
+  .contact-hero::before,
+  .ac-hero::before {
+    background:
+      linear-gradient(180deg,
+        rgba(4, 15, 29, 0.97) 0%,
+        rgba(4, 15, 29, 0.88) 48%,
+        rgba(4, 15, 29, 0.76) 100%) !important;
+  }
+
+  .hero-title,
+  .page-hero h1,
+  .blog-hero h1,
+  .contact-hero h1,
+  .ac-hero h1 {
+    line-height: 0.98 !important;
+  }
+}
+
+/* -- 39. Two service centers section ------------------------------ */
+.service-locations-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin-top: 34px !important;
+}
+
+.adv-section#advantages {
+  scroll-margin-top: 104px !important;
+  padding-top: 150px !important;
+}
+
+.service-location-card {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 330px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: clamp(20px, 2.1vw, 28px) !important;
+  border: 1px solid rgba(15, 102, 173, 0.14) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(33, 155, 230, 0.18), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f5fbff 100%) !important;
+  box-shadow: 0 20px 54px rgba(15, 102, 173, 0.1) !important;
+  color: #101827 !important;
+}
+
+.service-location-card::after {
+  content: '' !important;
+  position: absolute !important;
+  right: -80px !important;
+  bottom: -90px !important;
+  width: 230px !important;
+  height: 230px !important;
+  border-radius: 999px !important;
+  background: rgba(33, 155, 230, 0.12) !important;
+}
+
+.service-location-card.primary {
+  border-color: rgba(33, 155, 230, 0.28) !important;
+  box-shadow: 0 24px 64px rgba(33, 155, 230, 0.16) !important;
+}
+
+.service-location-top,
+.service-location-card h3,
+.service-location-card p,
+.service-location-meta,
+.service-location-actions {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.service-location-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  margin-bottom: 22px !important;
+}
+
+.service-location-num {
+  font-family: 'Bebas Neue', sans-serif !important;
+  color: rgba(33, 155, 230, 0.24) !important;
+  font-size: clamp(2.7rem, 4vw, 4.2rem) !important;
+  line-height: 0.8 !important;
+}
+
+.service-location-chip {
+  min-height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  background: rgba(33, 155, 230, 0.1) !important;
+  color: #0a5f9f !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+.service-location-card h3 {
+  margin: 0 0 14px !important;
+  color: #101827 !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: clamp(1.75rem, 2.15vw, 2.35rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0.03em !important;
+  max-width: 18ch !important;
+}
+
+.service-location-card p {
+  max-width: 560px !important;
+  margin: 0 0 20px !important;
+  color: rgba(16, 24, 39, 0.68) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.62 !important;
+}
+
+.service-location-meta {
+  display: grid !important;
+  gap: 10px !important;
+  margin: auto 0 20px !important;
+}
+
+.service-location-meta div {
+  display: grid !important;
+  grid-template-columns: 104px 1fr !important;
+  gap: 14px !important;
+  padding: 10px 0 !important;
+  border-top: 1px solid rgba(15, 102, 173, 0.11) !important;
+}
+
+.service-location-meta dt {
+  color: rgba(16, 24, 39, 0.46) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+.service-location-meta dd {
+  margin: 0 !important;
+  color: #101827 !important;
+  font-weight: 900 !important;
+}
+
+.service-location-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.service-location-call,
+.service-location-route {
+  min-height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 767px) {
+  .adv-section#advantages {
+    padding-top: 112px !important;
+  }
+}
+
+.service-location-call {
+  background: linear-gradient(135deg, #ffe16a 0%, #ffd21f 48%, #f4b400 100%) !important;
+  color: #101827 !important;
+  box-shadow: 0 12px 28px rgba(244, 180, 0, 0.24) !important;
+}
+
+.service-location-route {
+  border: 1px solid rgba(33, 155, 230, 0.26) !important;
+  background: #ffffff !important;
+  color: #0a5f9f !important;
+}
+
+.service-locations-note {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  margin-top: 22px !important;
+  padding: 18px 22px !important;
+  border: 1px solid rgba(33, 155, 230, 0.14) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: #101827 !important;
+}
+
+.service-locations-note span {
+  color: #0a5f9f !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.service-locations-note strong {
+  color: rgba(16, 24, 39, 0.72) !important;
+  text-align: right !important;
+}
+
+@media (max-width: 900px) {
+  .service-locations-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-location-card {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-location-meta div {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+
+  .service-location-actions,
+  .service-location-call,
+  .service-location-route {
+    width: 100% !important;
+  }
+
+  .service-locations-note {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .service-locations-note strong {
+    text-align: left !important;
+  }
+}
+
+/* -- 40. Home page usability and mobile service grid --------------- */
+#services.services-section {
+  padding: clamp(46px, 6vw, 78px) 0 clamp(48px, 6vw, 72px) !important;
+  scroll-margin-top: 86px !important;
+}
+
+#services .services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(14px, 2vw, 20px) !important;
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(16px, 2.6vw, 28px) !important;
+}
+
+#services .services-cta {
+  margin-top: clamp(24px, 4vw, 44px) !important;
+}
+
+#advantages.adv-section {
+  padding-top: clamp(74px, 8vw, 100px) !important;
+  padding-bottom: clamp(52px, 7vw, 88px) !important;
+}
+
+#contacts.contacts-section,
+#blog.blog-section,
+#stats.stats-section {
+  padding-top: clamp(54px, 7vw, 90px) !important;
+  padding-bottom: clamp(54px, 7vw, 90px) !important;
+}
+
+@media (max-width: 1100px) {
+  #services .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #services.services-section {
+    padding: 34px 0 42px !important;
+  }
+
+  #services .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    padding: 0 12px !important;
+  }
+
+  #services .svc-card {
+    min-width: 0 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 26px rgba(11, 95, 157, 0.18) !important;
+  }
+
+  #services .svc-card-visual {
+    height: 92px !important;
+    padding: 10px !important;
+  }
+
+  #services .svc-card-icon {
+    width: 58px !important;
+    height: 58px !important;
+    object-fit: contain !important;
+  }
+
+  #services .svc-card-number {
+    font-size: 2.05rem !important;
+    top: 10px !important;
+    left: 10px !important;
+  }
+
+  #services .svc-card-badge {
+    top: 10px !important;
+    right: 10px !important;
+    max-width: 72px !important;
+    padding: 4px 7px !important;
+    font-size: 0.54rem !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  #services .svc-card-body {
+    padding: 11px 10px 12px !important;
+  }
+
+  #services .svc-card-title {
+    min-height: 36px !important;
+    margin-bottom: 0 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: 0 !important;
+  }
+
+  #services .svc-card-desc {
+    display: none !important;
+  }
+
+  #services .svc-card-link {
+    width: 100% !important;
+    min-height: 30px !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+    padding: 0 8px !important;
+    font-size: 0.66rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  #services .services-cta {
+    margin-top: 18px !important;
+    padding: 0 12px !important;
+  }
+
+  #services .services-cta-inner {
+    padding: 22px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  #advantages.adv-section {
+    padding-top: 72px !important;
+    padding-bottom: 48px !important;
+  }
+}
