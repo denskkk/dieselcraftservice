@@ -18,12 +18,12 @@
     address1: {
       title: 'Приміська, 1',
       subtitle: 'Основний сервіс DIESEL-CRAFT',
-      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=%D0%9F%D1%80%D0%B8%D0%BC%D1%96%D1%81%D1%8C%D0%BA%D0%B0%201%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D0%B0',
+      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284',
     },
     address2: {
       title: 'Ак. Заболотного, 47',
       subtitle: 'Другий сервіс DIESEL-CRAFT',
-      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D0%BA%D0%B0%20%D0%97%D0%B0%D0%B1%D0%BE%D0%BB%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE%2047%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D0%B0',
+      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.570906858920544%2C30.81617477676993',
     },
   };
 
@@ -182,9 +182,10 @@
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'engine-menu-collapse';
-      button.setAttribute('aria-expanded', 'true');
+      panel.classList.add('is-collapsed');
+      button.setAttribute('aria-expanded', 'false');
       button.setAttribute('aria-controls', footer ? `${grid.id} ${footer.id}` : grid.id);
-      button.innerHTML = '<span>Згорнути</span><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 8L6 4L10 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      button.innerHTML = '<span>Розгорнути</span><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 8L6 4L10 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       head.appendChild(button);
 
       button.addEventListener('click', (event) => {
@@ -194,6 +195,44 @@
         button.setAttribute('aria-expanded', String(!collapsed));
         button.querySelector('span').textContent = collapsed ? 'Розгорнути' : 'Згорнути';
       });
+    });
+  };
+
+  const getPartnersHref = (nav) => {
+    const contactsLink = nav.querySelector('a[href$="contacts.html"], a[href*="contacts.html#"]');
+    const contactsHref = contactsLink?.getAttribute('href') || '';
+    if (contactsHref) return contactsHref.replace(/contacts\.html.*/, 'partners.html');
+
+    const path = window.location.pathname.replace(/\\/g, '/');
+    if (path.includes('/poslugy/dvyguny/')) return '../../partners.html';
+    if (path.includes('/poslugy/')) return '../partners.html';
+    return 'partners.html';
+  };
+
+  const initPartnersNavLink = () => {
+    document.querySelectorAll('.desktop-nav').forEach((nav) => {
+      if (nav.querySelector('a[href$="partners.html"]')) return;
+      const contactsLink = Array.from(nav.querySelectorAll('a.nav-link')).find((link) => (link.getAttribute('href') || '').includes('contacts.html'));
+      if (!contactsLink) return;
+
+      const partnersLink = document.createElement('a');
+      partnersLink.href = getPartnersHref(nav);
+      partnersLink.className = 'nav-link dc-partners-nav-link';
+      partnersLink.textContent = 'Партнерам';
+      nav.insertBefore(partnersLink, contactsLink);
+    });
+
+    document.querySelectorAll('#mobile-menu nav, .dc-site-mobile-menu nav').forEach((nav) => {
+      if (nav.querySelector('a[href$="partners.html"]')) return;
+      const contactsLink = Array.from(nav.querySelectorAll('a.mobile-nav-link')).find((link) => (link.getAttribute('href') || '').includes('contacts.html'));
+      if (!contactsLink) return;
+
+      const partnersLink = document.createElement('a');
+      partnersLink.href = getPartnersHref(nav);
+      partnersLink.className = 'mobile-nav-link dc-partners-nav-link';
+      partnersLink.setAttribute('data-close-menu', '');
+      partnersLink.textContent = 'Партнерам';
+      nav.insertBefore(partnersLink, contactsLink);
     });
   };
 
@@ -280,6 +319,7 @@
   };
 
   const init = () => {
+    initPartnersNavLink();
     initMobileFloatingActions();
     const hashAddress = getAddressId(window.location.hash);
     setAddress(hashAddress || readSavedAddress() || 'address1', false);
