@@ -21,8 +21,8 @@
       mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284',
     },
     address2: {
-      title: 'Ак. Заболотного, 47',
-      subtitle: 'Другий сервіс DIESEL-CRAFT',
+      title: 'Ак. Заболотного, 47 (Ліски)',
+      subtitle: 'Другий сервіс DIESEL-CRAFT, Ліски',
       mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.570906858920544%2C30.81617477676993',
     },
   };
