@@ -156,7 +156,7 @@
   top: 100%;
   left: -28px;
   right: -28px;
-  height: 22px;
+  height: 42px;
 }
 
 #main-header.dc-site-header .dropdown-group:hover .chevron,
@@ -166,9 +166,10 @@
 }
 
 #main-header.dc-site-header .mega-menu {
-  position: absolute;
-  top: calc(100% + 10px);
+  position: fixed;
+  top: 72px;
   left: 50%;
+  right: auto;
   width: min(980px, calc(100vw - 28px));
   max-height: calc(100vh - 118px);
   overflow-y: auto;
@@ -182,6 +183,10 @@
   visibility: hidden;
   pointer-events: none;
   transition: 0.3s ease;
+}
+
+#main-header.dc-site-header.scrolled .mega-menu {
+  top: 58px;
 }
 
 #main-header.dc-site-header .dropdown-group:hover .mega-menu,
