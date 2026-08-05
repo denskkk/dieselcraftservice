@@ -4,6 +4,25 @@
    Завантажується ОСТАННІМ — перекриває всі inline стилі через !important
    ═══════════════════════════════════════════════════════════════════ */
 
+/* ── 0. Global overflow guard ─────────────────────────────────────────
+   Мобільне бургер-меню (#mobile-menu) — position:fixed з
+   transform: translateX(100%) у закритому стані. Це виносить його
+   геометричний бокс за межі viewport праворуч, через що деякі браузери
+   (Chromium) враховують його ширину в document.documentElement.scrollWidth
+   і показують фантомний горизонтальний скрол на всіх сторінках/екранах.
+   Ставимо overflow-x: hidden на html/body, щоб гарантовано прибрати
+   будь-який горизонтальний скрол незалежно від подібних off-canvas
+   елементів. ────────────────────────────────────────────────────────── */
+html {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
 /* ── 1. CSS Variables ─────────────────────────────────────────────── */
 :root {
   /* Backgrounds — light theme */
