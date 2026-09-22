@@ -3815,56 +3815,58 @@ main .callcta-btn-call {
 
 @media (max-width: 767px) {
   body {
-    padding-bottom: calc(104px + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom)) !important;
   }
 
   .dc-mobile-actions {
     position: fixed !important;
-    left: 10px !important;
-    right: 10px !important;
-    bottom: calc(10px + env(safe-area-inset-bottom)) !important;
-    z-index: 2147483000 !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: calc(8px + env(safe-area-inset-bottom)) !important;
+    z-index: 900 !important;
     display: block !important;
     pointer-events: none !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.18s ease, transform 0.18s ease !important;
+  }
+
+  .dc-mobile-actions.is-hidden {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(16px) !important;
   }
 
   .dc-mobile-actions-shell {
     position: relative !important;
     display: grid !important;
-    grid-template-columns: 1.12fr 0.88fr !important;
-    gap: 8px !important;
-    padding: 8px !important;
-    border: 1px solid rgba(255, 255, 255, 0.76) !important;
-    border-radius: 24px !important;
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(236, 248, 255, 0.96)) !important;
-    box-shadow: 0 20px 54px rgba(4, 15, 29, 0.28) !important;
-    backdrop-filter: blur(18px) !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    padding: 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(14, 14, 14, 0.96) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.38) !important;
+    backdrop-filter: blur(12px) !important;
     pointer-events: auto !important;
   }
 
   .dc-mobile-actions-shell::before {
-    content: '' !important;
-    position: absolute !important;
-    inset: -1px !important;
-    z-index: -1 !important;
-    border-radius: inherit !important;
-    background: linear-gradient(135deg, rgba(33, 155, 230, 0.24), rgba(255, 210, 31, 0.28)) !important;
-    filter: blur(12px) !important;
-    opacity: 0.55 !important;
+    display: none !important;
   }
 
   .dc-mobile-action-call,
-  .dc-mobile-route-toggle {
+  .dc-mobile-action-message {
     min-width: 0 !important;
-    min-height: 58px !important;
+    min-height: 54px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 9px !important;
+    gap: 8px !important;
     border: 0 !important;
-    border-radius: 18px !important;
-    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    padding: 9px 10px !important;
     font-family: 'Manrope', sans-serif !important;
     text-decoration: none !important;
     cursor: pointer !important;
@@ -3872,26 +3874,27 @@ main .callcta-btn-call {
   }
 
   .dc-mobile-action-call {
-    background: linear-gradient(135deg, #ffe16a 0%, #ffd21f 52%, #f4b400 100%) !important;
-    color: #101827 !important;
-    box-shadow: 0 12px 28px rgba(244, 180, 0, 0.28) !important;
+    background: #c1121f !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
   }
 
-  .dc-mobile-route-toggle {
-    background: linear-gradient(135deg, #075f9a 0%, #219be6 100%) !important;
+  .dc-mobile-action-message {
+    background: #292929 !important;
     color: #ffffff !important;
-    box-shadow: 0 12px 28px rgba(33, 155, 230, 0.28) !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
   }
 
   .dc-mobile-action-call svg,
-  .dc-mobile-route-toggle svg {
+  .dc-mobile-action-message svg {
     width: 20px !important;
     height: 20px !important;
     flex: 0 0 20px !important;
   }
 
   .dc-mobile-action-call span,
-  .dc-mobile-route-toggle span {
+  .dc-mobile-action-message span {
     min-width: 0 !important;
     display: grid !important;
     gap: 1px !important;
@@ -3899,7 +3902,7 @@ main .callcta-btn-call {
   }
 
   .dc-mobile-action-call strong,
-  .dc-mobile-route-toggle strong {
+  .dc-mobile-action-message strong {
     display: block !important;
     font-size: 0.82rem !important;
     line-height: 1.05 !important;
@@ -3908,7 +3911,7 @@ main .callcta-btn-call {
   }
 
   .dc-mobile-action-call small,
-  .dc-mobile-route-toggle small {
+  .dc-mobile-action-message small {
     display: block !important;
     font-size: 0.62rem !important;
     line-height: 1.1 !important;
@@ -4036,7 +4039,124 @@ main .callcta-btn-call {
   }
 }
 
-/* -- 46. Minimal strict home gallery ------------------------------ */
+/* -- 46. Service landing mobile conversion ----------------------- */
+@media (max-width: 767px) {
+  .page-hero {
+    min-height: 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .page-hero-content {
+    padding: 94px 20px 98px !important;
+  }
+
+  .page-hero .hero-eyebrow {
+    margin-bottom: 14px !important;
+    padding: 5px 10px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .page-hero .hero-title {
+    margin-bottom: 14px !important;
+    font-size: clamp(2.35rem, 10.6vw, 3.45rem) !important;
+    line-height: 0.94 !important;
+  }
+
+  .page-hero .hero-divider {
+    margin-bottom: 14px !important;
+  }
+
+  .page-hero .hero-sub {
+    margin-bottom: 20px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .page-hero .hero-badges {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .page-hero .hero-badge {
+    min-width: 0 !important;
+    padding: 8px !important;
+    gap: 7px !important;
+    border-radius: 6px !important;
+  }
+
+  .page-hero .hero-badge:nth-child(3) {
+    display: none !important;
+  }
+
+  .page-hero .hero-badge-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .page-hero .hero-badge-title {
+    font-size: 0.68rem !important;
+  }
+
+  .page-hero .hero-badge-sub {
+    font-size: 0.58rem !important;
+  }
+
+  .page-hero .hero-cta-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .page-hero .cta-button,
+  .page-hero .hero-cta-secondary {
+    min-height: 50px !important;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .page-hero .hero-scroll {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section .hero-cta-row .cta-button,
+  .hero-section .hero-cta-row .hero-cta-secondary {
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* -- 47. Air-conditioning hero image ----------------------------- */
+#top.ac-hero::before,
+body > section#top.ac-hero::before {
+  background:
+    linear-gradient(105deg,
+      rgba(4, 15, 29, 0.96) 0%,
+      rgba(4, 15, 29, 0.84) 42%,
+      rgba(4, 15, 29, 0.58) 70%,
+      rgba(4, 15, 29, 0.42) 100%),
+    url('../img/firstbanner-hero.webp') center / cover no-repeat !important;
+}
+
+@media (max-width: 767px) {
+  #top.ac-hero::before,
+  body > section#top.ac-hero::before {
+    background:
+      linear-gradient(180deg,
+        rgba(4, 15, 29, 0.97) 0%,
+        rgba(4, 15, 29, 0.88) 48%,
+        rgba(4, 15, 29, 0.76) 100%),
+      url('../img/firstbanner-hero.webp') center / cover no-repeat !important;
+  }
+}
+
+/* -- 47. Minimal strict home gallery ------------------------------ */
 #gallery.gallery-section {
   padding: clamp(58px, 7vw, 92px) 0 clamp(64px, 7vw, 96px) !important;
   background: linear-gradient(180deg, #f7fafc 0%, #ffffff 100%) !important;

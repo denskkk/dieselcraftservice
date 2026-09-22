@@ -1,0 +1,13 @@
+{
+  "name": "diesel-craft-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/tailwind-input.css -o ./assets/tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.cjs -i ./assets/tailwind-input.css -o ./assets/tailwind.css --watch",
+    "optimize:images": "node optimize-images.cjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4",
+    "tailwindcss": "3.4.17"
+  }
+}

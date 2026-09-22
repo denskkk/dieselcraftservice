@@ -39,17 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="dvyguny/engine-pages.css" />
-<script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { 'dc-black':'#050505','dc-dark':'#111111','dc-red':'#C1121F','dc-darkred':'#8B0000','dc-gray':'#6b7280','dc-light':'#d1d5db' },
-          fontFamily: { 'bebas':['Bebas Neue','sans-serif'],'manrope':['Manrope','sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="../assets/tailwind.css" />
   <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
@@ -64,20 +54,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      "url":  "https://diesel-craft.com.ua/",
                      "telephone":  "+380933838363",
                      "priceRange":  "$$",
-                     "address":  [
-                                     {
-                                         "@type":  "PostalAddress",
-                                         "streetAddress":  "Prymiska 1",
-                                         "addressLocality":  "Odesa",
-                                         "addressCountry":  "UA"
-                                     },
-                                     {
-                                         "@type":  "PostalAddress",
-                                         "streetAddress":  "Akademika Zabolotnoho 47",
-                                       "addressLocality":  "Lisky",
-                                         "addressCountry":  "UA"
-                                     }
-                                 ]
+                     "address":  {
+                             "@type":  "PostalAddress",
+                             "streetAddress":  "вул. Приміська, 1",
+                             "addressLocality":  "Одеса",
+                             "addressCountry":  "UA"
+                           }
                  },
     "areaServed":  {
                        "@type":  "City",
@@ -557,7 +539,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* ══ CALL CTA ═════════════════════════════════════════════ */
     .callcta-section { position:relative; background:#050505; padding:100px 0; overflow:hidden; }
-    .callcta-section::before { content:''; position:absolute; inset:0; background:url('../img/firstbanner.png') center/cover no-repeat; opacity:0.06; }
+    .callcta-section::before { content:''; position:absolute; inset:0; background:url('../img/firstbanner.webp') center/cover no-repeat; opacity:0.06; }
     .callcta-section::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(139,0,0,0.18) 0%,transparent 50%,rgba(193,18,31,0.06) 100%); }
     .callcta-container { position:relative; max-width:1380px; margin:0 auto; padding:0 32px; z-index:2; text-align:center; }
     .callcta-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:22px; }
@@ -800,7 +782,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero-badges">
           <div class="hero-badge">
             <div class="hero-badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div><div class="hero-badge-title">Гарантія до 12 місяців</div><div class="hero-badge-sub">На всі види робіт</div></div>
+            <div><div class="hero-badge-title">Гарантія до 12 місяців</div><div class="hero-badge-sub">Залежить від виду робіт</div></div>
           </div>
           <div class="hero-badge">
             <div class="hero-badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
@@ -814,7 +796,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero-cta-row">
           <a href="tel:+380933838363" class="cta-button" style="font-size:0.8rem;padding:14px 32px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
-            Подзвонити зараз
+            Зателефонувати: +380 93 383 83 63
           </a>
           <a href="#process" class="hero-cta-secondary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -1086,14 +1068,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="callcta-eyebrow reveal"><span></span> Зв'яжіться з нами</div>
         <h2 class="callcta-title reveal">
           ЗАТЕЛЕФОНУЙТЕ —<br>
-          <span class="red">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</span>
+          <span class="red">ЗАПИС НА ДІАГНОСТИКУ</span>
         </h2>
         <p class="callcta-sub reveal">Назвіть марку авто, двигун і бажаний результат — майстер зорієнтує по Stage, вартості та запише на зручний час.</p>
         <a href="tel:+380933838363" class="callcta-phone reveal">+380 93 383 83 63</a>
         <div class="callcta-actions reveal">
           <a href="tel:+380933838363" class="callcta-btn-call">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
-            Подзвонити зараз
+            Зателефонувати
           </a>
           <a href="viber://chat?number=%2B380933838363" class="callcta-btn-wa">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg>
@@ -1128,7 +1110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="remont-turbin.html">Ремонт турбін</a></li>
             <li><a href="remont-dvyguniv.html">Ремонт двигунів</a></li>
             <li><a href="chip-tuning.html">Chip Tuning</a></li>
-            <li><a href="vydalennya-egr-dpf-adblue.html">Видалення EGR / DPF</a></li>
+            <li><a href="vydalennya-egr-dpf-adblue.html">Діагностика EGR / DPF</a></li>
             <li><a href="diagnostyka.html">Діагностика</a></li>
           </ul>
         </div>

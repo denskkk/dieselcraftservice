@@ -52,10 +52,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://diesel-craft.com.ua/",
       "telephone": "+380933838363",
       "priceRange": "$$",
-      "address": [
-        { "@type": "PostalAddress", "streetAddress": "Prymiska 1", "addressLocality": "Odesa", "addressCountry": "UA" },
-        { "@type": "PostalAddress", "streetAddress": "Akademika Zabolotnoho 47", "addressLocality": "Lisky", "addressCountry": "UA" }
-      ]
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Приміська, 1",
+        "addressLocality": "Одеса",
+        "addressCountry": "UA"
+      }
     },
     "offers": { "@type": "Offer", "priceCurrency": "UAH", "availability": "https://schema.org/InStock" }
   }
@@ -103,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .ac-section-title { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.25rem, 5vw, 4.2rem); line-height: .98; letter-spacing: .045em; text-transform: uppercase; overflow-wrap: break-word; text-wrap: balance; }
     .ac-section-copy { max-width: 720px; color: var(--muted); font-size: 1rem; line-height: 1.75; }
     .ac-hero { position: relative; min-height: 780px; display: grid; align-items: center; padding: 120px 0 86px; overflow: hidden; }
-    .ac-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,5,5,.96) 0%, rgba(5,5,5,.82) 44%, rgba(5,5,5,.25) 100%), url('../img/firstbanner-hero.jpg') center/cover no-repeat; opacity: .92; }
+    .ac-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,5,5,.96) 0%, rgba(5,5,5,.82) 44%, rgba(5,5,5,.25) 100%), url('../img/firstbanner-hero.webp') center/cover no-repeat; opacity: .92; }
     .ac-hero::after { content: ''; position: absolute; inset: auto 0 0; height: 190px; background: linear-gradient(0deg, #050505, transparent); }
     .ac-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, 420px); gap: 42px; align-items: center; }
     .ac-hero-inner > *, .ac-process > *, .ac-lead > * { min-width: 0; }
@@ -182,7 +184,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .ac-title { font-size: clamp(2.15rem, 14vw, 3.45rem); line-height: .96; letter-spacing: .02em; }
       .ac-section-title { font-size: clamp(2rem, 12vw, 3rem); line-height: 1; letter-spacing: .025em; }
       .ac-hero { padding-top: 42px; padding-bottom: 58px; }
-      .ac-hero::before { background: linear-gradient(180deg, rgba(5,5,5,.96) 0%, rgba(5,5,5,.88) 54%, rgba(5,5,5,.52) 100%), url('../img/firstbanner-hero.jpg') center/cover no-repeat; }
+      .ac-hero::before { background: linear-gradient(180deg, rgba(5,5,5,.96) 0%, rgba(5,5,5,.88) 54%, rgba(5,5,5,.52) 100%), url('../img/firstbanner-hero.webp') center/cover no-repeat; }
       .ac-hero-card { padding: 22px; }
       .ac-grid-3, .ac-price-grid, .form-grid, .footer-grid { grid-template-columns: 1fr; }
       .ac-section { padding: 68px 0; }
@@ -288,13 +290,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Обслуговуємо систему кондиціонування перед сезоном і після втрати холоду: перевіряємо герметичність, вакуумуємо контур, заправляємо фреоном і контролюємо температуру на виході.</p>
         <div class="ac-badges" aria-label="Переваги">
           <span class="ac-badge">Одеса + передмістя</span>
-          <span class="ac-badge">Запис у день звернення</span>
+          <span class="ac-badge">Погодження часу візиту</span>
           <span class="ac-badge">Контроль тиску</span>
-          <span class="ac-badge">Заявка в Telegram</span>
+          <span class="ac-badge">Запис у месенджер</span>
         </div>
         <div class="ac-actions">
-          <a href="tel:+380933838363" class="ac-btn primary">Подзвонити</a>
-          <a href="#lead" class="ac-btn secondary">Залишити заявку</a>
+          <a href="tel:+380933838363" class="ac-btn primary">Зателефонувати</a>
+          <a href="#lead" class="ac-btn secondary">Записатися на діагностику</a>
         </div>
       </div>
       <aside class="ac-panel ac-hero-card" aria-label="Контроль температури">

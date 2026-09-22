@@ -39,17 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="poslugy/dvyguny/engine-pages.css" />
-<script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { 'dc-black':'#050505','dc-dark':'#111111','dc-red':'#C1121F','dc-darkred':'#8B0000','dc-gray':'#6b7280','dc-light':'#d1d5db' },
-          fontFamily: { 'bebas':['Bebas Neue','sans-serif'],'manrope':['Manrope','sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="assets/tailwind.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -505,14 +495,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <div class="form-wrap reveal reveal-delay-2">
             <h2 class="form-title">ЗАПИСАТИСЯ НА СЕРВІС</h2>
-            <p class="form-subtitle">Залиште контакти, і майстер передзвонить протягом 30 хвилин у робочий час.</p>
+            <p class="form-subtitle">У робочий час уточнимо симптоми та запропонуємо зручний час візиту.</p>
             <form action="https://wa.me/380933838363" method="GET" data-lead-form data-lead-source="Контакти" novalidate>
-              <div class="form-row"><div class="form-group"><label class="form-label" for="c-name">Ваше ім'я</label><input class="form-input" type="text" id="c-name" name="name" placeholder="Олексій" autocomplete="given-name" required></div><div class="form-group"><label class="form-label" for="c-phone">Телефон</label><input class="form-input" type="tel" id="c-phone" name="phone" placeholder="+380 __ ___ __ __" autocomplete="tel" required></div></div>
-              <div class="form-group"><label class="form-label" for="c-service">Послуга</label><select class="form-select" id="c-service" name="service"><option value="">Оберіть послугу</option><option value="diagnostics">Комп'ютерна діагностика</option><option value="injectors">Ремонт форсунок</option><option value="np">Ремонт насос-форсунок</option><option value="tnvd">Ремонт ТНВД</option><option value="turbo">Ремонт турбіни</option><option value="engine">Ремонт двигуна</option><option value="egr">Видалення EGR / DPF / AdBlue</option><option value="chip">Чіп-тюнінг</option></select></div>
+              <div class="form-row"><div class="form-group"><label class="form-label" for="c-name">Ваше ім'я <span aria-hidden="true">(необов'язково)</span></label><input class="form-input" type="text" id="c-name" name="name" placeholder="Олексій" autocomplete="given-name"></div><div class="form-group"><label class="form-label" for="c-phone">Телефон</label><input class="form-input" type="tel" id="c-phone" name="phone" placeholder="+380 __ ___ __ __" autocomplete="tel" required></div></div>
+              <div class="form-group"><label class="form-label" for="c-service">Послуга</label><select class="form-select" id="c-service" name="service"><option value="">Оберіть послугу</option><option value="diagnostics">Комп'ютерна діагностика</option><option value="injectors">Ремонт форсунок</option><option value="np">Ремонт насос-форсунок</option><option value="tnvd">Ремонт ТНВД</option><option value="turbo">Ремонт турбіни</option><option value="engine">Ремонт двигуна</option><option value="egr">Діагностика EGR / DPF / AdBlue</option><option value="chip">Чіп-тюнінг</option></select></div>
               <div class="form-group"><label class="form-label" for="c-car">Марка та модель авто</label><input class="form-input" type="text" id="c-car" name="car" placeholder="BMW 530d, 2018" autocomplete="off"></div>
               <div class="form-group"><label class="form-label" for="c-msg">Опис проблеми</label><textarea class="form-textarea" id="c-msg" name="message" placeholder="Опишіть симптоми або бажану послугу..."></textarea></div>
-              <button type="submit" class="form-submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Надіслати заявку</button>
-              <p class="form-note">Натискаючи кнопку, ви погоджуєтесь на обробку персональних даних.</p>
+              <button type="submit" class="form-submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Записатися на діагностику</button>
+              <p class="form-note">Надсилаючи форму, ви погоджуєтесь з <a href="privacy.html">політикою конфіденційності</a>.</p>
             </form>
           </div>
         </div>
@@ -533,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand"><a href="index.html" class="footer-logo">DIESEL<span class="dash">-</span>CRAFT</a><p class="footer-desc">Спеціалізований дизельний сервіс в Одесі. Ремонт двигунів, форсунок, турбін та паливних систем з 2013 року. Офіційна гарантія до 12 місяців.</p><div class="footer-socials"><a href="viber://chat?number=%2B380933838363" class="footer-social-btn" aria-label="Viber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a></div></div>
-        <div><p class="footer-col-title">Послуги</p><ul class="footer-links"><li><a href="poslugy/remont-forsunok.html">Ремонт форсунок</a></li><li><a href="poslugy/remont-nasos-forsunok.html">Ремонт насос-форсунок</a></li><li><a href="poslugy/remont-tnvd.html">Ремонт ТНВД</a></li><li><a href="poslugy/remont-turbin.html">Ремонт турбін</a></li><li><a href="poslugy/remont-dvyguniv.html">Ремонт двигунів</a></li><li><a href="poslugy/chip-tuning.html">Chip Tuning</a></li><li><a href="poslugy/vydalennya-egr-dpf-adblue.html">Видалення EGR / DPF</a></li><li><a href="poslugy/diagnostyka.html">Діагностика</a></li></ul></div>
+        <div><p class="footer-col-title">Послуги</p><ul class="footer-links"><li><a href="poslugy/remont-forsunok.html">Ремонт форсунок</a></li><li><a href="poslugy/remont-nasos-forsunok.html">Ремонт насос-форсунок</a></li><li><a href="poslugy/remont-tnvd.html">Ремонт ТНВД</a></li><li><a href="poslugy/remont-turbin.html">Ремонт турбін</a></li><li><a href="poslugy/remont-dvyguniv.html">Ремонт двигунів</a></li><li><a href="poslugy/chip-tuning.html">Chip Tuning</a></li><li><a href="poslugy/vydalennya-egr-dpf-adblue.html">Діагностика EGR / DPF</a></li><li><a href="poslugy/diagnostyka.html">Діагностика</a></li></ul></div>
         <div><p class="footer-col-title">Навігація</p><ul class="footer-links"><li><a href="index.html">Головна</a></li><li><a href="index.html#services">Послуги</a></li><li><a href="index.html#advantages">Переваги</a></li><li><a href="index.html#reviews">Відгуки</a></li><li><a href="blog.html">Блог</a></li><li><a href="index.html#gallery">Галерея</a></li><li><a href="index.html#prices">Ціни</a></li><li><a href="contacts.html">Контакти</a></li></ul></div>
         <div><p class="footer-col-title">Контакти</p><div class="footer-contacts-list"><div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg><span><a href="tel:+380933838363">+380 93 383 83 63</a></span></div><div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>вул. Приміська, 1, Одеса<br>Україна</span></div><div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Пн-Пт: 8:00-18:00<br>Субота: 9:00-15:00</span></div></div></div>
       </div>
@@ -594,43 +584,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
 
-    (function initLeadForms() {
-      const whatsappPhone = '380933838363';
-
-      document.querySelectorAll('form[data-lead-form]').forEach((form) => {
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-
-          const formData = new FormData(form);
-          const phoneField = form.querySelector('[name="phone"]');
-          const phone = String(formData.get('phone') || '').trim();
-
-          if (!phone) {
-            phoneField?.focus();
-            phoneField?.reportValidity();
-            return;
-          }
-
-          const serviceSelect = form.querySelector('[name="service"]');
-          const service = serviceSelect?.value ? serviceSelect.selectedOptions[0].textContent.trim() : '';
-          const leadSource = form.dataset.leadSource || document.title;
-          const leadLines = [
-            'Нова заявка з сайту DIESEL-CRAFT',
-            `Сторінка: ${leadSource}`,
-            `Ім'я: ${String(formData.get('name') || '').trim() || 'не вказано'}`,
-            `Телефон: ${phone}`,
-            service ? `Послуга: ${service}` : '',
-            String(formData.get('car') || '').trim() ? `Авто: ${String(formData.get('car')).trim()}` : '',
-            String(formData.get('message') || '').trim() ? `Проблема: ${String(formData.get('message')).trim()}` : ''
-          ].filter(Boolean);
-
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({ event: 'lead_form_submit', lead_source: leadSource, lead_service: service || 'not_selected' });
-
-          window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(leadLines.join('\n'))}`, '_blank', 'noopener');
-        });
-      });
-    })();
   </script>
   <script src="assets/telegram-leads.js"></script>
   <script src="assets/address-phone.js"></script>
