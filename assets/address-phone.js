@@ -127,14 +127,40 @@
   };
 
   const pushLeadClickEvent = (link, clickData) => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      ...clickData,
-      link_url: link.href || link.getAttribute('href') || '',
-      link_text: link.textContent.trim().replace(/\s+/g, ' ').slice(0, 120),
-      page_path: window.location.pathname,
-      page_title: document.title,
-    });
+    try {
+      window.dataLayer = window.dataLayer || [];
+      const urlParams = new URLSearchParams(window.location.search);
+      const ctaLocation = link.closest('.dc-mobile-actions')
+        ? 'mobile_sticky'
+        : link.closest('#main-header')
+          ? 'header'
+          : link.closest('.hero-section, .page-hero')
+            ? 'hero'
+            : link.closest('.callcta-section, .services-cta, .engine-cta')
+              ? 'section_cta'
+              : 'content';
+      const deviceType = window.matchMedia('(max-width: 767px)').matches
+        ? 'mobile'
+        : window.matchMedia('(max-width: 1024px)').matches
+          ? 'tablet'
+          : 'desktop';
+      window.dataLayer.push({
+        ...clickData,
+        phone_number: clickData.contact_channel === 'phone' ? clickData.contact_value : undefined,
+        cta_location: ctaLocation,
+        device_type: deviceType,
+        landing_page: window.location.pathname,
+        gclid: urlParams.get('gclid') || undefined,
+        utm_source: urlParams.get('utm_source') || undefined,
+        utm_campaign: urlParams.get('utm_campaign') || undefined,
+        link_url: link.href || link.getAttribute('href') || '',
+        link_text: link.textContent.trim().replace(/\s+/g, ' ').slice(0, 120),
+        page_path: window.location.pathname,
+        page_title: document.title,
+      });
+    } catch {
+      // Analytics failures must never interfere with native link behavior.
+    }
   };
 
   const trackLeadClick = (event) => {
@@ -284,7 +310,7 @@
     });
 
     document.addEventListener('click', closeAddressDropdowns);
-    document.addEventListener('click', trackLeadClick, { capture: true });
+    document.addEventListener('click', trackLeadClick, { capture: true, passive: true });
 
     document.querySelectorAll('.address-option').forEach((option) => {
       option.addEventListener('click', () => {
