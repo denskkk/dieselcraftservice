@@ -3,8 +3,6 @@ DC | Search | Паливна апаратура,,diesel craft,Negative Phrase,En
 DC | Search | Паливна апаратура,,дизель крафт,Negative Phrase,Enabled
 DC | Search | Ремонт двигунів,,diesel craft,Negative Phrase,Enabled
 DC | Search | Ремонт двигунів,,дизель крафт,Negative Phrase,Enabled
-DC | Search | Турбіни,,diesel craft,Negative Phrase,Enabled
-DC | Search | Турбіни,,дизель крафт,Negative Phrase,Enabled
 DC | Search | Діагностика та Chip,,diesel craft,Negative Phrase,Enabled
 DC | Search | Діагностика та Chip,,дизель крафт,Negative Phrase,Enabled
 DC | Search | Паливна апаратура,Форсунки,насос форсунок,Negative Phrase,Enabled
@@ -29,10 +27,10 @@ DC | Search | Ремонт двигунів,Ремонт дизельних дв
 DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,4m41,Negative Phrase,Enabled
 DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,1kd,Negative Phrase,Enabled
 DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,2kd,Negative Phrase,Enabled
-DC | Search | Турбіни,Ремонт турбін,картридж,Negative Phrase,Enabled
-DC | Search | Турбіни,Ремонт турбін,геометрі,Negative Phrase,Enabled
-DC | Search | Турбіни,Ремонт турбін,балансув,Negative Phrase,Enabled
-DC | Search | Турбіни,Ремонт турбін,актуатор,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт турбін,картридж,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт турбін,геометрі,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт турбін,балансув,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт турбін,актуатор,Negative Phrase,Enabled
 DC | Search | Діагностика та Chip,Діагностика дизеля,ремонт форсунок,Negative Phrase,Enabled
 DC | Search | Діагностика та Chip,Діагностика дизеля,ремонт тнвд,Negative Phrase,Enabled
 DC | Search | Діагностика та Chip,Діагностика дизеля,ремонт турбіни,Negative Phrase,Enabled

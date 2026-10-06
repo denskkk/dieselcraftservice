@@ -10,17 +10,13 @@ DC | Search | Ремонт двигунів,VAG TDI,11,Enabled
 DC | Search | Ремонт двигунів,Renault Nissan Opel,11,Enabled
 DC | Search | Ремонт двигунів,Mitsubishi 4D56 4M41,10,Enabled
 DC | Search | Ремонт двигунів,Toyota KD,10,Enabled
-DC | Search | Турбіни,Ремонт турбін,16,Enabled
-DC | Search | Турбіни,Картридж та геометрія,14,Enabled
+DC | Search | Ремонт двигунів,Ремонт турбін,16,Enabled
+DC | Search | Ремонт двигунів,Картридж та геометрія,14,Enabled
 DC | Search | Діагностика та Chip,Діагностика дизеля,13,Enabled
 DC | Search | Діагностика та Chip,Chip tuning,12,Enabled
 DC | Search | Діагностика та Chip,Дизельний сервіс загальні,14,Enabled
 DC | Search | Діагностика та Chip,Кондиціонер,8,Enabled
 DC | Search | Бренд,Бренд DIESEL-CRAFT,5,Enabled
-DC | Call Only | Терміновий ремонт,Терміново форсунки,20,Enabled
-DC | Call Only | Терміновий ремонт,Терміново двигун,18,Enabled
-DC | Call Only | Терміновий ремонт,Терміново турбіна,18,Enabled
-DC | Remarketing | Display,Відвідувачі 30 днів,4,Enabled
 DC | Search | Ремонт двигунів,Ремонт ГБЦ,13,Enabled
 DC | Search | Паливна апаратура,Паливна система,15,Enabled
 DC | Search | Діагностика та Chip,Чистка DPF,12,Enabled
