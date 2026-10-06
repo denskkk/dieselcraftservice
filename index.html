@@ -153,7 +153,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Що робити, якщо авто не заводиться і потрібен евакуатор?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Зателефонуйте нам — підкажемо маршрут до нашого сервісу (вул. Приміська, 1) і, за потреби, порадимо перевіреного евакуатора."
+          "text": "Зателефонуйте нам — підкажемо найближчий сервіс (Приміська, 1 або Академіка Заболотного, 47) і маршрут, а за потреби порадимо перевіреного евакуатора."
         }
       },
       {
@@ -3318,6 +3318,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
+          <!-- Дві точки -->
+          <div class="hero-badge">
+            <div class="hero-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="hero-badge-text">
+              <span class="hero-badge-title">2 сервісні точки в Одесі</span>
+              <span class="hero-badge-sub">Приміська, 1 · Ліски</span>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -3558,39 +3571,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="adv-container">
 
         <header class="adv-header reveal">
-          <p class="adv-eyebrow">Сервісний центр</p>
+          <p class="adv-eyebrow">Два сервісні центри</p>
           <h2 id="adv-heading" class="adv-title">
-            Наша<br><span class="red">адреса в Одесі</span>
+            Наші<br><span class="red">адреси в Одесі</span>
           </h2>
-          <p class="adv-subtitle">Робоча точка DIESEL-CRAFT для ремонту дизельних авто. Подзвоніть перед виїздом — підкажемо, чи є місце.</p>
+          <p class="adv-subtitle">Два робочі майданчики DIESEL-CRAFT для ремонту дизельних авто. Подзвоніть перед виїздом — підкажемо, чи є місце саме на вашому напрямку.</p>
         </header>
 
-        <div class="service-locations-grid reveal" style="grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto;">
+        <div class="service-locations-grid reveal">
           <article class="service-location-card primary" id="address1">
             <div class="service-location-top">
               <span class="service-location-num">01</span>
-              <span class="service-location-chip">Основний сервіс</span>
+              <span class="service-location-chip">Приміська</span>
             </div>
             <h3>вул. Приміська, 1</h3>
             <p>Діагностика, ремонт двигунів, форсунок, ТНВД, турбін та паливних систем. Зручна точка для швидкого запису і первинної консультації.</p>
             <dl class="service-location-meta">
               <div><dt>Місто</dt><dd>Одеса</dd></div>
-              <div><dt>Графік</dt><dd>Пн-Пт 09:00-18:00<br>Нд: вихідний</dd></div>
+              <div><dt>Графік</dt><dd>Пн-Пт 08:00-18:00<br>Сб 09:00-15:00</dd></div>
               <div><dt>Перед виїздом</dt><dd>Краще подзвонити</dd></div>
             </dl>
             <div class="service-location-map" aria-label="Карта проїзду до DIESEL-CRAFT на Приміській, 1">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171.8058866945894!2d30.704746292629284!3d46.45079359464247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6332e5f8f4d47%3A0xdc1a3c821dd90c97!2z0JTQuNC30LXQu9GMINGB0LXRgNCy0ZbRgSBEaWVzZWxDcmFmdA!5e0!3m2!1sru!2sua!4v1779948087977!5m2!1sru!2sua" width="600" height="450" title="Карта DIESEL-CRAFT, вул. Приміська, 1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="service-location-actions">
-              <a href="tel:+380933838363" class="service-location-call">Подзвонити</a>
+              <a href="tel:+380933838363" class="service-location-call" data-phone-fixed>Подзвонити: ...83-63</a>
               <a href="https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284" class="service-location-route" target="_blank" rel="noopener noreferrer">Маршрут</a>
+            </div>
+          </article>
+
+          <article class="service-location-card" id="address2">
+            <div class="service-location-top">
+              <span class="service-location-num">02</span>
+              <span class="service-location-chip">Ліски</span>
+            </div>
+            <h3>вул. Академіка Заболотного, 47</h3>
+            <p>Другий сервіс DIESEL-CRAFT на Лісках: діагностика, ремонт паливної апаратури, турбін і дизельних двигунів.</p>
+            <dl class="service-location-meta">
+              <div><dt>Місто</dt><dd>Одеса, Ліски</dd></div>
+              <div><dt>Графік</dt><dd>Пн-Пт 08:00-18:00<br>Сб 09:00-15:00</dd></div>
+              <div><dt>Перед виїздом</dt><dd>Краще подзвонити</dd></div>
+            </dl>
+            <div class="service-location-map" aria-label="Карта проїзду до DIESEL-CRAFT на Академіка Заболотного, 47">
+              <iframe src="https://maps.google.com/maps?q=46.5709032,30.8187497&z=16&output=embed" width="600" height="450" title="Карта DIESEL-CRAFT, вул. Академіка Заболотного, 47" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="service-location-actions">
+              <a href="tel:+380933838373" class="service-location-call" data-phone-fixed>Подзвонити: ...83-73</a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=46.5709032%2C30.8187497" class="service-location-route" target="_blank" rel="noopener noreferrer">Маршрут</a>
             </div>
           </article>
         </div>
 
         <div class="service-locations-note reveal">
           <span>Потрібна консультація?</span>
-          <strong>Подзвоніть — підкажемо найкращий час для візиту.</strong>
+          <strong>Подзвоніть на зручну точку — підкажемо найкращий час для візиту.</strong>
         </div>
 
       </div>
@@ -3863,11 +3897,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               </div>
               <div class="contacts-info-body">
-                <p class="contacts-info-label">Телефон</p>
+                <p class="contacts-info-label">Телефони</p>
                 <p class="contacts-info-value">
-                  <a href="tel:+380933838363" itemprop="telephone">+380 93 383 83 63</a>
+                  <a href="tel:+380933838363" itemprop="telephone" data-phone-fixed>+380 93 383 83 63</a><br>
+                  <a href="tel:+380933838373" data-phone-fixed>+380 93 383 83 73</a>
                 </p>
-                <p class="contacts-info-sub">Пн–Пт 8:00–18:00 · Сб 9:00–15:00</p>
+                <p class="contacts-info-sub">Приміська, 1 · Ак. Заболотного, 47</p>
               </div>
             </div>
 
@@ -3876,9 +3911,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="contacts-info-body">
-                <p class="contacts-info-label">Адреса</p>
-                <p class="contacts-info-value" itemprop="address">вул. Приміська, 1, Одеса</p>
-                <p class="contacts-info-sub">Паркування є</p>
+                <p class="contacts-info-label">Адреси</p>
+                <p class="contacts-info-value" itemprop="address">вул. Приміська, 1<br>вул. Академіка Заболотного, 47</p>
+                <p class="contacts-info-sub">Два сервіси в Одесі · Паркування є</p>
               </div>
             </div>
 
@@ -3893,10 +3928,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
 
-            <div class="contacts-map contacts-map-grid" aria-label="Карта проїзду до DIESEL-CRAFT" style="grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto;">
+            <div class="contacts-map contacts-map-grid" aria-label="Карти проїзду до сервісів DIESEL-CRAFT">
               <article class="contacts-map-card" id="home-map-address1">
                 <div class="contacts-map-head"><div><strong>вул. Приміська, 1</strong></div><a href="https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284" class="contacts-map-route" target="_blank" rel="noopener noreferrer">Маршрут</a></div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171.8058866945894!2d30.704746292629284!3d46.45079359464247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6332e5f8f4d47%3A0xdc1a3c821dd90c97!2z0JTQuNC30LXQu9GMINGB0LXRgNCy0ZbRgSBEaWVzZWxDcmFmdA!5e0!3m2!1sru!2sua!4v1779948087977!5m2!1sru!2sua" width="600" height="450" title="Карта DIESEL-CRAFT, вул. Приміська, 1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </article>
+              <article class="contacts-map-card" id="home-map-address2">
+                <div class="contacts-map-head"><div><strong>вул. Академіка Заболотного, 47</strong></div><a href="https://www.google.com/maps/dir/?api=1&destination=46.5709032%2C30.8187497" class="contacts-map-route" target="_blank" rel="noopener noreferrer">Маршрут</a></div>
+                <iframe src="https://maps.google.com/maps?q=46.5709032,30.8187497&z=16&output=embed" width="600" height="450" title="Карта DIESEL-CRAFT, вул. Академіка Заболотного, 47" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </article>
             </div>
 
@@ -4191,7 +4230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Авто не заводиться — що робити?
               <span class="text-dc-red text-xl leading-none group-open:rotate-45 transition-transform">+</span>
             </summary>
-            <p class="px-5 pb-4 text-dc-light text-sm leading-relaxed">Зателефонуйте нам — підкажемо маршрут до нашого сервісу (вул. Приміська, 1) і, за потреби, порадимо перевіреного евакуатора.</p>
+            <p class="px-5 pb-4 text-dc-light text-sm leading-relaxed">Зателефонуйте нам — підкажемо найближчий сервіс (Приміська, 1 або Академіка Заболотного, 47) і маршрут, а за потреби порадимо перевіреного евакуатора.</p>
           </details>
           <details class="group rounded-xl" style="background:#111111;border:1px solid rgba(255,255,255,0.08);">
             <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-5 py-4 font-manrope font-semibold text-white">

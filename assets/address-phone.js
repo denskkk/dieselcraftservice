@@ -23,7 +23,7 @@
     address2: {
       title: 'Академіка Заболотного, 47',
       subtitle: 'Сервіс DIESEL-CRAFT на Лісках',
-      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D0%BA%D0%B0%20%D0%97%D0%B0%D0%B1%D0%BE%D0%BB%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE%2C%2047%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D0%B0',
+      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.5709032%2C30.8187497',
     },
   };
 
