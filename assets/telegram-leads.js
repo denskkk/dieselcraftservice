@@ -69,6 +69,7 @@
     const formData = new FormData(form);
     const serviceSelect = form.querySelector('[name="service"]');
     const service = serviceSelect?.value ? serviceSelect.selectedOptions[0].textContent.trim() : '';
+    const attribution = typeof window.dieselCraftGetAttribution === 'function' ? window.dieselCraftGetAttribution() : {};
 
     return {
       source: form.dataset.leadSource || document.title,
@@ -80,17 +81,46 @@
       car: String(formData.get('car') || '').trim(),
       message: String(formData.get('message') || '').trim(),
       submitted_at: new Date().toISOString(),
+      ...attribution,
     };
   };
 
+  const addHoneypot = (form) => {
+    if (form.querySelector('[data-lead-trap]')) return;
+    const wrap = document.createElement('div');
+    wrap.setAttribute('aria-hidden', 'true');
+    wrap.style.cssText = 'position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;';
+    const trap = document.createElement('input');
+    trap.type = 'text';
+    trap.name = 'company_website';
+    trap.tabIndex = -1;
+    trap.autocomplete = 'off';
+    trap.setAttribute('data-lead-trap', '');
+    wrap.appendChild(trap);
+    form.appendChild(wrap);
+  };
+
+  document.querySelectorAll('form[data-lead-form]').forEach(addHoneypot);
+
+  const attributionFields = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
   const pushLeadEvent = (event, payload, channel) => {
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event,
+    const base = {
       lead_source: payload.source,
       lead_service: payload.service || 'not_selected',
       lead_channel: channel,
+      landing_page: window.location.pathname,
+      device_type: window.matchMedia('(max-width: 767px)').matches ? 'mobile' : 'desktop',
+    };
+    attributionFields.forEach((key) => {
+      if (payload[key]) base[key] = payload[key];
     });
+    window.dataLayer.push({ event, ...base });
+    // Unified conversion event: use this one (not the two below) as the Google Ads form conversion trigger.
+    if (event === 'lead_form_submit_success' || event === 'lead_form_whatsapp_open') {
+      window.dataLayer.push({ event: 'form_submit', ...base });
+    }
   };
 
   const sendBackupLead = (payload) => {
@@ -163,6 +193,13 @@
 
     event.preventDefault();
     event.stopImmediatePropagation();
+
+    // Bots fill hidden fields; pretend success so they do not retry, and send nothing.
+    if (form.querySelector('[data-lead-trap]')?.value) {
+      form.reset();
+      showFormStatus(form, 'Заявку відправлено. Майстер скоро звʼяжеться з вами.');
+      return;
+    }
 
     const payload = getLeadPayload(form);
     const phoneField = form.querySelector('[name="phone"]');

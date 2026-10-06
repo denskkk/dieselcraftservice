@@ -3,6 +3,50 @@
   window.__dieselCraftAddressPhoneReady = true;
 
   const storageKey = 'dieselCraftSelectedAddress';
+
+  const attributionKey = 'dieselCraftAttribution';
+  const attributionTtlMs = 90 * 24 * 60 * 60 * 1000;
+  const attributionParams = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+  const readAttribution = () => {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(attributionKey) || 'null');
+      if (!saved || Date.now() - saved.captured_at > attributionTtlMs) return {};
+      return saved;
+    } catch {
+      return {};
+    }
+  };
+
+  const captureAttribution = () => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const fresh = {};
+      attributionParams.forEach((key) => {
+        const value = params.get(key);
+        if (value) fresh[key] = value.slice(0, 200);
+      });
+      if (!Object.keys(fresh).length) return;
+      // A new ad click replaces the previous one so conversions are credited to the latest campaign.
+      window.localStorage.setItem(attributionKey, JSON.stringify({
+        ...fresh,
+        landing_page: window.location.pathname,
+        captured_at: Date.now(),
+      }));
+    } catch {
+      // Storage can be unavailable in private mode; links still work without attribution.
+    }
+  };
+
+  captureAttribution();
+  window.dieselCraftGetAttribution = () => {
+    const attribution = readAttribution();
+    const result = {};
+    attributionParams.concat('landing_page').forEach((key) => {
+      if (attribution[key]) result[key] = attribution[key];
+    });
+    return result;
+  };
   const phones = {
     address1: {
       tel: '+380933838363',
@@ -165,7 +209,7 @@
   const pushLeadClickEvent = (link, clickData) => {
     try {
       window.dataLayer = window.dataLayer || [];
-      const urlParams = new URLSearchParams(window.location.search);
+      const attribution = window.dieselCraftGetAttribution();
       const ctaLocation = link.closest('.dc-mobile-actions')
         ? 'mobile_sticky'
         : link.closest('#main-header')
@@ -186,9 +230,16 @@
         cta_location: ctaLocation,
         device_type: deviceType,
         landing_page: window.location.pathname,
-        gclid: urlParams.get('gclid') || undefined,
-        utm_source: urlParams.get('utm_source') || undefined,
-        utm_campaign: urlParams.get('utm_campaign') || undefined,
+        service: (document.querySelector('h1')?.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80) || undefined,
+        gclid: attribution.gclid,
+        gbraid: attribution.gbraid,
+        wbraid: attribution.wbraid,
+        utm_source: attribution.utm_source,
+        utm_medium: attribution.utm_medium,
+        utm_campaign: attribution.utm_campaign,
+        utm_term: attribution.utm_term,
+        utm_content: attribution.utm_content,
+        first_landing_page: attribution.landing_page,
         link_url: link.href || link.getAttribute('href') || '',
         link_text: link.textContent.trim().replace(/\s+/g, ' ').slice(0, 120),
         page_path: window.location.pathname,

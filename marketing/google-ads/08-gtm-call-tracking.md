@@ -16,6 +16,7 @@
 | `lead_form_submit_success` | заявка успішно відправлена | `assets/telegram-leads.js` |
 | `lead_form_whatsapp_open` | заявка пішла через WhatsApp | `assets/telegram-leads.js` |
 | `lead_form_submit_error` | помилка відправки (для контролю) | `assets/telegram-leads.js` |
+| `form_submit` | **єдина подія конверсії форми** (спрацьовує разом з success або whatsapp_open) | `assets/telegram-leads.js` |
 
 Додаткові параметри в `click_phone`: `cta_location` (header / hero / mobile_sticky / section_cta / content),
 `device_type`, `landing_page`, `gclid`, `utm_source`, `utm_campaign`.
@@ -66,8 +67,7 @@
 | Назва тригера | Ім'я події (регулярний вираз вимкнено) |
 |---|---|
 | CE — click_phone | `click_phone` |
-| CE — lead_form_success | `lead_form_submit_success` |
-| CE — lead_form_whatsapp | `lead_form_whatsapp_open` |
+| CE — form_submit | `form_submit` (єдиний тригер для конверсії форми; не додавайте поряд `lead_form_*`, інакше буде дубль) |
 | CE — messenger_click | використати regex: `click_whatsapp\|click_telegram\|click_viber` |
 | CE — click_map | `click_map` |
 
@@ -78,7 +78,7 @@
 | Тег | Conversion ID | Label | Тригер | Value |
 |---|---|---|---|---|
 | Ads — Клік по телефону | AW-XXXXXXXXX | (з дії 1) | CE — click_phone | 300 |
-| Ads — Відправка форми | AW-XXXXXXXXX | (з дії 3) | CE — lead_form_success + CE — lead_form_whatsapp | 250 |
+| Ads — Відправка форми | AW-XXXXXXXXX | (з дії 3) | CE — form_submit | 250 |
 | Ads — Месенджери | AW-XXXXXXXXX | (з дії 4) | CE — messenger_click | 120 |
 | Ads — Маршрут | AW-XXXXXXXXX | (з дії 5) | CE — click_map | 80 |
 
@@ -98,7 +98,7 @@
 1. GTM → **Попередній перегляд** → відкрити `https://diesel-craft.com.ua`.
 2. Клікнути по телефону в шапці, у hero-блоці та на мобільній липкій панелі.
 3. У Tag Assistant має спрацювати подія `click_phone` і тег «Ads — Клік по телефону».
-4. Заповнити та відправити форму → подія `lead_form_submit_success`.
+4. Заповнити та відправити форму → подія `form_submit` (разом з `lead_form_whatsapp_open` або `lead_form_submit_success`).
 5. Google Ads → Конверсії: протягом 3-24 годин статус має змінитись з «Немає останніх конверсій» на «Записується».
 6. **Опублікувати** контейнер GTM (без публікації нічого працювати не буде).
 
