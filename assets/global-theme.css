@@ -1274,6 +1274,50 @@ main {
   color: #101827 !important;
 }
 
+.dc-site-mega-name {
+  display: block !important;
+  color: #101827 !important;
+}
+
+.dc-site-mega-note,
+#main-header.dc-site-header .dc-site-mega-note {
+  display: block !important;
+  color: rgba(16, 24, 39, 0.62) !important;
+}
+
+.dc-site-mega-title {
+  color: #0a5f9f !important;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-engine-dropdown {
+  border-bottom-color: rgba(33, 155, 230, 0.14) !important;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-engine-dropdown summary {
+  color: #101827 !important;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-engine-list {
+  scrollbar-color: rgba(33, 155, 230, 0.6) rgba(16, 24, 39, 0.06) !important;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-engine-list a {
+  border-color: rgba(33, 155, 230, 0.18) !important;
+  background: #f5fbff !important;
+  color: #101827 !important;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-engine-list a span,
+#mobile-menu.dc-site-mobile-menu .mobile-engine-list a small {
+  color: rgba(16, 24, 39, 0.62) !important;
+}
+
+#mobile-menu.dc-site-mobile-menu .mobile-engine-list a:hover {
+  border-color: rgba(33, 155, 230, 0.4) !important;
+  background: rgba(33, 155, 230, 0.12) !important;
+  color: #0a5f9f !important;
+}
+
 .hero-section,
 .page-hero {
   color: #ffffff !important;
