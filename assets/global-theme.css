@@ -857,17 +857,6 @@ h1 .red, h2 .red, h3 .red {
 .text-gray-300, .text-gray-400, .text-gray-500 {
   color: rgba(26, 20, 10, 0.62) !important;
 }
-.text-white {
-  color: #1a1410 !important;
-}
-/* Override text-white only outside hero/header/footer */
-.hero-section .text-white,
-.page-hero .text-white,
-#main-header .text-white,
-.site-footer .text-white,
-#mobile-menu .text-white {
-  color: #ffffff !important;
-}
 
 /* Theme color for meta content="..." */
 meta[name="theme-color"] {
@@ -1403,8 +1392,7 @@ main > section:not(.hero-section):not(.page-hero),
 .adv-card-title,
 .contacts-info-value,
 .engine-menu-title,
-.engine-menu-code,
-.text-white {
+.engine-menu-code {
   color: #101827 !important;
 }
 

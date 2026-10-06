@@ -661,7 +661,7 @@ body.engine-page {
   padding-top: 90px;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1850px) {
   #main-header.dc-site-header .desktop-extra {
     display: none !important;
   }
