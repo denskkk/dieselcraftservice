@@ -8,6 +8,10 @@
       tel: '+380933838363',
       label: '+380 93 383 83 63',
     },
+    address2: {
+      tel: '+380933838373',
+      label: '+380 93 383 83 73',
+    },
   };
 
   const addresses = {
@@ -15,6 +19,11 @@
       title: 'Приміська, 1',
       subtitle: 'Основний сервіс DIESEL-CRAFT',
       mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284',
+    },
+    address2: {
+      title: 'Академіка Заболотного, 47',
+      subtitle: 'Сервіс DIESEL-CRAFT на Лісках',
+      mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D0%BA%D0%B0%20%D0%97%D0%B0%D0%B1%D0%BE%D0%BB%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE%2C%2047%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D0%B0',
     },
   };
 
@@ -46,12 +55,39 @@
     }
   };
 
+  const phonePattern = /\+?\s*380[\d\s()\u2011-]{7,}/;
+
+  const replacePhoneText = (element, label) => {
+    element.childNodes.forEach((node) => {
+      if (node.nodeType === 3) {
+        if (phonePattern.test(node.textContent)) {
+          node.textContent = node.textContent.replace(phonePattern, label);
+        }
+      } else if (node.nodeType === 1) {
+        replacePhoneText(node, label);
+      }
+    });
+  };
+
   const syncPhoneLink = (link, phone) => {
+    if (link.hasAttribute('data-phone-fixed')) return;
     link.setAttribute('href', `tel:${phone.tel}`);
+    replacePhoneText(link, phone.label);
     if (link.classList.contains('dc-mobile-action-call')) {
       const label = link.querySelector('small');
       if (label) label.textContent = phone.label;
     }
+  };
+
+  const syncAddressTargets = (addressId) => {
+    const address = addresses[addressId];
+    if (!address) return;
+    document.querySelectorAll('[data-address-label]').forEach((node) => {
+      node.textContent = address.title;
+    });
+    document.querySelectorAll('[data-address-map]').forEach((node) => {
+      node.setAttribute('href', address.mapUrl);
+    });
   };
 
   const syncAddressOptions = (addressId) => {
@@ -175,6 +211,7 @@
     const selectedAddress = phones[addressId] ? addressId : 'address1';
     const phone = phones[selectedAddress];
     document.querySelectorAll('a[href^="tel:"]').forEach((link) => syncPhoneLink(link, phone));
+    syncAddressTargets(selectedAddress);
     syncAddressOptions(selectedAddress);
     if (persist) saveAddress(selectedAddress);
   };
@@ -313,11 +350,13 @@
     document.addEventListener('click', trackLeadClick, { capture: true, passive: true });
 
     document.querySelectorAll('.address-option').forEach((option) => {
-      option.addEventListener('click', () => {
+      option.addEventListener('click', (event) => {
         const addressId = getAddressId(option.getAttribute('href'));
         if (addressId) {
+          event.preventDefault();
           setAddress(addressId);
           closeAddressDropdowns();
+          document.getElementById(addressId)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }, { capture: true });
     });

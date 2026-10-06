@@ -1,0 +1,9 @@
+﻿Campaign,Campaign Type,Campaign Daily Budget,Budget Type,Bid Strategy Type,Campaign Status,Networks,Languages
+DC | Search | Паливна апаратура,Search,380,Daily,Manual CPC,Enabled,Google search,uk;ru
+DC | Search | Ремонт двигунів,Search,250,Daily,Manual CPC,Enabled,Google search,uk;ru
+DC | Search | Турбіни,Search,170,Daily,Manual CPC,Enabled,Google search,uk;ru
+DC | Search | Діагностика та Chip,Search,190,Daily,Manual CPC,Enabled,Google search,uk;ru
+DC | Search | Бренд,Search,40,Daily,Manual CPC,Enabled,Google search,uk;ru
+DC | Call Only | Терміновий ремонт,Search,150,Daily,Manual CPC,Enabled,Google search,uk;ru
+DC | PMax | Дизель сервіс Одеса,Performance Max,120,Daily,Maximize conversions,Enabled,All,uk;ru
+DC | Remarketing | Display,Display,40,Daily,Manual CPC,Enabled,Display Network,uk;ru

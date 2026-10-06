@@ -1,0 +1,51 @@
+﻿Campaign,Ad Group,Keyword,Criterion Type,Status
+DC | Search | Паливна апаратура,,diesel craft,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,,дизель крафт,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,,diesel craft,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,,дизель крафт,Negative Phrase,Enabled
+DC | Search | Турбіни,,diesel craft,Negative Phrase,Enabled
+DC | Search | Турбіни,,дизель крафт,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,,diesel craft,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,,дизель крафт,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,Форсунки,насос форсунок,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,Форсунки,насос-форсунок,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,Форсунки,тнвд,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,ТНВД,насос форсунок,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,ТНВД,насос-форсунок,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,Common Rail та паливна система,ремонт форсунок,Negative Phrase,Enabled
+DC | Search | Паливна апаратура,Common Rail та паливна система,ремонт тнвд,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,om651,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,om642,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,om646,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,m57,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,n57,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,b57,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,1.9 tdi,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,2.0 tdi,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,k9k,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,m9r,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,g9u,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,4d56,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,4m41,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,1kd,Negative Phrase,Enabled
+DC | Search | Ремонт двигунів,Ремонт дизельних двигунів,2kd,Negative Phrase,Enabled
+DC | Search | Турбіни,Ремонт турбін,картридж,Negative Phrase,Enabled
+DC | Search | Турбіни,Ремонт турбін,геометрі,Negative Phrase,Enabled
+DC | Search | Турбіни,Ремонт турбін,балансув,Negative Phrase,Enabled
+DC | Search | Турбіни,Ремонт турбін,актуатор,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Діагностика дизеля,ремонт форсунок,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Діагностика дизеля,ремонт тнвд,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Діагностика дизеля,ремонт турбіни,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Дизельний сервіс загальні,ремонт форсунок,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Дизельний сервіс загальні,ремонт тнвд,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Дизельний сервіс загальні,ремонт турбіни,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Дизельний сервіс загальні,чип тюнінг,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Дизельний сервіс загальні,чип тюнинг,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Chip tuning,ремонт двигуна,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Кондиціонер,дизель,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Кондиціонер,побутовий,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Кондиціонер,домашній,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Чистка DPF,egr,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Діагностика EGR,dpf,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,Діагностика EGR,сажев,Negative Phrase,Enabled
+DC | Search | Діагностика та Chip,ТО дизеля,ремонт двигуна,Negative Phrase,Enabled
