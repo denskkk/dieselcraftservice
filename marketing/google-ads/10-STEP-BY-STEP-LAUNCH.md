@@ -31,7 +31,15 @@
 
 ## 1. Чего реально ожидать (честно)
 
-Точных цифр я не знаю: цены клика в Одессе зависят от конкуренции, и я их не измерял. Ниже — расчёт «если», чтобы вы понимали порядок.
+Точных цифр я не знал заранее. **Прогноз самого Google для вашей первой кампании: средняя цена клика ≈ 27 грн** (≈ 119 кликов в неделю на 3 246 грн). Поэтому реальный расчёт на весь бюджет такой:
+
+| Цена клика | Кликов/нед. | Звонков при 4% | при 6% |
+|---|---|---|---|
+| 27 грн | ≈ 330 | ≈ 13 | ≈ 20 |
+
+Цена звонка получается около **450–700 грн**. Стартовые ставки в файлах уже пересчитаны под эту цену (×1,35 от первоначальных).
+
+Для сравнения — сценарии при другой цене клика:
 
 Формула: **кликов в неделю = 9 000 ÷ цена клика**, **звонков и заявок = клики × конверсия**.
 
@@ -234,44 +242,44 @@
 
 | Группа объявлений | Ставка по умолчанию (Max CPC) | Ключей | Посадочная страница |
 |---|---|---|---|
-| Форсунки | 18 грн | 28 | `/poslugy/remont-forsunok.html` |
-| Насос-форсунки | 16 грн | 11 | `/poslugy/remont-nasos-forsunok.html` |
-| ТНВД | 17 грн | 16 | `/poslugy/remont-tnvd.html` |
-| Common Rail та паливна система | 15 грн | 7 | `/poslugy/remont-forsunok.html` |
-| Паливна система | 15 грн | 8 | `/poslugy/remont-palyvnoi-systemy.html` |
+| Форсунки | 24 грн | 28 | `/poslugy/remont-forsunok.html` |
+| Насос-форсунки | 22 грн | 11 | `/poslugy/remont-nasos-forsunok.html` |
+| ТНВД | 23 грн | 16 | `/poslugy/remont-tnvd.html` |
+| Common Rail та паливна система | 20 грн | 7 | `/poslugy/remont-forsunok.html` |
+| Паливна система | 20 грн | 8 | `/poslugy/remont-palyvnoi-systemy.html` |
 
 ### DC | Search | Ремонт двигунів — 420 грн/день
 
 | Группа объявлений | Ставка по умолчанию (Max CPC) | Ключей | Посадочная страница |
 |---|---|---|---|
-| Ремонт дизельних двигунів | 15 грн | 16 | `/poslugy/remont-dvyguniv.html` |
-| Mercedes OM | 11 грн | 9 | `/poslugy/dvyguny/remont-om651.html` |
-| BMW M57 N57 B57 | 11 грн | 7 | `/poslugy/dvyguny/remont-m57.html` |
-| VAG TDI | 11 грн | 7 | `/poslugy/dvyguny/remont-20-tdi.html` |
-| Renault Nissan Opel | 11 грн | 7 | `/poslugy/dvyguny/remont-k9k.html` |
-| Mitsubishi 4D56 4M41 | 10 грн | 5 | `/poslugy/dvyguny/remont-4d56.html` |
-| Toyota KD | 10 грн | 6 | `/poslugy/dvyguny/remont-2kd-ftv.html` |
-| Ремонт турбін | 16 грн | 14 | `/poslugy/remont-turbin.html` |
-| Картридж та геометрія | 14 грн | 8 | `/poslugy/remont-turbin.html` |
-| Ремонт ГБЦ | 13 грн | 12 | `/poslugy/remont-gbc.html` |
+| Ремонт дизельних двигунів | 20 грн | 16 | `/poslugy/remont-dvyguniv.html` |
+| Mercedes OM | 15 грн | 9 | `/poslugy/dvyguny/remont-om651.html` |
+| BMW M57 N57 B57 | 15 грн | 7 | `/poslugy/dvyguny/remont-m57.html` |
+| VAG TDI | 15 грн | 7 | `/poslugy/dvyguny/remont-20-tdi.html` |
+| Renault Nissan Opel | 15 грн | 7 | `/poslugy/dvyguny/remont-k9k.html` |
+| Mitsubishi 4D56 4M41 | 14 грн | 5 | `/poslugy/dvyguny/remont-4d56.html` |
+| Toyota KD | 14 грн | 6 | `/poslugy/dvyguny/remont-2kd-ftv.html` |
+| Ремонт турбін | 22 грн | 14 | `/poslugy/remont-turbin.html` |
+| Картридж та геометрія | 19 грн | 8 | `/poslugy/remont-turbin.html` |
+| Ремонт ГБЦ | 18 грн | 12 | `/poslugy/remont-gbc.html` |
 
 ### DC | Search | Діагностика та Chip — 345 грн/день
 
 | Группа объявлений | Ставка по умолчанию (Max CPC) | Ключей | Посадочная страница |
 |---|---|---|---|
-| Діагностика дизеля | 13 грн | 8 | `/poslugy/diagnostyka.html` |
-| Chip tuning | 12 грн | 8 | `/poslugy/chip-tuning.html` |
-| Дизельний сервіс загальні | 14 грн | 8 | `/` |
-| Кондиціонер | 8 грн | 4 | `/poslugy/zapravka-kondytsionera.html` |
-| Чистка DPF | 12 грн | 8 | `/poslugy/chystka-dpf.html` |
-| Діагностика EGR | 11 грн | 8 | `/poslugy/diagnostyka-egr.html` |
-| ТО дизеля | 10 грн | 7 | `/poslugy/to-dyzelnyh-avto.html` |
+| Діагностика дизеля | 18 грн | 8 | `/poslugy/diagnostyka.html` |
+| Chip tuning | 16 грн | 8 | `/poslugy/chip-tuning.html` |
+| Дизельний сервіс загальні | 19 грн | 8 | `/` |
+| Кондиціонер | 11 грн | 4 | `/poslugy/zapravka-kondytsionera.html` |
+| Чистка DPF | 16 грн | 8 | `/poslugy/chystka-dpf.html` |
+| Діагностика EGR | 15 грн | 8 | `/poslugy/diagnostyka-egr.html` |
+| ТО дизеля | 14 грн | 7 | `/poslugy/to-dyzelnyh-avto.html` |
 
 ### DC | Search | Бренд — 50 грн/день
 
 | Группа объявлений | Ставка по умолчанию (Max CPC) | Ключей | Посадочная страница |
 |---|---|---|---|
-| Бренд DIESEL-CRAFT | 5 грн | 5 | `/` |
+| Бренд DIESEL-CRAFT | 7 грн | 5 | `/` |
 
 
 ---

@@ -1,5 +1,4 @@
 ﻿Campaign,Ad Group,Max CPC,Ad Group Status
-DC | Search | Паливна апаратура,Форсунки,24,Enabled
 DC | Search | Паливна апаратура,Насос-форсунки,22,Enabled
 DC | Search | Паливна апаратура,ТНВД,23,Enabled
 DC | Search | Паливна апаратура,Common Rail та паливна система,20,Enabled
@@ -13,9 +12,9 @@ DC | Search | Ремонт двигунів,Toyota KD,14,Enabled
 DC | Search | Ремонт двигунів,Ремонт турбін,22,Enabled
 DC | Search | Ремонт двигунів,Картридж та геометрія,19,Enabled
 DC | Search | Діагностика та Chip,Діагностика дизеля,18,Enabled
-DC | Search | Діагностика та Chip,Chip tuning,16,Enabled
+DC | Search | Діагностика та Chip,Chip tuning,16,Paused
 DC | Search | Діагностика та Chip,Дизельний сервіс загальні,19,Enabled
-DC | Search | Діагностика та Chip,Кондиціонер,11,Enabled
+DC | Search | Діагностика та Chip,Кондиціонер,11,Paused
 DC | Search | Бренд,Бренд DIESEL-CRAFT,7,Enabled
 DC | Search | Ремонт двигунів,Ремонт ГБЦ,18,Enabled
 DC | Search | Паливна апаратура,Паливна система,20,Enabled
