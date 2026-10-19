@@ -786,3 +786,10 @@ body.engine-page {
     height: 36px;
   }
 }
+
+
+/* Laptops 1180-1279px: the full header does not fit; keep the call button, collapse the phone number to its icon. */
+@media (min-width: 1180px) and (max-width: 1279px) {
+  #main-header.dc-site-header .desktop-actions .phone-link { font-size: 0 !important; gap: 0 !important; }
+  #main-header.dc-site-header .desktop-actions .phone-link .phone-icon { width: 20px; height: 20px; }
+}

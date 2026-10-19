@@ -130,3 +130,21 @@
   .dcx-form-row { grid-template-columns: 1fr; }
   .dcx-btn-row .dcx-btn { width: 100%; }
 }
+
+/* Header language switcher: keep the header from overflowing on laptops and small phones */
+@media (min-width: 1180px) and (max-width: 1439px) {
+  #main-header:has(.dcx-lang) .desktop-actions .phone-link { font-size: 0 !important; gap: 0 !important; }
+  #main-header:has(.dcx-lang) .desktop-actions .phone-link .phone-icon { width: 20px; height: 20px; }
+}
+@media (max-width: 420px) {
+  #main-header .mobile-actions .dcx-lang span[aria-current] { display: none; }
+  #main-header .mobile-actions .dcx-lang { padding: 2px; }
+}
+
+@media (min-width: 1440px) {
+  #main-header:has(.dcx-lang) .desktop-actions > .desktop-extra:has(.social-link),
+  #main-header:has(.dcx-lang) .desktop-actions > .address-dropdown + .red-divider.desktop-extra { display: none !important; }
+}
+@media (max-width: 340px) {
+  #main-header:has(.dcx-lang) .mobile-actions .phone-link { display: none !important; }
+}

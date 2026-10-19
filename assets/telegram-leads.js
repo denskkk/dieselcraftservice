@@ -6,11 +6,15 @@
   const t = (uk, ru) => (isRu ? ru : uk);
 
   const backupEndpoint = 'https://script.google.com/macros/s/AKfycbz8GGK0KJAMZnMXE-hHVzyO_VGtQmAyAAGIGeOg_4egQDyrk8Y53KJXe7E6ErxTAuztYA/exec';
+  // Google Apps Script relay that posts leads to the Telegram group (see tools/telegram-relay/README.md).
+  // The bot token lives only inside the relay; never put it into this public file.
+  const telegramRelayEndpoint = '';
   const defaultWhatsAppPhone = '380933838363';
 
   const getVerifiedEndpoint = () => (
     window.DIESEL_CRAFT_LEAD_API_ENDPOINT
     || document.querySelector('meta[name="lead-api-endpoint"]')?.content
+    || telegramRelayEndpoint
     || ''
   ).trim();
 
@@ -84,6 +88,7 @@
       car: String(formData.get('car') || '').trim(),
       message: String(formData.get('message') || '').trim(),
       submitted_at: new Date().toISOString(),
+      lang: isRu ? 'ru' : 'uk',
       ...attribution,
     };
   };
@@ -145,15 +150,19 @@
   };
 
   const sendVerifiedLead = async (endpoint, payload) => {
+    // text/plain keeps this a "simple" CORS request (no preflight), which Apps Script web apps require.
     const response = await fetch(endpoint, {
       method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload),
     });
     if (!response.ok) throw new Error(`Lead endpoint returned ${response.status}`);
+    const result = await response.json().catch(() => null);
+    if (!result || result.ok !== true) throw new Error('Lead endpoint rejected the lead');
+  };
+
+  const notify = (form, type, payload) => {
+    form.dispatchEvent(new CustomEvent(`dc:lead-${type}`, { bubbles: true, detail: { payload } }));
   };
 
   const openWhatsApp = (payload, form) => {
@@ -225,6 +234,7 @@
       pushLeadEvent('lead_form_whatsapp_open', payload, 'whatsapp');
       form.reset();
       showFormStatus(form, t('Відкрили WhatsApp. Надішліть повідомлення, щоб майстер отримав заявку.', 'Открыли WhatsApp. Отправьте сообщение, чтобы мастер получил заявку.'));
+      notify(form, 'whatsapp', payload);
       return;
     }
 
@@ -234,12 +244,14 @@
       await sendVerifiedLead(verifiedEndpoint, payload);
 
       form.reset();
-      pushLeadEvent('lead_form_submit_success', payload, 'form');
+      pushLeadEvent('lead_form_submit_success', payload, 'telegram');
       showFormStatus(form, t('Заявку відправлено. Майстер скоро звʼяжеться з вами.', 'Заявка отправлена. Мастер скоро свяжется с вами.'));
+      notify(form, 'success', payload);
     } catch {
       sendBackupLead(payload);
-      pushLeadEvent('lead_form_submit_error', payload, 'form');
+      pushLeadEvent('lead_form_submit_error', payload, 'telegram');
       showFormFallback(form);
+      notify(form, 'error', payload);
     } finally {
       setButtonState(submitButton, false);
     }

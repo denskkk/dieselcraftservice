@@ -352,10 +352,10 @@
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span><strong>${t('Зателефонувати', 'Позвонить')}</strong><small>${phones.address1.label}</small></span>
         </a>
-        <a href="https://wa.me/${phones.address1.tel.replace('+', '')}" target="_blank" rel="noopener noreferrer" class="dc-mobile-action-message" aria-label="${t('Написати DIESEL-CRAFT у WhatsApp', 'Написать DIESEL-CRAFT в WhatsApp')}">
+        <button type="button" class="dc-mobile-action-message" data-open-lead aria-label="${t('Залишити онлайн-заявку', 'Оставить онлайн-заявку')}">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 01-11.78 7.05L4 20l1.45-4.12A8 8 0 1120 11.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span><strong>${t('Написати', 'Написать')}</strong><small>WhatsApp</small></span>
-        </a>
+          <span><strong>${t('Заявка', 'Заявка')}</strong><small>${t('Передзвонимо', 'Перезвоним')}</small></span>
+        </button>
       </div>
     `;
     document.body.appendChild(bar);
