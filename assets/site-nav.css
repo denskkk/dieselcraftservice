@@ -793,3 +793,22 @@ body.engine-page {
   #main-header.dc-site-header .desktop-actions .phone-link { font-size: 0 !important; gap: 0 !important; }
   #main-header.dc-site-header .desktop-actions .phone-link .phone-icon { width: 20px; height: 20px; }
 }
+
+/* Two branches, two numbers in the desktop header */
+#main-header.dc-site-header .dcx-branch-phones { display: grid; gap: 3px; }
+#main-header.dc-site-header .dcx-bp { display: grid; grid-template-columns: 112px auto; align-items: baseline; gap: 8px; text-decoration: none; white-space: nowrap; line-height: 1.15; }
+#main-header.dc-site-header .dcx-bp-label { font: 800 0.6rem/1.2 'Manrope', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: #5b6b7d; text-align: right; }
+#main-header.dc-site-header .dcx-bp-num { font: 800 0.88rem/1.2 'Manrope', sans-serif; color: #101827; letter-spacing: 0.01em; }
+#main-header.dc-site-header .dcx-bp:hover .dcx-bp-num,
+#main-header.dc-site-header .dcx-bp:focus-visible .dcx-bp-num { color: #075f9a; }
+#main-header.dc-site-header:has(.dcx-branch-phones) .desktop-actions > .address-dropdown,
+#main-header.dc-site-header:has(.dcx-branch-phones) .desktop-actions > .address-dropdown + .red-divider { display: none !important; }
+@media (min-width: 1180px) and (max-width: 1439px) {
+  /* Both numbers are visible, so the generic call button is dropped to make room. */
+  #main-header.dc-site-header:has(.dcx-branch-phones) .desktop-actions > .cta-button,
+  #main-header.dc-site-header:has(.dcx-branch-phones) .desktop-actions > .red-divider:not(.desktop-extra) { display: none !important; }
+}
+/* "Call us" section: both branch numbers */
+.callcta-phones { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(14px, 3vw, 48px); margin: 0 0 40px; }
+.callcta-phones .callcta-phone { margin: 0 !important; font-size: clamp(1.9rem, 4.6vw, 3.8rem) !important; line-height: 1 !important; text-align: center; }
+.callcta-phones .callcta-phone small { display: block; margin-bottom: 8px; font: 800 0.74rem/1.2 'Manrope', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #5b6b7d; }

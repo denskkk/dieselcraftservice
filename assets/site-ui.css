@@ -93,3 +93,22 @@ html.dcui-lock, html.dcui-lock body { overflow: hidden !important; }
 @media (prefers-reduced-motion: reduce) {
   .dcui-toast, .dcui-dialog, .dcui-backdrop { transition: none; }
 }
+
+/* Call chooser (two branches) */
+.dcui-branches { display: grid; gap: 14px; }
+.dcui-branch { padding: 18px; border-radius: 18px; background: #fff; border: 1px solid rgba(15, 102, 173, 0.16); box-shadow: 0 12px 30px rgba(15, 102, 173, 0.08); display: grid; gap: 12px; }
+.dcui-branch-head { display: flex; gap: 12px; align-items: flex-start; }
+.dcui-branch-num { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, #219be6, #075f9a); color: #fff; font: 400 1.3rem/1 'Bebas Neue', 'Manrope', sans-serif; }
+.dcui-branch h3 { margin: 0; font-size: 1.15rem; font-weight: 800; color: #101827; }
+.dcui-branch p { margin: 2px 0 0; display: flex; align-items: center; gap: 6px; font-size: 0.88rem; color: rgba(16, 24, 39, 0.7); }
+.dcui-branch p svg { width: 15px; height: 15px; color: #219be6; flex: none; }
+.dcui-branch-call { width: 100%; min-height: 54px; font-size: 1.08rem; letter-spacing: 0.04em; }
+.dcui-branch-call svg { width: 20px; height: 20px; }
+.dcui-branch-route { justify-self: start; font-size: 0.84rem; font-weight: 700; color: #075f9a !important; text-decoration: none !important; }
+.dcui-branch-route:hover { text-decoration: underline !important; }
+.dcui-alt span { white-space: nowrap; }
+@media (min-width: 640px) {
+  .dcui-call .dcui-dialog { width: min(640px, 100%); }
+  .dcui-branches { grid-template-columns: 1fr 1fr; }
+  .dcui-branches .dcui-note { grid-column: 1 / -1; }
+}@media (min-width: 640px) { .dcui-branch { grid-template-rows: minmax(58px, auto) auto auto; align-content: start; } }

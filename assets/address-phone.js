@@ -64,12 +64,12 @@
   const addresses = {
     address1: {
       title: 'Приміська, 1',
-      subtitle: 'Основний сервіс DIESEL-CRAFT',
+      subtitle: 'Сервіс DIESEL-CRAFT біля Горбатого мосту',
       mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284',
     },
     address2: {
       title: 'Академіка Заболотного, 47',
-      subtitle: 'Сервіс DIESEL-CRAFT на Лісках',
+      subtitle: 'Сервіс DIESEL-CRAFT у селищі Котовського',
       mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=46.5709032%2C30.8187497',
     },
   };
@@ -213,7 +213,9 @@
     try {
       window.dataLayer = window.dataLayer || [];
       const attribution = window.dieselCraftGetAttribution();
-      const ctaLocation = link.closest('.dc-mobile-actions')
+      const ctaLocation = link.closest('.dcui-call')
+        ? 'call_chooser'
+        : link.closest('.dc-mobile-actions')
         ? 'mobile_sticky'
         : link.closest('#main-header')
           ? 'header'
@@ -348,9 +350,9 @@
     bar.setAttribute('aria-label', t('Швидкі дії DIESEL-CRAFT', 'Быстрые действия DIESEL-CRAFT'));
     bar.innerHTML = `
       <div class="dc-mobile-actions-shell">
-        <a href="tel:${phones.address1.tel}" class="dc-mobile-action-call" aria-label="${t('Подзвонити в DIESEL-CRAFT', 'Позвонить в DIESEL-CRAFT')}">
+        <a href="tel:${phones.address1.tel}" class="dc-mobile-action-call" data-phone-fixed data-call-chooser aria-label="${t('Подзвонити — оберіть філіал', 'Позвонить — выберите филиал')}">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span><strong>${t('Зателефонувати', 'Позвонить')}</strong><small>${phones.address1.label}</small></span>
+          <span><strong>${t('Зателефонувати', 'Позвонить')}</strong><small>${t('2 філіали · 2 номери', '2 филиала · 2 номера')}</small></span>
         </a>
         <button type="button" class="dc-mobile-action-message" data-open-lead aria-label="${t('Залишити онлайн-заявку', 'Оставить онлайн-заявку')}">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 01-11.78 7.05L4 20l1.45-4.12A8 8 0 1120 11.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>

@@ -18,6 +18,19 @@
   const track = (event, extra = {}) => window.dataLayer.push({ event, page_path: window.location.pathname, ...extra });
   const icon = (paths) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
   const PHONE = { tel: '+380933838363', label: '+380 93 383 83 63' };
+  const BRANCHES = [
+    {
+      id: 'address1', name: t('Горбатий міст', 'Горбатый мост'), street: t('вул. Приміська, 1', 'ул. Приміська, 1'),
+      tel: '+380933838363', label: '+380 93 383 83 63',
+      route: 'https://www.google.com/maps/dir/?api=1&destination=46.45079359464247%2C30.704746292629284',
+    },
+    {
+      id: 'address2', name: t('Селище Котовського', 'Посёлок Котовского'), street: t('вул. Академіка Заболотного, 47', 'ул. Академика Заболотного, 47'),
+      tel: '+380933838373', label: '+380 93 383 83 73',
+      route: 'https://www.google.com/maps/dir/?api=1&destination=46.5709032%2C30.8187497',
+    },
+  ];
+  const HOURS = t('Пн–Пт 8:00–18:00 · Сб 9:00–15:00 · Нд вихідний', 'Пн–Пт 8:00–18:00 · Сб 9:00–15:00 · Вс выходной');
 
   const cssReady = new Promise((resolve) => {
     if (doc.querySelector('link[data-dcui-css]')) { resolve(); return; }
@@ -168,7 +181,7 @@
             <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><input type="text" name="company_website" tabindex="-1" autocomplete="off" data-lead-trap></div>
             <button type="submit" class="dcui-btn dcui-btn-primary dcui-submit">${t('Надіслати заявку', 'Отправить заявку')}</button>
             <p class="dcui-note">${t('Надсилаючи форму, ви погоджуєтесь з', 'Отправляя форму, вы соглашаетесь с')} <a href="${new URL('privacy.html', siteRoot).href}">${t('політикою конфіденційності', 'политикой конфиденциальности')}</a>.</p>
-            <div class="dcui-alt">${t('Або зателефонуйте:', 'Или позвоните:')} <a href="tel:${PHONE.tel}">${PHONE.label}</a></div>
+            <div class="dcui-alt">${t('Або зателефонуйте:', 'Или позвоните:')} ${BRANCHES.map((b) => `<span>${b.name} — <a href="tel:${b.tel}" data-phone-fixed>${b.label}</a></span>`).join('')}</div>
           </form>
         </div>
         <div class="dcui-success" role="status">
@@ -235,6 +248,80 @@
   };
 
   window.dieselCraftOpenLead = openModal;
+
+  /* ── Call chooser: two branches, two numbers ──────────────────── */
+  let chooser = null;
+  let chooserFocus = null;
+  const pin = icon('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>');
+  const phoneIcon = icon('<path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/>');
+
+  const buildChooser = () => {
+    const el = doc.createElement('div');
+    el.className = 'dcui-modal dcui-call';
+    el.hidden = true;
+    el.innerHTML = `
+      <div class="dcui-backdrop" data-close></div>
+      <div class="dcui-dialog" role="dialog" aria-modal="true" aria-labelledby="dcui-call-title">
+        <div class="dcui-head">
+          <button type="button" class="dcui-close" data-close aria-label="${t('Закрити', 'Закрыть')}">${icon('<path d="M18 6L6 18M6 6l12 12"/>')}</button>
+          <span class="dcui-kicker">DIESEL-CRAFT · ${t('2 філіали в Одесі', '2 филиала в Одессе')}</span>
+          <h2 class="dcui-title" id="dcui-call-title">${t('Куди телефонувати?', 'Куда звонить?')}</h2>
+          <p class="dcui-sub">${t('Оберіть філіал, до якого вам зручніше приїхати, — у кожного свій номер.', 'Выберите филиал, куда вам удобнее приехать, — у каждого свой номер.')}</p>
+        </div>
+        <div class="dcui-body dcui-branches">
+          ${BRANCHES.map((b, i) => `
+          <section class="dcui-branch" aria-label="${b.name}">
+            <div class="dcui-branch-head"><span class="dcui-branch-num">${i + 1}</span><div><h3>${b.name}</h3><p>${pin}${b.street}</p></div></div>
+            <a class="dcui-btn dcui-btn-primary dcui-branch-call" href="tel:${b.tel}" data-phone-fixed data-branch="${b.id}">${phoneIcon}<span>${b.label}</span></a>
+            <a class="dcui-branch-route" href="${b.route}" target="_blank" rel="noopener noreferrer">${t('Маршрут у Google Maps', 'Маршрут в Google Maps')} →</a>
+          </section>`).join('')}
+          <p class="dcui-note">${HOURS}<br>${t('Не знаєте, який філіал ближче? Телефонуйте на будь-який номер — підкажемо.', 'Не знаете, какой филиал ближе? Звоните на любой номер — подскажем.')}</p>
+        </div>
+      </div>`;
+    el.addEventListener('click', (event) => {
+      if (event.target.closest('[data-close]')) closeChooser();
+      const call = event.target.closest('.dcui-branch-call');
+      if (call) {
+        store.set('dieselCraftSelectedAddress', call.dataset.branch);
+        setTimeout(closeChooser, 400);
+      }
+    });
+    doc.addEventListener('keydown', (event) => { if (!el.hidden && event.key === 'Escape') closeChooser(); });
+    doc.body.appendChild(el);
+    return el;
+  };
+
+  const openChooser = (trigger) => {
+    cssReady.then(() => {
+      if (!chooser) chooser = buildChooser();
+      chooserFocus = trigger || doc.activeElement;
+      chooser.hidden = false;
+      doc.documentElement.classList.add('dcui-lock');
+      void chooser.offsetWidth;
+      chooser.classList.add('is-open');
+      setTimeout(() => chooser.querySelector('.dcui-branch-call')?.focus({ preventScroll: true }), 120);
+      track('call_chooser_open', { cta_text: (trigger?.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60) });
+    });
+  };
+
+  const closeChooser = () => {
+    if (!chooser || chooser.hidden) return;
+    chooser.classList.remove('is-open');
+    doc.documentElement.classList.remove('dcui-lock');
+    setTimeout(() => { if (!chooser.classList.contains('is-open')) chooser.hidden = true; }, 220);
+    if (chooserFocus && typeof chooserFocus.focus === 'function') chooserFocus.focus({ preventScroll: true });
+  };
+  window.dieselCraftOpenCallChooser = openChooser;
+
+  // Generic "call" buttons don't know which branch the visitor needs, so they open the chooser.
+  // Links bound to a specific branch number carry data-phone-fixed and dial directly.
+  doc.addEventListener('click', (event) => {
+    const trigger = event.target.closest('[data-call-chooser], a[href^="tel:"]:not([data-phone-fixed])');
+    if (!trigger || trigger.closest('.dcui-call') || event.ctrlKey || event.metaKey || event.shiftKey || event.button > 0) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    openChooser(trigger);
+  }, true);
   const TRIGGERS = '[data-open-lead], a[href$="#zayavka"], a.svc-cta-btn-secondary, a.cta-button[href$="#contacts"], a.hero-cta-secondary[href$="#contacts"]';
   // Capture phase: page scripts (smooth-scroll for #anchors) must not swallow the click first.
   doc.addEventListener('click', (event) => {
