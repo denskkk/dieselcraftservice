@@ -37,8 +37,8 @@ GitHub Pages не підтримує серверні 301 — при майбу�
 - `404.html` має `noindex` і не входить у sitemap.
 
 ## Schema.org
-52 блоки JSON-LD, усі валідні. Типи: `AutoRepair` (з двома `department`), `Service`, `FAQPage`, `BreadcrumbList`, `CollectionPage`.
-⚠️ Рейтинг у розмітці головної узгоджено з профілем Google «Ліски» (**4,4 / 56 відгуків**). Якщо рейтинг зміниться, оновлюйте 4 місця в `index.html` (JSON-LD, `ratingValue`, `reviewCount`, видимий лічильник) — вони мають збігатися з Google.
+Актуальний стан розмітки описано в `SEO_REPORT.md` (жовтень 2026): єдиний граф `Organization` + два `AutoRepair` (філії з `geo`, `hasMap`, графіком), `Service` з `provider` на обидві філії, `BreadcrumbList`, `FAQPage` синхронізований з видимими питаннями, `WebSite`.
+`aggregateRating` прибрано з розмітки: Google не показує зірки для відгуків, які компанія публікує про себе (self-serving reviews). Видимий блок відгуків на головній залишився — якщо рейтинг у Google зміниться, оновіть лише видимий лічильник у `index.html` і `ru/index.html`.
 
 ## Рекомендації далі
 1. Створити два Бізнес-профілі Google (по одному на сервіс) і прив'язати до Google Ads.
