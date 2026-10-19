@@ -4413,7 +4413,7 @@ body.blog-page main > section#top.blog-hero::before {
   background:
     linear-gradient(90deg, rgba(5, 5, 5, 0.98) 0%, rgba(5, 5, 5, 0.82) 42%, rgba(5, 5, 5, 0.48) 72%, rgba(5, 5, 5, 0.86) 100%),
     linear-gradient(180deg, rgba(193, 18, 31, 0.24), transparent 42%),
-    url('../img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.jpg') center right / cover no-repeat !important;
+    url('../img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.webp') center right / cover no-repeat !important;
   opacity: 1 !important;
 }
 
@@ -4645,7 +4645,7 @@ body.blog-page .faq-card p {
   body.blog-page main > section#top.blog-hero::before {
     background:
       linear-gradient(180deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.72) 44%, #050505 100%),
-      url('../img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.jpg') center top / cover no-repeat !important;
+      url('../img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.webp') center top / cover no-repeat !important;
   }
 
   body.blog-page .blog-topic-nav {
