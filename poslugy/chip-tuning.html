@@ -43,55 +43,113 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="../assets/tailwind.css" />
   <script type="application/ld+json">
 {
-    "@context":  "https://schema.org",
-    "@type":  "Service",
-    "name":  "Chip Tuning в Одесі",
-    "serviceType":  "Chip Tuning в Одесі",
-    "url":  "https://diesel-craft.com.ua/poslugy/chip-tuning.html",
-    "description":  "Chip Tuning дизельних авто в Одесі від DIESEL-CRAFT: прошивка ECU, Stage 1/2, оптимізація тяги, EGR/DPF/AdBlue рішення та контроль параметрів.",
-    "provider":  {
-                     "@type":  "AutoRepair",
-                     "name":  "DIESEL-CRAFT",
-                     "url":  "https://diesel-craft.com.ua/",
-                     "telephone":  ["+380933838363", "+380933838373"],
-                     "priceRange":  "$$",
-                     "address":  [{
-                             "@type":  "PostalAddress",
-                             "streetAddress":  "вул. Приміська, 1",
-                             "addressLocality":  "Одеса",
-                             "addressCountry":  "UA"
-                           }, {
-                             "@type":  "PostalAddress",
-                             "streetAddress":  "вул. Академіка Заболотного, 47",
-                             "addressLocality":  "Одеса",
-                             "addressCountry":  "UA"
-                           }]
-                 },
-    "areaServed":  {
-                       "@type":  "City",
-                       "name":  "Odesa"
-                   },
-    "offers":  {
-                   "@type":  "Offer",
-                   "url":  "https://diesel-craft.com.ua/poslugy/chip-tuning.html",
-                   "priceCurrency":  "UAH",
-                   "availability":  "https://schema.org/InStock"
-               }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Chip Tuning в Одесі",
+      "serviceType": "Chip Tuning в Одесі",
+      "url": "https://diesel-craft.com.ua/poslugy/chip-tuning.html",
+      "description": "Chip Tuning дизельних авто в Одесі від DIESEL-CRAFT: прошивка ECU, Stage 1/2, оптимізація тяги, EGR/DPF/AdBlue рішення та контроль параметрів.",
+      "provider": [
+        {
+          "@type": "AutoRepair",
+          "@id": "https://diesel-craft.com.ua/#primiska",
+          "name": "DIESEL-CRAFT — Приміська",
+          "url": "https://diesel-craft.com.ua/",
+          "telephone": "+380933838363",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "вул. Приміська, 1",
+            "addressLocality": "Одеса",
+            "addressRegion": "Одеська область",
+            "addressCountry": "UA"
+          }
+        },
+        {
+          "@type": "AutoRepair",
+          "@id": "https://diesel-craft.com.ua/#lisky",
+          "name": "DIESEL-CRAFT — Ліски (Академіка Заболотного)",
+          "url": "https://diesel-craft.com.ua/",
+          "telephone": "+380933838373",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "вул. Академіка Заболотного, 47",
+            "addressLocality": "Одеса",
+            "addressRegion": "Одеська область",
+            "addressCountry": "UA"
+          }
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Одеса"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Скільки коштує чіп-тюнінг дизеля?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Вартість залежить від марки авто, ЕБУ та обраного стейджа (Stage 1/2). Назвемо точну ціну після діагностики та зчитування прошивки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи безпечний чіп-тюнінг для двигуна?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, за умови коректного налаштування параметрів під конкретний двигун і контролю після прошивки — саме так ми і працюємо."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Скільки триває процедура прошивки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зазвичай 1–2 години разом із діагностикою та контрольним тест-драйвом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи є гарантія після чіп-тюнінгу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, гарантія до 12 місяців на виконані роботи з прошивки та налаштування ECU."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DIESEL-CRAFT",
+          "item": "https://diesel-craft.com.ua/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Послуги",
+          "item": "https://diesel-craft.com.ua/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Chip Tuning",
+          "item": "https://diesel-craft.com.ua/poslugy/chip-tuning.html"
+        }
+      ]
+    }
+  ]
 }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Скільки коштує чіп-тюнінг дизеля?", "acceptedAnswer": {"@type": "Answer", "text": "Вартість залежить від марки авто, ЕБУ та стейджа (Stage 1/2)."}},
-      {"@type": "Question", "name": "Чи безпечний чіп-тюнінг для двигуна?", "acceptedAnswer": {"@type": "Answer", "text": "Так, за умови коректного налаштування параметрів і контролю після прошивки."}},
-      {"@type": "Question", "name": "Скільки триває процедура прошивки?", "acceptedAnswer": {"@type": "Answer", "text": "Зазвичай 1–2 години разом із діагностикою."}},
-      {"@type": "Question", "name": "Чи є гарантія після чіп-тюнінгу?", "acceptedAnswer": {"@type": "Answer", "text": "Так, гарантія до 12 місяців."}}
-    ]
-  }
-  </script>
+</script>
+
 
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -636,13 +694,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ══════════════ HEADER ══════════════════════════════════ -->
 <header id="main-header" class="dc-site-header" role="banner">
     <div class="dc-site-container">
-      <a href="../index.html" class="dc-site-logo-wrap" aria-label="DIESEL-CRAFT">
+      <a href="../" class="dc-site-logo-wrap" aria-label="DIESEL-CRAFT">
         <span class="dc-site-logo-main">DIESEL<span>-</span>CRAFT</span>
         <span class="dc-site-logo-sub">Diesel service Odesa</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="../index.html" class="nav-link">&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
+        <a href="../" class="nav-link">&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
         <div class="dropdown-group" role="none">
           <button type="button" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="services-mega" id="services-btn">
             &#1055;&#1086;&#1089;&#1083;&#1091;&#1075;&#1080;
@@ -654,7 +712,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="engine-menu-panel" role="group" aria-label="&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1080;&#1079;&#1077;&#1083;&#1100;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;">
                 <div class="engine-menu-head">
                   <div>
-                    <span class="engine-menu-kicker">SEO-&#1073;&#1083;&#1086;&#1082;</span>
+                    <span class="engine-menu-kicker">Ремонт за моделлю мотора</span>
                     <p class="engine-menu-title">&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1080;&#1079;&#1077;&#1083;&#1100;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</p>
                   </div>
                   <p class="engine-menu-copy">BMW, Mercedes, Renault, VAG, Toyota &#1090;&#1072; Mitsubishi &#1074; &#1054;&#1076;&#1077;&#1089;&#1110;.</p>
@@ -677,8 +735,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <a class="engine-menu-link" href="../poslugy/dvyguny/remont-4d56.html" role="menuitem"><span class="engine-menu-code">4D56</span><span class="engine-menu-brand">Mitsubishi</span></a>
                 </div>
                 <div class="engine-menu-footer">
-                  <span class="engine-menu-note">15 &#1089;&#1090;&#1086;&#1088;&#1110;&#1085;&#1086;&#1082; &#1087;&#1110;&#1076; &#1087;&#1086;&#1096;&#1091;&#1082; &#1110; Google Ads</span>
-                  <a class="engine-menu-cta" href="../poslugy/dvyguny/index.html">&#1059;&#1089;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</a>
+                  <span class="engine-menu-note">Діагностика і ремонт 15 популярних дизелів</span>
+                  <a class="engine-menu-cta" href="../poslugy/dvyguny/">&#1059;&#1089;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</a>
                 </div>
               </div>
               <a href="../poslugy/remont-dvyguniv.html" class="mega-item" role="menuitem"><svg class="mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><span><span class="dc-site-mega-name">&#1056;&#1077;&#1084;&#1086;&#1085;&#1090; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1110;&#1074;</span><span class="dc-site-mega-note">&#1050;&#1072;&#1087;&#1110;&#1090;&#1072;&#1083;&#1100;&#1085;&#1080;&#1081; &#1090;&#1072; &#1087;&#1086;&#1090;&#1086;&#1095;&#1085;&#1080;&#1081;</span></span></a>
@@ -698,8 +756,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
-        <a href="../index.html#advantages" class="nav-link">&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
-        <a href="../index.html#reviews" class="nav-link">&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
+        <a href="../#advantages" class="nav-link">&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
+        <a href="../#reviews" class="nav-link">&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
         <a href="../blog.html" class="nav-link">&#1041;&#1083;&#1086;&#1075;</a>
         <a href="../contacts.html" class="nav-link">&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</a>
       </nav>
@@ -709,7 +767,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="red-divider desktop-extra"></div>
         <div class="address-dropdown desktop-extra">
           <button type="button" class="address-btn" aria-haspopup="listbox" aria-expanded="false"><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>&#1054;&#1076;&#1077;&#1089;&#1072;<svg class="addr-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="address-menu" role="listbox"><a href="../index.html#address1" class="address-option"><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="../index.html#address2" class="address-option"><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
+          <div class="address-menu" role="listbox"><a href="../#address1" class="address-option"><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="../#address2" class="address-option"><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
         </div>
         <div class="red-divider desktop-extra"></div>
         <div class="desktop-extra" style="display:flex;align-items:center;gap:8px"><a href="https://instagram.com/diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://t.me/Dieselcraft2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a><a href="viber://chat?number=%2B380933838363" class="social-link" aria-label="Viber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.tiktok.com/@diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.2a4.2 4.2 0 11-4.2-4.2"/><path d="M14 3c.6 3.2 2.6 5.1 6 5.4"/></svg></a></div>
@@ -726,7 +784,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div id="mobile-menu" class="dc-site-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
     <nav aria-label="Mobile navigation">
-      <a href="../index.html" class="mobile-nav-link" data-close-menu>&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
+      <a href="../" class="mobile-nav-link" data-close-menu>&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
       <div>
         <button type="button" class="mobile-accordion-btn" id="mob-services-btn" aria-expanded="false" aria-controls="mob-services-panel">&#1055;&#1086;&#1089;&#1083;&#1091;&#1075;&#1080;<svg class="chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="mobile-accordion-content" id="mob-services-panel" role="region">
@@ -734,7 +792,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <details class="mobile-engine-dropdown">
             <summary>&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</summary>
             <div class="mobile-engine-list" aria-label="Popular diesel engines">
-              <a href="../poslugy/dvyguny/index.html" data-close-menu><span>&#1059;&#1089;&#1110;</span></a>
+              <a href="../poslugy/dvyguny/" data-close-menu><span>&#1059;&#1089;&#1110;</span></a>
               <a href="../poslugy/dvyguny/remont-m57.html" data-close-menu><span>M57</span></a>
               <a href="../poslugy/dvyguny/remont-n57.html" data-close-menu><span>N57</span></a>
               <a href="../poslugy/dvyguny/remont-b57.html" data-close-menu><span>B57</span></a>
@@ -767,14 +825,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="../poslugy/to-dyzelnyh-avto.html" class="mobile-sub-link" data-close-menu>ТО дизельних авто</a>
         </div>
       </div>
-      <a href="../index.html#advantages" class="mobile-nav-link" data-close-menu>&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
-      <a href="../index.html#reviews" class="mobile-nav-link" data-close-menu>&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
+      <a href="../#advantages" class="mobile-nav-link" data-close-menu>&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
+      <a href="../#reviews" class="mobile-nav-link" data-close-menu>&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
       <a href="../blog.html" class="mobile-nav-link" data-close-menu>&#1041;&#1083;&#1086;&#1075;</a>
       <a href="../contacts.html" class="mobile-nav-link" data-close-menu>&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</a>
     </nav>
     <div class="dc-site-mobile-meta">
       <div class="dc-site-mobile-label">&#1040;&#1076;&#1088;&#1077;&#1089;&#1080; &#1089;&#1077;&#1088;&#1074;&#1110;&#1089;&#1091;</div>
-      <div class="dc-site-mobile-addresses"><a href="../index.html#address1" class="address-option" data-close-menu><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="../index.html#address2" class="address-option" data-close-menu><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
+      <div class="dc-site-mobile-addresses"><a href="../#address1" class="address-option" data-close-menu><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="../#address2" class="address-option" data-close-menu><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
       <div class="dc-site-mobile-socials"><a href="https://instagram.com/diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://t.me/Dieselcraft2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a><a href="viber://chat?number=%2B380933838363" class="social-link" aria-label="Viber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.tiktok.com/@diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.2a4.2 4.2 0 11-4.2-4.2"/><path d="M14 3c.6 3.2 2.6 5.1 6 5.4"/></svg></a></div>
     </div>
   </div>
@@ -826,9 +884,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════════════ BREADCRUMB ══════════════════════════════ -->
     <nav class="breadcrumb" aria-label="Навігаційний ланцюжок">
       <div class="breadcrumb-inner">
-        <a href="../index.html">DIESEL-CRAFT</a>
+        <a href="../">DIESEL-CRAFT</a>
         <span class="sep">›</span>
-        <a href="../index.html#services">Послуги</a>
+        <a href="../#services">Послуги</a>
         <span class="sep">›</span>
         <span class="current">Chip Tuning</span>
       </div>
@@ -1108,7 +1166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="../index.html" class="footer-logo">DIESEL<span class="dash">-</span>CRAFT</a>
+          <a href="../" class="footer-logo">DIESEL<span class="dash">-</span>CRAFT</a>
           <p class="footer-desc">Спеціалізований дизельний сервіс в Одесі. Ремонт двигунів, форсунок, турбін та паливних систем з 2013 року. Офіційна гарантія до 12 місяців.</p>
           <div class="footer-socials" aria-label="Соціальні мережі">
             <a href="viber://chat?number=%2B380933838363" class="footer-social-btn" aria-label="Viber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a>
@@ -1133,13 +1191,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
           <p class="footer-col-title">Навігація</p>
           <ul class="footer-links">
-            <li><a href="../index.html">Головна</a></li>
-            <li><a href="../index.html#services">Послуги</a></li>
-            <li><a href="../index.html#advantages">Переваги</a></li>
-            <li><a href="../index.html#reviews">Відгуки</a></li>
+            <li><a href="../">Головна</a></li>
+            <li><a href="../#services">Послуги</a></li>
+            <li><a href="../#advantages">Переваги</a></li>
+            <li><a href="../#reviews">Відгуки</a></li>
             <li><a href="../blog.html">Блог</a></li>
-            <li><a href="../index.html#gallery">Галерея</a></li>
-            <li><a href="../index.html#prices">Ціни</a></li>
+            <li><a href="../#gallery">Галерея</a></li>
+            <li><a href="../#prices">Ціни</a></li>
             <li><a href="../contacts.html">Контакти</a></li>
           </ul>
         </div>

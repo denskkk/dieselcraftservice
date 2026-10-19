@@ -41,108 +41,322 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="poslugy/dvyguny/engine-pages.css" />
   <link rel="stylesheet" href="assets/tailwind.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "DIESEL-CRAFT",
-    "url": "https://diesel-craft.com.ua/contacts.html",
-    "image": "https://diesel-craft.com.ua/img/firstbanner.png",
-    "description": "Контакти дизельного сервісу DIESEL-CRAFT в Одесі: запис на діагностику та ремонт дизельних систем.",
-    "telephone": ["+380933838363", "+380933838373"],
-    "priceRange": "$$",
-    "areaServed": { "@type": "City", "name": "Одеса" },
-    "address": [{
-      "@type": "PostalAddress",
-      "streetAddress": "вул. Приміська, 1",
-      "addressLocality": "Одеса",
-      "addressCountry": "UA"
-    }, {
-      "@type": "PostalAddress",
-      "streetAddress": "вул. Академіка Заболотного, 47",
-      "addressLocality": "Одеса",
-      "addressCountry": "UA"
-    }],
-    "department": [
-      {
-        "@type": "AutoRepair",
-        "name": "DIESEL-CRAFT — Приміська",
-        "telephone": ["+380933838363", "+380933838373"],
-        "priceRange": "$$",
-        "address": [{
-          "@type": "PostalAddress",
-          "streetAddress": "вул. Приміська, 1",
-          "addressLocality": "Одеса",
-          "addressCountry": "UA"
-        }, {
-          "@type": "PostalAddress",
-          "streetAddress": "вул. Академіка Заболотного, 47",
-          "addressLocality": "Одеса",
-          "addressCountry": "UA"
-        }],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "18:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "15:00"
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://diesel-craft.com.ua/#organization",
+      "name": "DIESEL-CRAFT",
+      "alternateName": [
+        "DieselCraft",
+        "Дизель Крафт"
+      ],
+      "url": "https://diesel-craft.com.ua/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://diesel-craft.com.ua/favicon/android-chrome-512x512.png",
+        "width": 512,
+        "height": 512
       },
-      {
-        "@type": "AutoRepair",
-        "name": "DIESEL-CRAFT — Ліски",
-        "telephone": "+380933838373",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "вул. Академіка Заболотного, 47",
-          "addressLocality": "Одеса",
-          "addressCountry": "UA"
+      "description": "Спеціалізований дизельний сервіс в Одесі: ремонт і капремонт дизельних двигунів, форсунок, ТНВД, турбін, ГБЦ, паливних систем Common Rail та діагностика.",
+      "telephone": "+380933838363",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+380933838363",
+          "contactType": "customer service",
+          "areaServed": "UA",
+          "availableLanguage": [
+            "uk",
+            "ru"
+          ]
         },
-        "openingHoursSpecification": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+380933838373",
+          "contactType": "customer service",
+          "areaServed": "UA",
+          "availableLanguage": [
+            "uk",
+            "ru"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/diesel_craft_odessa",
+        "https://www.tiktok.com/@diesel_craft_odessa",
+        "https://t.me/Dieselcraft2"
+      ],
+      "department": [
+        {
+          "@id": "https://diesel-craft.com.ua/#primiska"
+        },
+        {
+          "@id": "https://diesel-craft.com.ua/#lisky"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Послуги дизельного сервісу",
+        "itemListElement": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "18:00"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт і капремонт дизельних двигунів",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-dvyguniv.html"
+            }
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "15:00"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт дизельних форсунок",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-forsunok.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт насос-форсунок",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-nasos-forsunok.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт ТНВД",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-tnvd.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт турбін",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-turbin.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт ГБЦ",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-gbc.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт паливної системи Common Rail",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-palyvnoi-systemy.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Комп'ютерна діагностика дизеля",
+              "url": "https://diesel-craft.com.ua/poslugy/diagnostyka.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Чистка та діагностика DPF",
+              "url": "https://diesel-craft.com.ua/poslugy/chystka-dpf.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Діагностика та чистка EGR",
+              "url": "https://diesel-craft.com.ua/poslugy/diagnostyka-egr.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ТО дизельних авто",
+              "url": "https://diesel-craft.com.ua/poslugy/to-dyzelnyh-avto.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт дизельних генераторів",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-dyzelnyh-generatoriv.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт дизелів комерційного транспорту і спецтехніки",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-komertsiinogo-transportu.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chip Tuning",
+              "url": "https://diesel-craft.com.ua/poslugy/chip-tuning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Заправка кондиціонера",
+              "url": "https://diesel-craft.com.ua/poslugy/zapravka-kondytsionera.html"
+            }
           }
         ]
       }
-    ],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
+    },
+    {
+      "@type": "AutoRepair",
+      "@id": "https://diesel-craft.com.ua/#primiska",
+      "name": "DIESEL-CRAFT — Приміська",
+      "url": "https://diesel-craft.com.ua/",
+      "parentOrganization": {
+        "@id": "https://diesel-craft.com.ua/#organization"
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "15:00"
+      "image": [
+        "https://diesel-craft.com.ua/img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.jpg",
+        "https://diesel-craft.com.ua/img/firstbanner-hero.jpg"
+      ],
+      "telephone": "+380933838363",
+      "priceRange": "$$",
+      "currenciesAccepted": "UAH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Приміська, 1",
+        "addressLocality": "Одеса",
+        "addressRegion": "Одеська область",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.45079359464247,
+        "longitude": 30.704746292629284
+      },
+      "hasMap": "https://maps.google.com/?cid=15860055567282801815",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Одеса"
       }
-    ],
-    "sameAs": [
-      "https://instagram.com/diesel_craft_odessa",
-      "https://www.tiktok.com/@diesel_craft_odessa",
-      "https://t.me/Dieselcraft2",
-      "https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z"
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "AutoRepair",
+      "@id": "https://diesel-craft.com.ua/#lisky",
+      "name": "DIESEL-CRAFT — Ліски (Академіка Заболотного)",
+      "url": "https://diesel-craft.com.ua/",
+      "parentOrganization": {
+        "@id": "https://diesel-craft.com.ua/#organization"
+      },
+      "image": [
+        "https://diesel-craft.com.ua/img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.jpg",
+        "https://diesel-craft.com.ua/img/firstbanner-hero.jpg"
+      ],
+      "telephone": "+380933838373",
+      "priceRange": "$$",
+      "currenciesAccepted": "UAH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Академіка Заболотного, 47",
+        "addressLocality": "Одеса",
+        "addressRegion": "Одеська область",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.5709032,
+        "longitude": 30.8187497
+      },
+      "hasMap": "https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Одеса"
+      }
+    },
+    {
+      "@type": "ContactPage",
+      "url": "https://diesel-craft.com.ua/contacts.html",
+      "name": "Контакти DIESEL-CRAFT в Одесі",
+      "about": {
+        "@id": "https://diesel-craft.com.ua/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DIESEL-CRAFT",
+          "item": "https://diesel-craft.com.ua/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Контакти",
+          "item": "https://diesel-craft.com.ua/contacts.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { max-width:100%; overflow-x:hidden; }
@@ -380,13 +594,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header id="main-header" class="dc-site-header" role="banner">
     <div class="dc-site-container">
-      <a href="index.html" class="dc-site-logo-wrap" aria-label="DIESEL-CRAFT">
+      <a href="./" class="dc-site-logo-wrap" aria-label="DIESEL-CRAFT">
         <span class="dc-site-logo-main">DIESEL<span>-</span>CRAFT</span>
         <span class="dc-site-logo-sub">Diesel service Odesa</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="index.html" class="nav-link">&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
+        <a href="./" class="nav-link">&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
         <div class="dropdown-group" role="none">
           <button type="button" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="services-mega" id="services-btn">
             &#1055;&#1086;&#1089;&#1083;&#1091;&#1075;&#1080;
@@ -398,7 +612,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="engine-menu-panel" role="group" aria-label="&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1080;&#1079;&#1077;&#1083;&#1100;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;">
                 <div class="engine-menu-head">
                   <div>
-                    <span class="engine-menu-kicker">SEO-&#1073;&#1083;&#1086;&#1082;</span>
+                    <span class="engine-menu-kicker">Ремонт за моделлю мотора</span>
                     <p class="engine-menu-title">&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1080;&#1079;&#1077;&#1083;&#1100;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</p>
                   </div>
                   <p class="engine-menu-copy">BMW, Mercedes, Renault, VAG, Toyota &#1090;&#1072; Mitsubishi &#1074; &#1054;&#1076;&#1077;&#1089;&#1110;.</p>
@@ -421,8 +635,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <a class="engine-menu-link" href="poslugy/dvyguny/remont-4d56.html" role="menuitem"><span class="engine-menu-code">4D56</span><span class="engine-menu-brand">Mitsubishi</span></a>
                 </div>
                 <div class="engine-menu-footer">
-                  <span class="engine-menu-note">15 &#1089;&#1090;&#1086;&#1088;&#1110;&#1085;&#1086;&#1082; &#1087;&#1110;&#1076; &#1087;&#1086;&#1096;&#1091;&#1082; &#1110; Google Ads</span>
-                  <a class="engine-menu-cta" href="poslugy/dvyguny/index.html">&#1059;&#1089;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</a>
+                  <span class="engine-menu-note">Діагностика і ремонт 15 популярних дизелів</span>
+                  <a class="engine-menu-cta" href="poslugy/dvyguny/">&#1059;&#1089;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</a>
                 </div>
               </div>
               <a href="poslugy/remont-dvyguniv.html" class="mega-item" role="menuitem"><svg class="mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><span><span class="dc-site-mega-name">&#1056;&#1077;&#1084;&#1086;&#1085;&#1090; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1110;&#1074;</span><span class="dc-site-mega-note">&#1050;&#1072;&#1087;&#1110;&#1090;&#1072;&#1083;&#1100;&#1085;&#1080;&#1081; &#1090;&#1072; &#1087;&#1086;&#1090;&#1086;&#1095;&#1085;&#1080;&#1081;</span></span></a>
@@ -442,8 +656,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
-        <a href="index.html#advantages" class="nav-link">&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
-        <a href="index.html#reviews" class="nav-link">&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
+        <a href="./#advantages" class="nav-link">&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
+        <a href="./#reviews" class="nav-link">&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
         <a href="blog.html" class="nav-link">&#1041;&#1083;&#1086;&#1075;</a>
         <a href="contacts.html" class="nav-link">&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</a>
       </nav>
@@ -453,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="red-divider desktop-extra"></div>
         <div class="address-dropdown desktop-extra">
           <button type="button" class="address-btn" aria-haspopup="listbox" aria-expanded="false"><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>&#1054;&#1076;&#1077;&#1089;&#1072;<svg class="addr-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="address-menu" role="listbox"><a href="index.html#address1" class="address-option"><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="index.html#address2" class="address-option"><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
+          <div class="address-menu" role="listbox"><a href="./#address1" class="address-option"><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="./#address2" class="address-option"><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
         </div>
         <div class="red-divider desktop-extra"></div>
         <div class="desktop-extra" style="display:flex;align-items:center;gap:8px"><a href="https://instagram.com/diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://t.me/Dieselcraft2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a><a href="viber://chat?number=%2B380933838363" class="social-link" aria-label="Viber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.tiktok.com/@diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.2a4.2 4.2 0 11-4.2-4.2"/><path d="M14 3c.6 3.2 2.6 5.1 6 5.4"/></svg></a></div>
@@ -470,7 +684,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div id="mobile-menu" class="dc-site-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
     <nav aria-label="Mobile navigation">
-      <a href="index.html" class="mobile-nav-link" data-close-menu>&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
+      <a href="./" class="mobile-nav-link" data-close-menu>&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
       <div>
         <button type="button" class="mobile-accordion-btn" id="mob-services-btn" aria-expanded="false" aria-controls="mob-services-panel">&#1055;&#1086;&#1089;&#1083;&#1091;&#1075;&#1080;<svg class="chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="mobile-accordion-content" id="mob-services-panel" role="region">
@@ -478,7 +692,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <details class="mobile-engine-dropdown">
             <summary>&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</summary>
             <div class="mobile-engine-list" aria-label="Popular diesel engines">
-              <a href="poslugy/dvyguny/index.html" data-close-menu><span>&#1059;&#1089;&#1110;</span></a>
+              <a href="poslugy/dvyguny/" data-close-menu><span>&#1059;&#1089;&#1110;</span></a>
               <a href="poslugy/dvyguny/remont-m57.html" data-close-menu><span>M57</span></a>
               <a href="poslugy/dvyguny/remont-n57.html" data-close-menu><span>N57</span></a>
               <a href="poslugy/dvyguny/remont-b57.html" data-close-menu><span>B57</span></a>
@@ -511,14 +725,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="poslugy/to-dyzelnyh-avto.html" class="mobile-sub-link" data-close-menu>ТО дизельних авто</a>
         </div>
       </div>
-      <a href="index.html#advantages" class="mobile-nav-link" data-close-menu>&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
-      <a href="index.html#reviews" class="mobile-nav-link" data-close-menu>&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
+      <a href="./#advantages" class="mobile-nav-link" data-close-menu>&#1055;&#1077;&#1088;&#1077;&#1074;&#1072;&#1075;&#1080;</a>
+      <a href="./#reviews" class="mobile-nav-link" data-close-menu>&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
       <a href="blog.html" class="mobile-nav-link" data-close-menu>&#1041;&#1083;&#1086;&#1075;</a>
       <a href="contacts.html" class="mobile-nav-link" data-close-menu>&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</a>
     </nav>
     <div class="dc-site-mobile-meta">
       <div class="dc-site-mobile-label">&#1040;&#1076;&#1088;&#1077;&#1089;&#1080; &#1089;&#1077;&#1088;&#1074;&#1110;&#1089;&#1091;</div>
-      <div class="dc-site-mobile-addresses"><a href="index.html#address1" class="address-option" data-close-menu><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="index.html#address2" class="address-option" data-close-menu><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
+      <div class="dc-site-mobile-addresses"><a href="./#address1" class="address-option" data-close-menu><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="./#address2" class="address-option" data-close-menu><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
       <div class="dc-site-mobile-socials"><a href="https://instagram.com/diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://t.me/Dieselcraft2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a><a href="viber://chat?number=%2B380933838363" class="social-link" aria-label="Viber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.tiktok.com/@diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.2a4.2 4.2 0 11-4.2-4.2"/><path d="M14 3c.6 3.2 2.6 5.1 6 5.4"/></svg></a></div>
     </div>
   </div>
@@ -546,9 +760,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <nav class="breadcrumb" aria-label="Навігаційний ланцюжок"><div class="breadcrumb-inner"><a href="index.html">DIESEL-CRAFT</a><span>›</span><span class="current">Контакти</span></div></nav>
+    <nav class="breadcrumb" aria-label="Навігаційний ланцюжок"><div class="breadcrumb-inner"><a href="./">DIESEL-CRAFT</a><span>›</span><span class="current">Контакти</span></div></nav>
 
-    <section class="contacts-page" id="contacts" itemscope itemtype="https://schema.org/LocalBusiness">
+    <section class="contacts-page" id="contacts">
       <div class="section-inner">
         <div class="reveal">
           <div class="section-eyebrow">Запис і консультація</div>
@@ -558,9 +772,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="contacts-layout">
           <div class="info-stack reveal reveal-delay-1">
-            <article class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg></div><div><p class="info-label">Телефони</p><p class="info-value"><a href="tel:+380933838363" itemprop="telephone" data-phone-fixed>+380 93 383 83 63</a><br><a href="tel:+380933838373" itemprop="telephone" data-phone-fixed>+380 93 383 83 73</a></p><p class="info-sub">Пн-Пт 8:00-18:00 · Сб 9:00-15:00</p></div></article>
-            <article class="info-card" id="address1"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><p class="info-label">Адреса №1</p><p class="info-value" itemprop="address">вул. Приміська, 1, Одеса</p><p class="info-sub">Основний майданчик DIESEL-CRAFT</p></div></article>
-            <article class="info-card" id="address2"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><p class="info-label">Адреса №2</p><p class="info-value" itemprop="address">вул. Академіка Заболотного, 47, Одеса</p><p class="info-sub">Сервіс на Лісках</p></div></article>
+            <article class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg></div><div><p class="info-label">Телефони</p><p class="info-value"><a href="tel:+380933838363" data-phone-fixed>+380 93 383 83 63</a><br><a href="tel:+380933838373" data-phone-fixed>+380 93 383 83 73</a></p><p class="info-sub">Пн-Пт 8:00-18:00 · Сб 9:00-15:00</p></div></article>
+            <article class="info-card" id="address1"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><p class="info-label">Адреса №1</p><p class="info-value">вул. Приміська, 1, Одеса</p><p class="info-sub">Основний майданчик DIESEL-CRAFT</p></div></article>
+            <article class="info-card" id="address2"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><p class="info-label">Адреса №2</p><p class="info-value">вул. Академіка Заболотного, 47, Одеса</p><p class="info-sub">Сервіс на Лісках</p></div></article>
             <article class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><p class="info-label">Графік роботи</p><p class="info-value">Пн-Пт: 8:00 - 18:00</p><p class="info-sub">Субота: 9:00-15:00 · Неділя: вихідний</p></div></article>
             <div class="map-card map-card-grid" aria-label="Карти проїзду до сервісів DIESEL-CRAFT" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
               <article class="map-panel" id="map-address1">
@@ -604,9 +818,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="site-footer" aria-label="Підвал сайту">
     <div class="footer-container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="index.html" class="footer-logo">DIESEL<span class="dash">-</span>CRAFT</a><p class="footer-desc">Спеціалізований дизельний сервіс в Одесі. Ремонт двигунів, форсунок, турбін та паливних систем з 2013 року. Офіційна гарантія до 12 місяців.</p><div class="footer-socials"><a href="viber://chat?number=%2B380933838363" class="footer-social-btn" aria-label="Viber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a></div></div>
+        <div class="footer-brand"><a href="./" class="footer-logo">DIESEL<span class="dash">-</span>CRAFT</a><p class="footer-desc">Спеціалізований дизельний сервіс в Одесі. Ремонт двигунів, форсунок, турбін та паливних систем з 2013 року. Офіційна гарантія до 12 місяців.</p><div class="footer-socials"><a href="viber://chat?number=%2B380933838363" class="footer-social-btn" aria-label="Viber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a></div></div>
         <div><p class="footer-col-title">Послуги</p><ul class="footer-links"><li><a href="poslugy/remont-forsunok.html">Ремонт форсунок</a></li><li><a href="poslugy/remont-nasos-forsunok.html">Ремонт насос-форсунок</a></li><li><a href="poslugy/remont-tnvd.html">Ремонт ТНВД</a></li><li><a href="poslugy/remont-turbin.html">Ремонт турбін</a></li><li><a href="poslugy/remont-gbc.html">Ремонт ГБЦ</a></li><li><a href="poslugy/remont-palyvnoi-systemy.html">Паливна система</a></li><li><a href="poslugy/chystka-dpf.html">Чистка DPF</a></li><li><a href="poslugy/remont-dvyguniv.html">Ремонт двигунів</a></li><li><a href="poslugy/chip-tuning.html">Chip Tuning</a></li><li><a href="poslugy/vydalennya-egr-dpf-adblue.html">Діагностика EGR / DPF</a></li><li><a href="poslugy/diagnostyka.html">Діагностика</a></li></ul></div>
-        <div><p class="footer-col-title">Навігація</p><ul class="footer-links"><li><a href="index.html">Головна</a></li><li><a href="index.html#services">Послуги</a></li><li><a href="index.html#advantages">Переваги</a></li><li><a href="index.html#reviews">Відгуки</a></li><li><a href="blog.html">Блог</a></li><li><a href="index.html#gallery">Галерея</a></li><li><a href="index.html#prices">Ціни</a></li><li><a href="contacts.html">Контакти</a></li></ul></div>
+        <div><p class="footer-col-title">Навігація</p><ul class="footer-links"><li><a href="./">Головна</a></li><li><a href="./#services">Послуги</a></li><li><a href="./#advantages">Переваги</a></li><li><a href="./#reviews">Відгуки</a></li><li><a href="blog.html">Блог</a></li><li><a href="./#gallery">Галерея</a></li><li><a href="./#prices">Ціни</a></li><li><a href="contacts.html">Контакти</a></li></ul></div>
         <div><p class="footer-col-title">Контакти</p><div class="footer-contacts-list"><div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg><span><a href="tel:+380933838363" data-phone-fixed>+380 93 383 83 63</a><br><a href="tel:+380933838373" data-phone-fixed>+380 93 383 83 73</a></span></div><div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>вул. Приміська, 1, Одеса<br>вул. Академіка Заболотного, 47 (Ліски)<br>Україна</span></div><div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Пн-Пт: 8:00-18:00<br>Субота: 9:00-15:00</span></div></div></div>
       </div>
       <div class="footer-bottom"><p class="footer-copy">© 2013-2026 DIESEL-CRAFT. Всі права захищені. Одеса, Україна.</p><div class="footer-bottom-links"><a href="privacy.html">Політика конфіденційності</a><a href="offer.html">Публічна оферта</a><a href="partners.html">Партнерам</a><a href="terms.html">Умови використання</a></div></div>

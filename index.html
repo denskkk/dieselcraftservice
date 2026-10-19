@@ -47,126 +47,361 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="assets/tailwind.css" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "DIESEL-CRAFT",
-    "url": "https://diesel-craft.com.ua/",
-    "image": "https://diesel-craft.com.ua/img/firstbanner-hero.jpg",
-    "description": "Спеціалізований дизельний сервіс в Одесі: ремонт двигунів, ТНВД, форсунок, турбін, діагностика, chip tuning та рішення EGR / DPF / AdBlue.",
-    "telephone": ["+380933838363", "+380933838373"],
-    "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.4",
-      "bestRating": "5",
-      "reviewCount": "56"
-    },
-    "areaServed": { "@type": "City", "name": "Одеса" },
-    "address": [{
-      "@type": "PostalAddress",
-      "streetAddress": "вул. Приміська, 1",
-      "addressLocality": "Одеса",
-      "addressCountry": "UA"
-    }, {
-      "@type": "PostalAddress",
-      "streetAddress": "вул. Академіка Заболотного, 47",
-      "addressLocality": "Одеса",
-      "addressCountry": "UA"
-    }],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://diesel-craft.com.ua/#organization",
+      "name": "DIESEL-CRAFT",
+      "alternateName": [
+        "DieselCraft",
+        "Дизель Крафт"
+      ],
+      "url": "https://diesel-craft.com.ua/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://diesel-craft.com.ua/favicon/android-chrome-512x512.png",
+        "width": 512,
+        "height": 512
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "15:00"
+      "description": "Спеціалізований дизельний сервіс в Одесі: ремонт і капремонт дизельних двигунів, форсунок, ТНВД, турбін, ГБЦ, паливних систем Common Rail та діагностика.",
+      "telephone": "+380933838363",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+380933838363",
+          "contactType": "customer service",
+          "areaServed": "UA",
+          "availableLanguage": [
+            "uk",
+            "ru"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+380933838373",
+          "contactType": "customer service",
+          "areaServed": "UA",
+          "availableLanguage": [
+            "uk",
+            "ru"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/diesel_craft_odessa",
+        "https://www.tiktok.com/@diesel_craft_odessa",
+        "https://t.me/Dieselcraft2"
+      ],
+      "department": [
+        {
+          "@id": "https://diesel-craft.com.ua/#primiska"
+        },
+        {
+          "@id": "https://diesel-craft.com.ua/#lisky"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Послуги дизельного сервісу",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт і капремонт дизельних двигунів",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-dvyguniv.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт дизельних форсунок",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-forsunok.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт насос-форсунок",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-nasos-forsunok.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт ТНВД",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-tnvd.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт турбін",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-turbin.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт ГБЦ",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-gbc.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт паливної системи Common Rail",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-palyvnoi-systemy.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Комп'ютерна діагностика дизеля",
+              "url": "https://diesel-craft.com.ua/poslugy/diagnostyka.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Чистка та діагностика DPF",
+              "url": "https://diesel-craft.com.ua/poslugy/chystka-dpf.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Діагностика та чистка EGR",
+              "url": "https://diesel-craft.com.ua/poslugy/diagnostyka-egr.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ТО дизельних авто",
+              "url": "https://diesel-craft.com.ua/poslugy/to-dyzelnyh-avto.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт дизельних генераторів",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-dyzelnyh-generatoriv.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт дизелів комерційного транспорту і спецтехніки",
+              "url": "https://diesel-craft.com.ua/poslugy/remont-komertsiinogo-transportu.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chip Tuning",
+              "url": "https://diesel-craft.com.ua/poslugy/chip-tuning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Заправка кондиціонера",
+              "url": "https://diesel-craft.com.ua/poslugy/zapravka-kondytsionera.html"
+            }
+          }
+        ]
       }
-    ],
-    "sameAs": [
-      "https://instagram.com/diesel_craft_odessa",
-      "https://www.tiktok.com/@diesel_craft_odessa",
-      "https://t.me/Dieselcraft2",
-      "https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Послуги дизельного сервісу",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт дизельних двигунів" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт ТНВД" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт форсунок" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт турбін" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Комп'ютерна діагностика" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chip Tuning" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Заправка кондиціонера авто" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Діагностика EGR / DPF / AdBlue" } }
+    },
+    {
+      "@type": "AutoRepair",
+      "@id": "https://diesel-craft.com.ua/#primiska",
+      "name": "DIESEL-CRAFT — Приміська",
+      "url": "https://diesel-craft.com.ua/",
+      "parentOrganization": {
+        "@id": "https://diesel-craft.com.ua/#organization"
+      },
+      "image": [
+        "https://diesel-craft.com.ua/img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.jpg",
+        "https://diesel-craft.com.ua/img/firstbanner-hero.jpg"
+      ],
+      "telephone": "+380933838363",
+      "priceRange": "$$",
+      "currenciesAccepted": "UAH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Приміська, 1",
+        "addressLocality": "Одеса",
+        "addressRegion": "Одеська область",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.45079359464247,
+        "longitude": 30.704746292629284
+      },
+      "hasMap": "https://maps.google.com/?cid=15860055567282801815",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Одеса"
+      }
+    },
+    {
+      "@type": "AutoRepair",
+      "@id": "https://diesel-craft.com.ua/#lisky",
+      "name": "DIESEL-CRAFT — Ліски (Академіка Заболотного)",
+      "url": "https://diesel-craft.com.ua/",
+      "parentOrganization": {
+        "@id": "https://diesel-craft.com.ua/#organization"
+      },
+      "image": [
+        "https://diesel-craft.com.ua/img/gallery/dyzelnyi-dvyhun-na-stendi-odesa.jpg",
+        "https://diesel-craft.com.ua/img/firstbanner-hero.jpg"
+      ],
+      "telephone": "+380933838373",
+      "priceRange": "$$",
+      "currenciesAccepted": "UAH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Академіка Заболотного, 47",
+        "addressLocality": "Одеса",
+        "addressRegion": "Одеська область",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.5709032,
+        "longitude": 30.8187497
+      },
+      "hasMap": "https://www.google.com/maps/place/%D0%94%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C+%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81+DieselCraft/@46.5709069,30.8161748,17z",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Одеса"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://diesel-craft.com.ua/#website",
+      "url": "https://diesel-craft.com.ua/",
+      "name": "DIESEL-CRAFT",
+      "inLanguage": "uk",
+      "publisher": {
+        "@id": "https://diesel-craft.com.ua/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Скільки коштує ремонт двигуна, форсунок чи ТНВД?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Точна вартість залежить від марки авто та результатів діагностики. Орієнтовні ціни — у розділі «Прайс-лист» вище. До початку робіт погоджуємо перелік послуг, запчастини, вартість і строки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Скільки часу займає ремонт?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Форсунки, ТНВД чи турбіна — зазвичай 1–3 дні. Капітальний ремонт двигуна — від 5 до 10 робочих днів залежно від складності. Точні терміни назвемо одразу після діагностики по телефону."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи є гарантія на виконані роботи?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, на погоджені виконані роботи діє гарантія до 12 місяців. Її строк і умови залежать від виду ремонту, стану вузла, використаних деталей та дотримання рекомендацій майстра."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи потрібно записуватись заздалегідь?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Працюємо Пн–Пт з 8:00 до 18:00, субота — з 9:00 до 15:00. Можна приїхати без запису, але щоб не чекати черги, краще зателефонувати заздалегідь — майстер підготує пост і одразу візьме авто в роботу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Авто не заводиться — що робити?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зателефонуйте нам — підкажемо найближчий сервіс (Приміська, 1 або Академіка Заболотного, 47) і маршрут, а за потреби порадимо перевіреного евакуатора."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ви ставите оригінальні запчастини чи аналоги?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Використовуємо оригінальні або перевірені OEM-деталі — залежно від бюджету та побажань клієнта. Варіант завжди узгоджуємо заздалегідь, до початку робіт."
+          }
+        }
       ]
     }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Скільки коштує ремонт дизельного двигуна, форсунок чи ТНВД в Одесі?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Точна вартість залежить від марки авто, типу несправності та результатів діагностики. Орієнтовні ціни вказані в розділі «Прайс-лист» на сайті: від 350 грн за промивку форсунки до кількох тисяч за капітальний ремонт. До початку робіт погоджуємо з клієнтом перелік послуг, запчастини, вартість і строки."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Скільки часу займає ремонт дизельного двигуна або форсунок?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Діагностика та ремонт форсунок, ТНВД або турбіни зазвичай займають 1–3 дні. Капітальний ремонт двигуна — від 5 до 10 робочих днів залежно від складності та наявності запчастин. Точні терміни майстер повідомить одразу після діагностики по телефону."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Чи є гарантія на ремонт дизельного авто в DIESEL-CRAFT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Так, на погоджені виконані роботи надається гарантія до 12 місяців. Її строк і умови залежать від виду ремонту, стану вузла, використаних деталей та дотримання рекомендацій майстра."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Чи потрібно записуватись заздалегідь, чи можна приїхати одразу?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ми працюємо Пн–Пт з 8:00 до 18:00 та в суботу з 9:00 до 15:00. Можна приїхати без запису, але щоб не чекати черги, рекомендуємо зателефонувати заздалегідь — так майстер підготує пост і одразу візьме авто в роботу."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Що робити, якщо авто не заводиться і потрібен евакуатор?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Зателефонуйте нам — підкажемо найближчий сервіс (Приміська, 1 або Академіка Заболотного, 47) і маршрут, а за потреби порадимо перевіреного евакуатора."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ви ставите оригінальні запчастини чи аналоги?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Використовуємо як оригінальні, так і перевірені OEM-деталі — залежно від бюджету та побажань клієнта. Всі варіанти узгоджуємо заздалегідь, до початку робіт."
-        }
-      }
-    ]
-  }
-  </script>
+  ]
+}
+</script>
+
 
   <style>
     /* ─── Base ─────────────────────────────────────────────── */
@@ -3105,13 +3340,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   ════════════════════════════════════════════════════════ -->
   <header id="main-header" class="dc-site-header" role="banner">
     <div class="dc-site-container">
-      <a href="index.html" class="dc-site-logo-wrap" aria-label="DIESEL-CRAFT">
+      <a href="./" class="dc-site-logo-wrap" aria-label="DIESEL-CRAFT">
         <span class="dc-site-logo-main">DIESEL<span>-</span>CRAFT</span>
         <span class="dc-site-logo-sub">Diesel service Odesa</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="index.html" class="nav-link">&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
+        <a href="./" class="nav-link">&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
         <div class="dropdown-group" role="none">
           <button type="button" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="services-mega" id="services-btn">
             &#1055;&#1086;&#1089;&#1083;&#1091;&#1075;&#1080;
@@ -3123,7 +3358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="engine-menu-panel" role="group" aria-label="&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1080;&#1079;&#1077;&#1083;&#1100;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;">
                 <div class="engine-menu-head">
                   <div>
-                    <span class="engine-menu-kicker">SEO-&#1073;&#1083;&#1086;&#1082;</span>
+                    <span class="engine-menu-kicker">Ремонт за моделлю мотора</span>
                     <p class="engine-menu-title">&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1080;&#1079;&#1077;&#1083;&#1100;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</p>
                   </div>
                   <p class="engine-menu-copy">BMW, Mercedes, Renault, VAG, Toyota &#1090;&#1072; Mitsubishi &#1074; &#1054;&#1076;&#1077;&#1089;&#1110;.</p>
@@ -3146,8 +3381,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <a class="engine-menu-link" href="poslugy/dvyguny/remont-4d56.html" role="menuitem"><span class="engine-menu-code">4D56</span><span class="engine-menu-brand">Mitsubishi</span></a>
                 </div>
                 <div class="engine-menu-footer">
-                  <span class="engine-menu-note">15 &#1089;&#1090;&#1086;&#1088;&#1110;&#1085;&#1086;&#1082; &#1087;&#1110;&#1076; &#1087;&#1086;&#1096;&#1091;&#1082; &#1110; Google Ads</span>
-                  <a class="engine-menu-cta" href="poslugy/dvyguny/index.html">&#1059;&#1089;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</a>
+                  <span class="engine-menu-note">Діагностика і ремонт 15 популярних дизелів</span>
+                  <a class="engine-menu-cta" href="poslugy/dvyguny/">&#1059;&#1089;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</a>
                 </div>
               </div>
               <a href="poslugy/remont-dvyguniv.html" class="mega-item" role="menuitem"><svg class="mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><span><span class="dc-site-mega-name">&#1056;&#1077;&#1084;&#1086;&#1085;&#1090; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1110;&#1074;</span><span class="dc-site-mega-note">&#1050;&#1072;&#1087;&#1110;&#1090;&#1072;&#1083;&#1100;&#1085;&#1080;&#1081; &#1090;&#1072; &#1087;&#1086;&#1090;&#1086;&#1095;&#1085;&#1080;&#1081;</span></span></a>
@@ -3167,8 +3402,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
-        <a href="index.html#advantages" class="nav-link">Адреса</a>
-        <a href="index.html#reviews" class="nav-link">&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
+        <a href="./#advantages" class="nav-link">Адреса</a>
+        <a href="./#reviews" class="nav-link">&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
         <a href="blog.html" class="nav-link">&#1041;&#1083;&#1086;&#1075;</a>
         <a href="contacts.html" class="nav-link">&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</a>
       </nav>
@@ -3178,7 +3413,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="red-divider desktop-extra"></div>
         <div class="address-dropdown desktop-extra">
           <button type="button" class="address-btn" aria-haspopup="listbox" aria-expanded="false"><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>&#1054;&#1076;&#1077;&#1089;&#1072;<svg class="addr-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="address-menu" role="listbox"><a href="index.html#address1" class="address-option"><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="index.html#address2" class="address-option"><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
+          <div class="address-menu" role="listbox"><a href="./#address1" class="address-option"><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="./#address2" class="address-option"><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
         </div>
         <div class="red-divider desktop-extra"></div>
         <div class="desktop-extra" style="display:flex;align-items:center;gap:8px"><a href="https://instagram.com/diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://t.me/Dieselcraft2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a><a href="viber://chat?number=%2B380933838363" class="social-link" aria-label="Viber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.tiktok.com/@diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.2a4.2 4.2 0 11-4.2-4.2"/><path d="M14 3c.6 3.2 2.6 5.1 6 5.4"/></svg></a></div>
@@ -3195,7 +3430,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div id="mobile-menu" class="dc-site-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
     <nav aria-label="Mobile navigation">
-      <a href="index.html" class="mobile-nav-link" data-close-menu>&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
+      <a href="./" class="mobile-nav-link" data-close-menu>&#1043;&#1086;&#1083;&#1086;&#1074;&#1085;&#1072;</a>
       <div>
         <button type="button" class="mobile-accordion-btn" id="mob-services-btn" aria-expanded="false" aria-controls="mob-services-panel">&#1055;&#1086;&#1089;&#1083;&#1091;&#1075;&#1080;<svg class="chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="mobile-accordion-content" id="mob-services-panel" role="region">
@@ -3203,7 +3438,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <details class="mobile-engine-dropdown">
             <summary>&#1055;&#1086;&#1087;&#1091;&#1083;&#1103;&#1088;&#1085;&#1110; &#1076;&#1074;&#1080;&#1075;&#1091;&#1085;&#1080;</summary>
             <div class="mobile-engine-list" aria-label="Popular diesel engines">
-              <a href="poslugy/dvyguny/index.html" data-close-menu><span>&#1059;&#1089;&#1110;</span></a>
+              <a href="poslugy/dvyguny/" data-close-menu><span>&#1059;&#1089;&#1110;</span></a>
               <a href="poslugy/dvyguny/remont-m57.html" data-close-menu><span>M57</span></a>
               <a href="poslugy/dvyguny/remont-n57.html" data-close-menu><span>N57</span></a>
               <a href="poslugy/dvyguny/remont-b57.html" data-close-menu><span>B57</span></a>
@@ -3236,14 +3471,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="poslugy/to-dyzelnyh-avto.html" class="mobile-sub-link" data-close-menu>ТО дизельних авто</a>
         </div>
       </div>
-      <a href="index.html#advantages" class="mobile-nav-link" data-close-menu>Адреса</a>
-      <a href="index.html#reviews" class="mobile-nav-link" data-close-menu>&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
+      <a href="./#advantages" class="mobile-nav-link" data-close-menu>Адреса</a>
+      <a href="./#reviews" class="mobile-nav-link" data-close-menu>&#1042;&#1110;&#1076;&#1075;&#1091;&#1082;&#1080;</a>
       <a href="blog.html" class="mobile-nav-link" data-close-menu>&#1041;&#1083;&#1086;&#1075;</a>
       <a href="contacts.html" class="mobile-nav-link" data-close-menu>&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</a>
     </nav>
     <div class="dc-site-mobile-meta">
       <div class="dc-site-mobile-label">&#1040;&#1076;&#1088;&#1077;&#1089;&#1080; &#1089;&#1077;&#1088;&#1074;&#1110;&#1089;&#1091;</div>
-      <div class="dc-site-mobile-addresses"><a href="index.html#address1" class="address-option" data-close-menu><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="index.html#address2" class="address-option" data-close-menu><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
+      <div class="dc-site-mobile-addresses"><a href="./#address1" class="address-option" data-close-menu><span class="dot"></span>&#1074;&#1091;&#1083;. &#1055;&#1088;&#1080;&#1084;&#1110;&#1089;&#1100;&#1082;&#1072; 1</a><a href="./#address2" class="address-option" data-close-menu><span class="dot"></span>вул. Академіка Заболотного, 47</a></div>
       <div class="dc-site-mobile-socials"><a href="https://instagram.com/diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://t.me/Dieselcraft2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a><a href="viber://chat?number=%2B380933838363" class="social-link" aria-label="Viber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5C8.5 3.6 10.2 3 12 3c5 0 9 3.4 9 7.7 0 2.5-1.4 4.7-3.6 6.1L18 21l-4.3-2.4c-.5.1-1.1.1-1.7.1-5 0-9-3.4-9-7.7 0-1.5.5-2.9 1.4-4.1"/><path d="M8.5 8.2c.4 2.7 1.9 5 4.8 6.4l1.4-1.3c.2-.2.5-.2.8-.1l2 .8"/><path d="M8.5 8.2l1.2-.8c.3-.2.7-.1.9.2l.9 1.7c.1.3.1.6-.1.8l-.6.7"/></svg></a><a href="https://www.tiktok.com/@diesel_craft_odessa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.2a4.2 4.2 0 11-4.2-4.2"/><path d="M14 3c.6 3.2 2.6 5.1 6 5.4"/></svg></a></div>
     </div>
   </div>
@@ -3348,8 +3583,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          SERVICES SECTION
     ════════════════════════════════════════════════════════ -->
     <section id="services" class="services-section"
-         aria-label="Наші послуги"
-             itemscope itemtype="https://schema.org/Service">
+         aria-label="Наші послуги">
 
       <!-- Ambient glow + scan line -->
       <div class="services-bg-glow" aria-hidden="true"></div>
@@ -3363,8 +3597,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="services-grid" role="list">
 
         <!-- 1. Капітальний ремонт двигунів -->
-        <a href="poslugy/remont-dvyguniv.html" class="svc-card reveal reveal-delay-1" role="listitem" aria-label="Детальніше про капітальний ремонт дизельних двигунів в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/remont-dvyguniv.html" class="svc-card reveal reveal-delay-1" role="listitem" aria-label="Детальніше про капітальний ремонт дизельних двигунів в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">01</span>
@@ -3372,8 +3605,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/remont-motorov-odessa.webp" alt="Капітальний ремонт дизельних двигунів Одеса" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Капремонт двигунів</h3>
-            <p class="svc-card-desc" itemprop="description">Повне відновлення дизельних двигунів: розточування блоку, шліфування колінвалу, заміна поршнів та вкладишів.</p>
+            <h3 class="svc-card-title">Капремонт двигунів</h3>
+            <p class="svc-card-desc">Повне відновлення дизельних двигунів: розточування блоку, шліфування колінвалу, заміна поршнів та вкладишів.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3382,8 +3615,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 2. Ремонт турбін -->
-        <a href="poslugy/remont-turbin.html" class="svc-card reveal reveal-delay-2" role="listitem" aria-label="Детальніше про ремонт турбін в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/remont-turbin.html" class="svc-card reveal reveal-delay-2" role="listitem" aria-label="Детальніше про ремонт турбін в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">02</span>
@@ -3391,8 +3623,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/remont-turbin.webp" alt="Ремонт турбін дизельних автомобілів" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Ремонт турбін</h3>
-            <p class="svc-card-desc" itemprop="description">Діагностика та ремонт турбокомпресорів усіх марок. Балансування ротора, заміна підшипників, відновлення картриджа.</p>
+            <h3 class="svc-card-title">Ремонт турбін</h3>
+            <p class="svc-card-desc">Діагностика та ремонт турбокомпресорів усіх марок. Балансування ротора, заміна підшипників, відновлення картриджа.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3401,8 +3633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 3. Ремонт ТНВД -->
-        <a href="poslugy/remont-tnvd.html" class="svc-card reveal reveal-delay-3" role="listitem" aria-label="Детальніше про ремонт ТНВД в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/remont-tnvd.html" class="svc-card reveal reveal-delay-3" role="listitem" aria-label="Детальніше про ремонт ТНВД в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">03</span>
@@ -3410,8 +3641,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/remont-tnvd.webp" alt="Ремонт ТНВД паливного насосу" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Ремонт ТНВД</h3>
-            <p class="svc-card-desc" itemprop="description">Відновлення паливних насосів високого тиску Bosch, Delphi, Denso. Регулювання подачі та тиску на стенді.</p>
+            <h3 class="svc-card-title">Ремонт ТНВД</h3>
+            <p class="svc-card-desc">Відновлення паливних насосів високого тиску Bosch, Delphi, Denso. Регулювання подачі та тиску на стенді.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3420,8 +3651,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 4. Ремонт форсунок -->
-        <a href="poslugy/remont-forsunok.html" class="svc-card reveal reveal-delay-4" role="listitem" aria-label="Детальніше про ремонт форсунок в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/remont-forsunok.html" class="svc-card reveal reveal-delay-4" role="listitem" aria-label="Детальніше про ремонт форсунок в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">04</span>
@@ -3429,8 +3659,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/remont-forsunok.webp" alt="Ремонт форсунок Common Rail" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Ремонт форсунок</h3>
-            <p class="svc-card-desc" itemprop="description">Ультразвукове очищення, притирка та перевірка форсунок Common Rail і piezo-форсунок на стенді Hartridge.</p>
+            <h3 class="svc-card-title">Ремонт форсунок</h3>
+            <p class="svc-card-desc">Ультразвукове очищення, притирка та перевірка форсунок Common Rail і piezo-форсунок на стенді Hartridge.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3439,8 +3669,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 5. Ремонт насос-форсунок -->
-        <a href="poslugy/remont-nasos-forsunok.html" class="svc-card reveal reveal-delay-1" role="listitem" aria-label="Детальніше про ремонт насос-форсунок"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/remont-nasos-forsunok.html" class="svc-card reveal reveal-delay-1" role="listitem" aria-label="Детальніше про ремонт насос-форсунок">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">05</span>
@@ -3448,8 +3677,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/remont-nasos-forsunok.webp" alt="Ремонт насос-форсунок PD PLD" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Ремонт насос-форсунок</h3>
-            <p class="svc-card-desc" itemprop="description">Реставрація PD та PLD насос-форсунок для VW, Audi, Scania, MAN. Перевірка та регулювання на заводському стенді.</p>
+            <h3 class="svc-card-title">Ремонт насос-форсунок</h3>
+            <p class="svc-card-desc">Реставрація PD та PLD насос-форсунок для VW, Audi, Scania, MAN. Перевірка та регулювання на заводському стенді.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3458,8 +3687,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 6. Chip Tuning -->
-        <a href="poslugy/chip-tuning.html" class="svc-card reveal reveal-delay-2" role="listitem" aria-label="Детальніше про chip tuning в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/chip-tuning.html" class="svc-card reveal reveal-delay-2" role="listitem" aria-label="Детальніше про chip tuning в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">06</span>
@@ -3467,8 +3695,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/chip-tuning-avto.webp" alt="Chip Tuning ECU дизельного двигуна" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Chip Tuning</h3>
-            <p class="svc-card-desc" itemprop="description">Перепрошивка ЕБУ для підвищення потужності до +30%, зниження витрати пального та покращення тяги двигуна.</p>
+            <h3 class="svc-card-title">Chip Tuning</h3>
+            <p class="svc-card-desc">Перепрошивка ЕБУ для підвищення потужності до +30%, зниження витрати пального та покращення тяги двигуна.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3477,8 +3705,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 7. Діагностика -->
-        <a href="poslugy/diagnostyka.html" class="svc-card reveal reveal-delay-3" role="listitem" aria-label="Детальніше про діагностику дизеля в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/diagnostyka.html" class="svc-card reveal reveal-delay-3" role="listitem" aria-label="Детальніше про діагностику дизеля в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">07</span>
@@ -3486,8 +3713,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/diagnostika-avto.webp" alt="Комп'ютерна діагностика дизеля OBD2" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Комп'ютерна діагностика</h3>
-            <p class="svc-card-desc" itemprop="description">Повна діагностика дизельних систем OBD2, CAN-шини та адаптація компонентів паливної системи після ремонту.</p>
+            <h3 class="svc-card-title">Комп'ютерна діагностика</h3>
+            <p class="svc-card-desc">Повна діагностика дизельних систем OBD2, CAN-шини та адаптація компонентів паливної системи після ремонту.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3496,8 +3723,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 8. Діагностика EGR/DPF/AdBlue -->
-        <a href="poslugy/vydalennya-egr-dpf-adblue.html" class="svc-card reveal reveal-delay-4" role="listitem" aria-label="Детальніше про діагностику EGR DPF AdBlue в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/vydalennya-egr-dpf-adblue.html" class="svc-card reveal reveal-delay-4" role="listitem" aria-label="Детальніше про діагностику EGR DPF AdBlue в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">08</span>
@@ -3505,8 +3731,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/vidalenya-egr-dpf-adblue.webp" alt="Діагностика EGR DPF AdBlue дизель Одеса" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Діагностика EGR / DPF / AdBlue</h3>
-            <p class="svc-card-desc" itemprop="description">Перевірка EGR, DPF, AdBlue та ECU: пошук причини помилок, ремонт, очищення або погоджене налаштування систем.</p>
+            <h3 class="svc-card-title">Діагностика EGR / DPF / AdBlue</h3>
+            <p class="svc-card-desc">Перевірка EGR, DPF, AdBlue та ECU: пошук причини помилок, ремонт, очищення або погоджене налаштування систем.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3515,8 +3741,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- 9. Заправка кондиціонера авто -->
-        <a href="poslugy/zapravka-kondytsionera.html" class="svc-card reveal reveal-delay-1" role="listitem" aria-label="Детальніше про заправку кондиціонера авто в Одесі"
-           itemscope itemtype="https://schema.org/Service">
+        <a href="poslugy/zapravka-kondytsionera.html" class="svc-card reveal reveal-delay-1" role="listitem" aria-label="Детальніше про заправку кондиціонера авто в Одесі">
           <div class="svc-card-visual" aria-hidden="true">
             <div class="svc-card-visual-grid"></div>
             <span class="svc-card-number">09</span>
@@ -3524,8 +3749,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="svc-card-icon" src="img/imgposlugi/kondiczioner-zapravka.webp" alt="Заправка кондиціонера авто Одеса" width="160" height="160" loading="lazy">
           </div>
           <div class="svc-card-body">
-            <h3 class="svc-card-title" itemprop="name">Заправка кондиціонера</h3>
-            <p class="svc-card-desc" itemprop="description">Діагностика герметичності, вакуумування, заправка фреоном і контроль температури автокондиціонера в Одесі.</p>
+            <h3 class="svc-card-title">Заправка кондиціонера</h3>
+            <p class="svc-card-desc">Діагностика герметичності, вакуумування, заправка фреоном і контроль температури автокондиціонера в Одесі.</p>
             <span class="svc-card-link" aria-hidden="true">
               Детальніше
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3632,11 +3857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ════════════════════════════════════════════════════════
          REVIEWS SECTION
     ════════════════════════════════════════════════════════ -->
-    <section id="reviews" class="rev-section" aria-labelledby="rev-heading"
-             itemscope itemtype="https://schema.org/LocalBusiness">
-      <meta itemprop="name" content="DIESEL-CRAFT">
-      <meta itemprop="telephone" content="+380933838363">
-      <meta itemprop="image" content="https://diesel-craft.com.ua/img/firstbanner-hero.jpg">
+    <section id="reviews" class="rev-section" aria-labelledby="rev-heading">
 
       <div class="rev-container">
 
@@ -3653,10 +3874,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!-- Google rating summary -->
           <div class="rev-rating-box">
             <div class="rev-rating-score">
-              <div class="rev-score-num" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                <span itemprop="ratingValue">4.4</span>
-                <meta itemprop="bestRating" content="5">
-                <meta itemprop="reviewCount" content="56">
+              <div class="rev-score-num">
+                <span>4.4</span>
               </div>
               <div class="rev-stars-row" aria-label="4.4 із 5 зірок">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3709,12 +3928,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rev-grid">
 
           <!-- 1 -->
-          <article class="rev-card reveal reveal-delay-1"
-                   itemscope itemtype="https://schema.org/Review">
+          <article class="rev-card reveal reveal-delay-1">
             <div class="rev-card-top">
               <div class="rev-avatar">О</div>
               <div class="rev-card-meta">
-                <p class="rev-card-name" itemprop="author">Олег</p>
+                <p class="rev-card-name">Олег</p>
                 <div class="rev-card-stars" aria-label="5 зірок">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3731,17 +3949,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
             </div>
-            <p class="rev-card-text" itemprop="reviewBody">Зібрали мотор ідеально, працює як годинник. Турбіну зробили якісно, все чітко та у справі. Машина їде — проблем не знаю. Рекомендую!</p>
+            <p class="rev-card-text">Зібрали мотор ідеально, працює як годинник. Турбіну зробили якісно, все чітко та у справі. Машина їде — проблем не знаю. Рекомендую!</p>
             <span class="rev-card-tag">Турбіна + Двигун</span>
           </article>
 
           <!-- 2 -->
-          <article class="rev-card reveal reveal-delay-2"
-                   itemscope itemtype="https://schema.org/Review">
+          <article class="rev-card reveal reveal-delay-2">
             <div class="rev-card-top">
               <div class="rev-avatar blue">B</div>
               <div class="rev-card-meta">
-                <p class="rev-card-name" itemprop="author">BLACK CAT (Ірина)</p>
+                <p class="rev-card-name">BLACK CAT (Ірина)</p>
                 <div class="rev-card-stars" aria-label="5 зірок">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3753,17 +3970,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <svg class="rev-card-google" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <p class="rev-card-text" itemprop="reviewBody">Відмінне СТО, все пояснили, показали, машина була зроблена якісно і в найкоротші терміни. Тепер мій хлопчик (VW) просто літає! Скоро приїду доробляти. Дякую, успіхів і процвітання.</p>
+            <p class="rev-card-text">Відмінне СТО, все пояснили, показали, машина була зроблена якісно і в найкоротші терміни. Тепер мій хлопчик (VW) просто літає! Скоро приїду доробляти. Дякую, успіхів і процвітання.</p>
             <span class="rev-card-tag">Ремонт VW</span>
           </article>
 
           <!-- 3 -->
-          <article class="rev-card reveal reveal-delay-3"
-                   itemscope itemtype="https://schema.org/Review">
+          <article class="rev-card reveal reveal-delay-3">
             <div class="rev-card-top">
               <div class="rev-avatar green">Л</div>
               <div class="rev-card-meta">
-                <p class="rev-card-name" itemprop="author">Людмила Шевчук</p>
+                <p class="rev-card-name">Людмила Шевчук</p>
                 <div class="rev-card-stars" aria-label="5 зірок">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3775,17 +3991,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <svg class="rev-card-google" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <p class="rev-card-text" itemprop="reviewBody">Відмінний сервіс, швидко зробили. Звернулась за рекомендаціями від друзів — і буду теж радити тільки їх. Якість роботи на найвищому рівні!</p>
+            <p class="rev-card-text">Відмінний сервіс, швидко зробили. Звернулась за рекомендаціями від друзів — і буду теж радити тільки їх. Якість роботи на найвищому рівні!</p>
             <span class="rev-card-tag">За рекомендацією</span>
           </article>
 
           <!-- 4 -->
-          <article class="rev-card reveal reveal-delay-1"
-                   itemscope itemtype="https://schema.org/Review">
+          <article class="rev-card reveal reveal-delay-1">
             <div class="rev-card-top">
               <div class="rev-avatar purple">К</div>
               <div class="rev-card-meta">
-                <p class="rev-card-name" itemprop="author">Карина Юзленко</p>
+                <p class="rev-card-name">Карина Юзленко</p>
                 <div class="rev-card-stars" aria-label="5 зірок">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3797,17 +4012,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <svg class="rev-card-google" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <p class="rev-card-text" itemprop="reviewBody">Робили військовим машину — зробили без черги та дуже дешево і якісно!!! Дякуємо хлопцям за допомогу ЗСУ! Справжні патріоти та професіонали своєї справи.</p>
+            <p class="rev-card-text">Робили військовим машину — зробили без черги та дуже дешево і якісно!!! Дякуємо хлопцям за допомогу ЗСУ! Справжні патріоти та професіонали своєї справи.</p>
             <span class="rev-card-tag">Допомога ЗСУ</span>
           </article>
 
           <!-- 5 -->
-          <article class="rev-card reveal reveal-delay-2"
-                   itemscope itemtype="https://schema.org/Review">
+          <article class="rev-card reveal reveal-delay-2">
             <div class="rev-card-top">
               <div class="rev-avatar orange">М</div>
               <div class="rev-card-meta">
-                <p class="rev-card-name" itemprop="author">Микола</p>
+                <p class="rev-card-name">Микола</p>
                 <div class="rev-card-stars" aria-label="5 зірок">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3819,17 +4033,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <svg class="rev-card-google" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <p class="rev-card-text" itemprop="reviewBody">На іншому сервісі «полагодили» турбіну — через кілька днів засвистіла. Приїхав сюди: зняли, перевірили, зробили правильно. Ось де справжні фахівці! Машина як нова.</p>
+            <p class="rev-card-text">На іншому сервісі «полагодили» турбіну — через кілька днів засвистіла. Приїхав сюди: зняли, перевірили, зробили правильно. Ось де справжні фахівці! Машина як нова.</p>
             <span class="rev-card-tag">Ремонт турбіни</span>
           </article>
 
           <!-- 6 -->
-          <article class="rev-card reveal reveal-delay-3"
-                   itemscope itemtype="https://schema.org/Review">
+          <article class="rev-card reveal reveal-delay-3">
             <div class="rev-card-top">
               <div class="rev-avatar teal">S</div>
               <div class="rev-card-meta">
-                <p class="rev-card-name" itemprop="author">Street Profi</p>
+                <p class="rev-card-name">Street Profi</p>
                 <div class="rev-card-stars" aria-label="5 зірок">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -3841,7 +4054,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <svg class="rev-card-google" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             </div>
-            <p class="rev-card-text" itemprop="reviewBody">Гарний сервіс, дякую за роботу. Все зробили швидко і якісно, ціна адекватна. Буду рекомендувати знайомим. Приємно мати справу з людьми, які розуміються на своїй роботі.</p>
+            <p class="rev-card-text">Гарний сервіс, дякую за роботу. Все зробили швидко і якісно, ціна адекватна. Буду рекомендувати знайомим. Приємно мати справу з людьми, які розуміються на своїй роботі.</p>
             <span class="rev-card-tag">Якість + Ціна</span>
           </article>
 
@@ -3878,8 +4091,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════════════════════════════════════════════════════════
          CONTACTS SECTION
     ══════════════════════════════════════════════════════════ -->
-    <section id="contacts" class="contacts-section" aria-labelledby="contacts-heading"
-             itemscope itemtype="https://schema.org/LocalBusiness">
+    <section id="contacts" class="contacts-section" aria-labelledby="contacts-heading">
 
       <div class="contacts-container">
         <p class="contacts-eyebrow">Зв'язатися з нами</p>
@@ -3899,7 +4111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="contacts-info-body">
                 <p class="contacts-info-label">Телефони</p>
                 <p class="contacts-info-value">
-                  <a href="tel:+380933838363" itemprop="telephone" data-phone-fixed>+380 93 383 83 63</a><br>
+                  <a href="tel:+380933838363" data-phone-fixed>+380 93 383 83 63</a><br>
                   <a href="tel:+380933838373" data-phone-fixed>+380 93 383 83 73</a>
                 </p>
                 <p class="contacts-info-sub">Приміська, 1 · Ак. Заболотного, 47</p>
@@ -3912,7 +4124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="contacts-info-body">
                 <p class="contacts-info-label">Адреси</p>
-                <p class="contacts-info-value" itemprop="address">вул. Приміська, 1<br>вул. Академіка Заболотного, 47</p>
+                <p class="contacts-info-value">вул. Приміська, 1<br>вул. Академіка Заболотного, 47</p>
                 <p class="contacts-info-sub">Два сервіси в Одесі · Паркування є</p>
               </div>
             </div>
