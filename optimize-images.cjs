@@ -3,7 +3,8 @@ const path = require('path');
 const sharp = require('sharp');
 
 const imageRoots = [
-  { path: path.join(__dirname, 'img', 'imgposlugi'), extensions: ['.png'] },
+  { path: path.join(__dirname, 'img', 'imgposlugi'), extensions: ['.png', '.jpeg', '.jpg'] },
+  { path: path.join(__dirname, 'img', 'gallery'), extensions: ['.jpg', '.jpeg'] },
   { path: path.join(__dirname, 'img', 'firstbanner.png'), extensions: ['.png'] },
   { path: path.join(__dirname, 'img', 'firstbanner-hero.jpg'), extensions: ['.jpg'] },
 ];

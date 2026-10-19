@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /marketing/
 
 Sitemap: https://diesel-craft.com.ua/sitemap.xml

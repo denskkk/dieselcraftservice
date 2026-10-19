@@ -2,6 +2,9 @@
   if (window.__dieselCraftAddressPhoneReady) return;
   window.__dieselCraftAddressPhoneReady = true;
 
+  const isRu = (document.documentElement.lang || '').toLowerCase().startsWith('ru');
+  const t = (uk, ru) => (isRu ? ru : uk);
+
   const storageKey = 'dieselCraftSelectedAddress';
 
   const attributionKey = 'dieselCraftAttribution';
@@ -286,7 +289,7 @@
       panel.classList.add('is-collapsed');
       button.setAttribute('aria-expanded', 'false');
       button.setAttribute('aria-controls', footer ? `${grid.id} ${footer.id}` : grid.id);
-      button.innerHTML = '<span>Розгорнути</span><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 8L6 4L10 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      button.innerHTML = '<span>' + t('Розгорнути', 'Развернуть') + '</span><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 8L6 4L10 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       head.appendChild(button);
 
       button.addEventListener('click', (event) => {
@@ -294,7 +297,7 @@
         event.stopPropagation();
         const collapsed = panel.classList.toggle('is-collapsed');
         button.setAttribute('aria-expanded', String(!collapsed));
-        button.querySelector('span').textContent = collapsed ? 'Розгорнути' : 'Згорнути';
+        button.querySelector('span').textContent = collapsed ? t('Розгорнути', 'Развернуть') : t('Згорнути', 'Свернуть');
       });
     });
   };
@@ -319,7 +322,7 @@
       const partnersLink = document.createElement('a');
       partnersLink.href = getPartnersHref(nav);
       partnersLink.className = 'nav-link dc-partners-nav-link';
-      partnersLink.textContent = 'Партнерам';
+      partnersLink.textContent = t('Партнерам', 'Партнёрам');
       nav.insertBefore(partnersLink, contactsLink);
     });
 
@@ -332,7 +335,7 @@
       partnersLink.href = getPartnersHref(nav);
       partnersLink.className = 'mobile-nav-link dc-partners-nav-link';
       partnersLink.setAttribute('data-close-menu', '');
-      partnersLink.textContent = 'Партнерам';
+      partnersLink.textContent = t('Партнерам', 'Партнёрам');
       nav.insertBefore(partnersLink, contactsLink);
     });
   };
@@ -342,16 +345,16 @@
 
     const bar = document.createElement('div');
     bar.className = 'dc-mobile-actions';
-    bar.setAttribute('aria-label', 'Швидкі дії DIESEL-CRAFT');
+    bar.setAttribute('aria-label', t('Швидкі дії DIESEL-CRAFT', 'Быстрые действия DIESEL-CRAFT'));
     bar.innerHTML = `
       <div class="dc-mobile-actions-shell">
-        <a href="tel:${phones.address1.tel}" class="dc-mobile-action-call" aria-label="Подзвонити в DIESEL-CRAFT">
+        <a href="tel:${phones.address1.tel}" class="dc-mobile-action-call" aria-label="${t('Подзвонити в DIESEL-CRAFT', 'Позвонить в DIESEL-CRAFT')}">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span><strong>Зателефонувати</strong><small>${phones.address1.label}</small></span>
+          <span><strong>${t('Зателефонувати', 'Позвонить')}</strong><small>${phones.address1.label}</small></span>
         </a>
-        <a href="https://wa.me/${phones.address1.tel.replace('+', '')}" target="_blank" rel="noopener noreferrer" class="dc-mobile-action-message" aria-label="Написати DIESEL-CRAFT у WhatsApp">
+        <a href="https://wa.me/${phones.address1.tel.replace('+', '')}" target="_blank" rel="noopener noreferrer" class="dc-mobile-action-message" aria-label="${t('Написати DIESEL-CRAFT у WhatsApp', 'Написать DIESEL-CRAFT в WhatsApp')}">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 01-11.78 7.05L4 20l1.45-4.12A8 8 0 1120 11.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span><strong>Написати</strong><small>WhatsApp</small></span>
+          <span><strong>${t('Написати', 'Написать')}</strong><small>WhatsApp</small></span>
         </a>
       </div>
     `;

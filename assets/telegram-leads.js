@@ -2,6 +2,9 @@
   if (window.__dieselCraftTelegramLeadsReady) return;
   window.__dieselCraftTelegramLeadsReady = true;
 
+  const isRu = (document.documentElement.lang || '').toLowerCase().startsWith('ru');
+  const t = (uk, ru) => (isRu ? ru : uk);
+
   const backupEndpoint = 'https://script.google.com/macros/s/AKfycbz8GGK0KJAMZnMXE-hHVzyO_VGtQmAyAAGIGeOg_4egQDyrk8Y53KJXe7E6ErxTAuztYA/exec';
   const defaultWhatsAppPhone = '380933838363';
 
@@ -24,7 +27,7 @@
     button.style.opacity = pending ? '0.75' : '';
     button.style.cursor = pending ? 'wait' : '';
     if (pending) {
-      button.textContent = 'Відправляємо...';
+      button.textContent = t('Відправляємо...', 'Отправляем...');
     } else {
       button.textContent = button.dataset.originalText;
     }
@@ -46,19 +49,19 @@
   };
 
   const showFormFallback = (form) => {
-    const status = showFormStatus(form, 'Не вдалося надіслати заявку. ', true);
+    const status = showFormStatus(form, t('Не вдалося надіслати заявку. ', 'Не удалось отправить заявку. '), true);
     const callLink = document.createElement('a');
     callLink.href = `tel:+${defaultWhatsAppPhone}`;
-    callLink.textContent = 'Зателефонуйте нам';
+    callLink.textContent = t('Зателефонуйте нам', 'Позвоните нам');
     callLink.style.color = 'inherit';
     callLink.style.textDecoration = 'underline';
 
-    const separator = document.createTextNode(' або ');
+    const separator = document.createTextNode(t(' або ', ' или '));
     const messageLink = document.createElement('a');
     messageLink.href = `https://wa.me/${defaultWhatsAppPhone}`;
     messageLink.target = '_blank';
     messageLink.rel = 'noopener noreferrer';
-    messageLink.textContent = 'напишіть у WhatsApp';
+    messageLink.textContent = t('напишіть у WhatsApp', 'напишите в WhatsApp');
     messageLink.style.color = 'inherit';
     messageLink.style.textDecoration = 'underline';
 
@@ -163,6 +166,7 @@
       payload.service ? `Послуга: ${payload.service}` : '',
       payload.car ? `Авто: ${payload.car}` : '',
       payload.message ? `Проблема: ${payload.message}` : '',
+      isRu ? 'Мова сайту: RU' : '',
     ].filter(Boolean);
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(lines.join('\n'))}`;
     const popup = window.open(url, '_blank');
@@ -197,7 +201,7 @@
     // Bots fill hidden fields; pretend success so they do not retry, and send nothing.
     if (form.querySelector('[data-lead-trap]')?.value) {
       form.reset();
-      showFormStatus(form, 'Заявку відправлено. Майстер скоро звʼяжеться з вами.');
+      showFormStatus(form, t('Заявку відправлено. Майстер скоро звʼяжеться з вами.', 'Заявка отправлена. Мастер скоро свяжется с вами.'));
       return;
     }
 
@@ -208,7 +212,7 @@
       phoneField?.focus();
       phoneField?.reportValidity();
       pushLeadEvent('lead_form_validation_error', payload, 'form');
-      showFormStatus(form, 'Вкажіть коректний номер телефону для звʼязку.', true);
+      showFormStatus(form, t('Вкажіть коректний номер телефону для звʼязку.', 'Укажите корректный номер телефона для связи.'), true);
       return;
     }
 
@@ -220,7 +224,7 @@
       openWhatsApp(payload, form);
       pushLeadEvent('lead_form_whatsapp_open', payload, 'whatsapp');
       form.reset();
-      showFormStatus(form, 'Відкрили WhatsApp. Надішліть повідомлення, щоб майстер отримав заявку.');
+      showFormStatus(form, t('Відкрили WhatsApp. Надішліть повідомлення, щоб майстер отримав заявку.', 'Открыли WhatsApp. Отправьте сообщение, чтобы мастер получил заявку.'));
       return;
     }
 
@@ -231,7 +235,7 @@
 
       form.reset();
       pushLeadEvent('lead_form_submit_success', payload, 'form');
-      showFormStatus(form, 'Заявку відправлено. Майстер скоро звʼяжеться з вами.');
+      showFormStatus(form, t('Заявку відправлено. Майстер скоро звʼяжеться з вами.', 'Заявка отправлена. Мастер скоро свяжется с вами.'));
     } catch {
       sendBackupLead(payload);
       pushLeadEvent('lead_form_submit_error', payload, 'form');
