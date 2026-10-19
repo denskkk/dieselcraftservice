@@ -8,7 +8,7 @@
   const backupEndpoint = 'https://script.google.com/macros/s/AKfycbz8GGK0KJAMZnMXE-hHVzyO_VGtQmAyAAGIGeOg_4egQDyrk8Y53KJXe7E6ErxTAuztYA/exec';
   // Google Apps Script relay that posts leads to the Telegram group (see tools/telegram-relay/README.md).
   // The bot token lives only inside the relay; never put it into this public file.
-  const telegramRelayEndpoint = '';
+  const telegramRelayEndpoint = 'https://script.google.com/macros/s/AKfycbwJw_TzkvRRBCvZjZj5xL8WObeCYvlDkzcfBT6YE__ngJbVzZsHo3lq55C5MbTj9i_H/exec';
   const defaultWhatsAppPhone = '380933838363';
 
   const getVerifiedEndpoint = () => (
